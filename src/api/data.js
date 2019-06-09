@@ -1,7 +1,7 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS } from '../constants/Tags';
-import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM } from '../constants/Prices-Quantity';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE } from '../constants/Ingredients';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN } from '../constants/Tags';
+import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY } from '../constants/Prices-Quantity';
 
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
 import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS } from '../constants/variants';
@@ -187,6 +187,29 @@ const allItems = [
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.lipScrubsVegan, allProducts.vegan],
   "howToUse":"Rub gently on the lips and after some continuous rounds of rubbing, wipe off with towel or rinse with water"
+},
+{
+  "id": 9,
+  "name": "Sparkle",
+  "type":allProducts.skin,
+  "price": 350.00,
+  "salePrice": 350.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/Serums/sparkle_big.jpg", "/assets/images/kurinjini-images/Oils/Serums/sparkleTwo_big.jpg"],
+  "shortDetails": "Skin brightening serum",
+  "description": "As the name suggests, it's a silicone free skin brightening overnight serum that absorbs quickly in the skin and gives a radiating effect over a period of time. Pores are tiny openings in the skin that release oil and sweat. When pores are clogged, it can result in blackheads or acne. This serum aims to unclog the pores. It also has Helichrysum essential oil that helps smooth both skin tone and texture, reduces the appearance of fine lines, and its emollient properties help keep skin hydrated. Helichrysum is also known to be beneficial for treating sunburns. Along with it is also added few drops of Mysore Sandalwood oil that acts as an antiseptic and anti-inflammatory agent too apart from being a brightening agent. Also added is Rosehip that tightens the pores and brightens your skin. Mixed with other essentials and carrier oils, this brightening skin serum is good for all kinds of skin.",
+  "stock": 5,
+  "new": false,
+  "sale": false,
+  "category": allProducts.faceSerum,
+  "ingredients": [SANDALWOOD, HELICHRYSUM, ROSEHIP, FRANKINCENSE, VITAMIN_E, JOJOBA, SWEET_ALMOND, HEMP, AVOCADO, MORINGA, ALOVE],
+  "size": [TWENTY],
+  "tags": [DULLSKIN],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin, allProducts.sixteenYeardsOld],
+  "subCategory":[allProducts.faceSerum],
+  "howToUse":"It's a night application cream. Take a small quantity on your finger tip and apply gently after a face wash on your face."
 }
 ]
 export default allItems

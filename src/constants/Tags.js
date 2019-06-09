@@ -4,6 +4,7 @@ export const DRYNESS = 'Dryness'
 export const ACNE = "Acne"
 export const DRYLIPS = "Dry Lips"
 export const FLAKYLIPS = "Flaky Lips"
+export const DULLSKIN = "Dull skin"
 
 export const SUBCATEGORY_MOISTURIZING = "moisturizing"
 export const SUBCATEGORY_KIDS = "kids"

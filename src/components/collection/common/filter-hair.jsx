@@ -68,13 +68,13 @@ class FilterHair extends Component {
                     {/*brand filter start*/}
                     <div className="collection-mobile-back">
                         <span className="filter-back" onClick={(e) => this.closeFilter(e)} >
-                            <i className="fa fa-angle-left" aria-hidden="true"></i> back
+                            <i className="fa fa-angle-left" aria-hidden="true"></i> Click here
                         </span>
                     </div>
                     <SlideToggle>
                         {({onToggle, setCollapsibleElement}) => (
                             <div className="collection-collapse-block">
-                                <h3 className="collapse-block-title" onClick={onToggle}>What bothers you the most</h3>
+                                <h3 className="collapse-block-title" onClick={onToggle}>What bothers you</h3>
                                 <div className="collection-collapse-block-content"  ref={setCollapsibleElement}>
                                     <div className="collection-brand-filter">
                                         {this.props.solutionFor.map((solutionFor, index) => {

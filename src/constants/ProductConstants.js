@@ -52,7 +52,8 @@ const allProducts = {
     allKindsOfSkin:"All Kinds of Skin",
     skin:"skin",
     hair:"hair",
-    lipCare:"Lip care"
+    lipCare:"Lip care",
+    sixteenYeardsOld: "Adult skin"
 }
 
 export default allProducts

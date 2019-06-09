@@ -19,7 +19,6 @@ class CollectionAll extends Component {
     }
 
     componentWillMount() {
-        console.log("calling mount");
         this.props.filters.category = [];
         this.props.filters.goodFor = [];
         this.props.filters.tags = [];

@@ -8,6 +8,7 @@ class DetailsTopTabs extends Component {
     render () {
         const {item} = this.props
         let videoTab;
+        let howToUse;
         if(item.videoLink) {
             videoTab = <Tab className="nav-item">
             <span className="nav-link" >
@@ -17,6 +18,16 @@ class DetailsTopTabs extends Component {
         } else {
             videoTab = ''
         }
+        if(item.howToUse) {
+            howToUse = <tr>
+                <th>How to use :</th>
+                <td>{item.howToUse}</td>
+            </tr>
+        
+        } else {
+            howToUse = ""
+        }
+        
         return (
             <section className="tab-product m-0">
                 <div className="row">
@@ -62,6 +73,7 @@ class DetailsTopTabs extends Component {
                                         <th>Ingredients :</th>
                                         <td>{item.ingredients.join(", ")}</td>
                                     </tr>
+                                    {howToUse}
                                     {/* <tr>
                                         <th>Neck :</th>
                                         <td>Round Neck</td>

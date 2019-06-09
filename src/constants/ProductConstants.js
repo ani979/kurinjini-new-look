@@ -13,6 +13,7 @@ const allProducts = {
     lipbalmKids:"Lip Balm For Kids",
     lipScrubs:"Lip Scrubs",
     lipScrubsVegan:"Vegan Lip Scrubs",
+    vegan:"Vegan",
     oilsAndSerums:"Oils and Serums",
     nightOil:"Night Oil",
     hairOilIntensive: "Hair Oil - Intensive Hair Care",
@@ -31,8 +32,10 @@ const allProducts = {
     oils:"Oils",
     serums:"Serums",
     hairCare:"Hair Care",
+    kidsSpecial:"Especially For Kids",
     kidsFriendly:"Kids cream",
     sensitiveSkin:"Cream for sensitive Skin",
+    acneproneSkin:"Acne prone skin",
     roseHydrosol: "Rose Mist",
     roseWater:"Rose Arka",
     footHealer:"Foot Healer",
@@ -48,7 +51,8 @@ const allProducts = {
     precaution:"Precaution",
     allKindsOfSkin:"All Kinds of Skin",
     skin:"skin",
-    hair:"hair"
+    hair:"hair",
+    lipCare:"Lip care"
 }
 
 export default allProducts

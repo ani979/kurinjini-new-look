@@ -6,7 +6,7 @@ export default class ImageZoom extends Component {
 
         return (
             
-                <img src={`${image}`}  className="img-fluid image_zoom_cls-0" />
+                <img src={`${image}`}  className="img-fluid image_zoom_cls-0" alt = "No Image available"/>
                 
             
         );

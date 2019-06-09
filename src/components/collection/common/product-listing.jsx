@@ -50,7 +50,7 @@ class ProductListing extends Component {
                                 loader={<div className="loading-cls"></div>}
                                 endMessage={
                                     <p className="seen-cls seen-it-cls">
-                                        <b>Yay! You have seen it all</b>
+                                        <b>Yay! You have seen it all.</b>
                                     </p>
                                 }
                             >

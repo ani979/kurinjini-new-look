@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Modal from 'react-responsive-modal';
+import { UNAVAILABLE_IMAGE } from '../../../constants/variants';
 
 
 class ProductListItem extends Component {
@@ -55,14 +56,22 @@ class ProductListItem extends Component {
             for(var i = 0; i < product.rating; i++) {
                 RatingStars.push(<i className="fa fa-star" key={i}></i>)
             }
-
+        console.log("image ", this.state.image);
+        console.log("product.variants ", product);
+        
         return (
                 <div className="col-xl-3 col-md-6 col-grid-box">
                     <div className="product-box">
                         <div className="img-wrapper">
                             <div className="front">
                                 <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} ><img
-                                    src={`${this.state.image?this.state.image:(product.variants.length > 0 ? product.variants[0].images:'')}`}
+                                    src={this.state.image !=='' ? 
+                                        this.state.image: 
+                                        (product.variants.length > 0 ? 
+                                        product.variants[0].images:
+                                            (product.pictures && product.pictures.length > 0 ? 
+                                            product.pictures[0]:
+                                                UNAVAILABLE_IMAGE))}
                                     className="img-fluid"
                                     alt="" /></Link>
                             </div>
@@ -80,7 +89,7 @@ class ProductListItem extends Component {
                                 <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
                                     <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                             </div>
-                            <ul className="product-thumb-list">
+                            {/* <ul className="product-thumb-list">
                                 {product.variants.map((vari, i) =>
                                     <li className={`grid_thumb_img ${(vari.images === this.state.image)?'active':''}`} key={i}>
                                         <a href="javascript:void(0)" title="Add to Wishlist">
@@ -88,7 +97,7 @@ class ProductListItem extends Component {
                                         </a>
                                     </li>)
                                 }
-                            </ul>
+                            </ul> */}
 
                         </div>
                         <div className="product-detail">

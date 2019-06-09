@@ -50,6 +50,7 @@ const allProducts = {
     howToUse:"How to use",
     precaution:"Precaution",
     allKindsOfSkin:"All Kinds of Skin",
+    allKindsOfHair:"All Kinds of Hair",
     skin:"skin",
     hair:"hair",
     lipCare:"Lip care",

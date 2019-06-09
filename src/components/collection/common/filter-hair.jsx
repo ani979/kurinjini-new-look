@@ -5,8 +5,9 @@ import 'react-input-range/lib/css/index.css';
 import { SlideToggle } from 'react-slide-toggle';
 
 
-import {getGoodForHair, getSolutionForHair, getMinMaxPrice} from '../../../services';
+import {getGoodForHair, getSolutionForHair, getMinMaxPrice, getType} from '../../../services';
 import {filterGoodFor, filterSolutionFor, filterPrice} from '../../../actions'
+import allProducts from '../../../constants/ProductConstants';
 
 class FilterHair extends Component {
 
@@ -28,6 +29,7 @@ class FilterHair extends Component {
         this.props.filters.subCategory = [];
         this.props.filters.goodFor = [];
         this.props.filters.tags = [];
+        this.props.filters.type = allProducts.hair;
     }
 
     componentWillUnmount() {
@@ -68,7 +70,7 @@ class FilterHair extends Component {
                     {/*brand filter start*/}
                     <div className="collection-mobile-back">
                         <span className="filter-back" onClick={(e) => this.closeFilter(e)} >
-                            <i className="fa fa-angle-left" aria-hidden="true"></i> Click here
+                            <i className="fa fa-angle-left" aria-hidden="true"></i> Filter
                         </span>
                     </div>
                     <SlideToggle>
@@ -93,7 +95,7 @@ class FilterHair extends Component {
                     <SlideToggle>
                         {({onToggle, setCollapsibleElement}) => (
                             <div className="collection-collapse-block">
-                                <h3 className="collapse-block-title" onClick={onToggle}>What is your skin type?</h3>
+                                <h3 className="collapse-block-title" onClick={onToggle}>What is your hair type?</h3>
                                 <div className="collection-collapse-block-content"  ref={setCollapsibleElement}>
                                     <div className="collection-brand-filter">
                                         {this.props.goodFor.map((goodFor, index) => {
@@ -157,6 +159,7 @@ const mapStateToProps = state => ({
     goodFor: getGoodForHair(state.data.products),
     solutionFor: getSolutionForHair(state.data.products),
     prices: getMinMaxPrice(state.data.products),
+    type:getType(state.data.products),
     filters: state.filters
 })
 

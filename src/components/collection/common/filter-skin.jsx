@@ -5,8 +5,9 @@ import 'react-input-range/lib/css/index.css';
 import { SlideToggle } from 'react-slide-toggle';
 
 
-import {getGoodForSkin, getSolutionForSkin, getMinMaxPrice} from '../../../services';
+import {getGoodForSkin, getSolutionForSkin, getMinMaxPrice, getType} from '../../../services';
 import {filterGoodFor, filterSolutionFor, filterPrice} from '../../../actions'
+import allProducts from '../../../constants/ProductConstants';
 
 class FilterSkin extends Component {
 
@@ -28,6 +29,7 @@ class FilterSkin extends Component {
         this.props.filters.subCategory = [];
         this.props.filters.goodFor = [];
         this.props.filters.tags = [];
+        this.props.filters.type = allProducts.skin;
     }
 
     // componentWillUnmount() {
@@ -68,7 +70,7 @@ class FilterSkin extends Component {
                     {/*brand filter start*/}
                     <div className="collection-mobile-back">
                         <span className="filter-back" onClick={(e) => this.closeFilter(e)} >
-                            <i className="fa fa-angle-left" aria-hidden="true"></i> Click here
+                            <i className="fa fa-angle-left" aria-hidden="true"></i> Filter
                         </span>
                     </div>
                     <SlideToggle>
@@ -157,6 +159,7 @@ const mapStateToProps = state => ({
     goodFor: getGoodForSkin(state.data.products),
     solutionFor: getSolutionForSkin(state.data.products),
     prices: getMinMaxPrice(state.data.products),
+    type:getType(state.data.products),
     filters: state.filters
 })
 

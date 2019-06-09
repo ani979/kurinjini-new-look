@@ -149,7 +149,7 @@ class FooterOne extends Component {
                                     <div className="subscribe">
                                         <div>
                                             <h4>KNOW IT ALL FIRST!</h4>
-                                            <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter. </p>
+                                            <p>Never Miss Anything From Kurinjini By Getting added to our whatsapp group </p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@ class FooterOne extends Component {
                                     <form className="form-inline subscribe-form">
                                         <div className="form-group mx-sm-3">
                                             <input type="text" className="form-control" id="exampleFormControlInput1"
-                                                   placeholder="Enter your email"/>
+                                                   placeholder="Enter your phone number"/>
                                         </div>
                                         <button type="submit" className="btn btn-solid">subscribe</button>
                                     </form>
@@ -175,10 +175,9 @@ class FooterOne extends Component {
                                 </div>
                                 <div className="footer-contant">
                                     <div className="footer-logo">
-                                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/logo.png`} alt="" /></Link>
+                                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/kurinjini_smallsize.png`} alt="" /></Link>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <p>Lend your skin and relax</p>
                                     <div className="footer-social">
                                         <ul>
                                             <li>
@@ -200,7 +199,7 @@ class FooterOne extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col offset-xl-1">
+                            {/* <div className="col offset-xl-1">
                                 <div className="sub-title">
                                     <div className="footer-title">
                                         <h4>my account</h4>
@@ -214,7 +213,7 @@ class FooterOne extends Component {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="col">
                                 <div className="sub-title">
                                     <div className="footer-title">
@@ -222,11 +221,10 @@ class FooterOne extends Component {
                                     </div>
                                     <div className="footer-contant">
                                         <ul>
-                                            <li><a href="#">shipping & return</a></li>
-                                            <li><a href="#">secure shopping</a></li>
-                                            <li><a href="#">gallary</a></li>
-                                            <li><a href="#">affiliates</a></li>
-                                            <li><a href="#">contacts</a></li>
+                                            <li><a href="#">Shipping and Return</a></li>
+                                            <li><a href="#">How to shop</a></li>
+                                            <li><a href="#">Recycle is rewarding</a></li>
+                                            <li><a href="#">About us</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -238,13 +236,11 @@ class FooterOne extends Component {
                                     </div>
                                     <div className="footer-contant">
                                         <ul className="contact-list">
-                                            <li><i className="fa fa-map-marker"></i>Multikart Demo Store, Demo store
-                                                India 345-659
+                                            <li><i className="fa fa-map-marker"></i>Kurinjini Skin Care
                                             </li>
-                                            <li><i className="fa fa-phone"></i>Call Us: 123-456-7898</li>
+                                            <li><i className="fa fa-phone"></i>Call Us: 7483897810</li>
                                             <li><i className="fa fa-envelope-o"></i>Email Us: <a
-                                                href="#">Support@Fiot.com</a></li>
-                                            <li><i className="fa fa-fax"></i>Fax: 123456</li>
+                                                href="#">shilpi@kurinjiniskincare.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -257,11 +253,10 @@ class FooterOne extends Component {
                         <div className="row">
                             <div className="col-xl-6 col-md-6 col-sm-12">
                                 <div className="footer-end">
-                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2018-19 themeforest
-                                        powered by pixelstrap</p>
+                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</p>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-md-6 col-sm-12">
+                            {/* <div className="col-xl-6 col-md-6 col-sm-12">
                                 <div className="payment-card-bottom">
                                     <ul>
                                         <li>
@@ -281,7 +276,7 @@ class FooterOne extends Component {
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

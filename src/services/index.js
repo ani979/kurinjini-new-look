@@ -75,6 +75,23 @@ export const getCategory = (products) => {
     return uniqueBrands;
 }
 
+// Get Unique Products Category  from Json Data
+export const getType = (products) => {
+    var uniqueBrands = [];
+    products.map((product, index) => {
+            console.log("product.type ", product.type);
+            if(product.type) {
+                if(uniqueBrands.indexOf(product.type) === -1){
+                    uniqueBrands.push(product.type);
+                }
+               
+            }    
+        }
+    )
+    console.log(uniqueBrands)
+    return uniqueBrands;
+}
+
 // Get Unique Products Sub-Category  from Json Data
 export const getSubCategory = (products) => {
     var uniqueBrands = [];
@@ -128,7 +145,7 @@ export const getMinMaxPrice = (products) => {
     return {'min':min, 'max':max};
 }
 
-export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category, subCategory }) => {
+export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category, subCategory, type }) => {
     //console.log("do i come here?? ", tags)
     return data.products.filter(product => {
         //console.log("product.goodFor ? ", product.goodFor, goodFor);
@@ -172,10 +189,20 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
             subCategoryMatch = true;
         }
 
+        let typeMatch;
+        console.log("type ", type);
+        if(type !== '') {
+            //console.log("product.tags ", product.tags)
+            typeMatch = product.type? type === product.type:''
+            //console.log("brandmatch ", brandMatch);
+        } else {
+            typeMatch = true;
+        }
+
         const startPriceMatch = typeof value.min !== 'number' || value.min <= product.price;
         const endPriceMatch = typeof value.max !== 'number' || product.price <= value.max;
 
-        return brandMatch && colorMatch && startPriceMatch && endPriceMatch && categoryMatch && subCategoryMatch;
+        return brandMatch && colorMatch && startPriceMatch && endPriceMatch && categoryMatch && subCategoryMatch && typeMatch;
     }).sort((product1, product2) => {
         if (sortBy === 'HighToLow') {
             return product2.price < product1.price ? -1 : 1;

@@ -1,10 +1,10 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN } from '../constants/Tags';
-import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY } from '../constants/Prices-Quantity';
-
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS } from '../constants/Ingredients';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL } from '../constants/Tags';
+import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY } from '../constants/Prices-Quantity';
+import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
-import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS } from '../constants/variants';
+import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE } from '../constants/variants';
 
 const allItems = [
 {
@@ -201,15 +201,139 @@ const allItems = [
   "stock": 5,
   "new": false,
   "sale": false,
-  "category": allProducts.faceSerum,
+  "category": allProducts.oilsAndSerums,
   "ingredients": [SANDALWOOD, HELICHRYSUM, ROSEHIP, FRANKINCENSE, VITAMIN_E, JOJOBA, SWEET_ALMOND, HEMP, AVOCADO, MORINGA, ALOVE],
   "size": [TWENTY],
   "tags": [DULLSKIN],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.allKindsOfSkin, allProducts.sixteenYeardsOld],
+  "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.faceSerum],
   "howToUse":"It's a night application cream. Take a small quantity on your finger tip and apply gently after a face wash on your face."
+},
+{
+  "id": 10,
+  "name": "Moonstone",
+  "type":allProducts.skin,
+  "price": 350.00,
+  "salePrice": 350.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/Serums/moonstone_big.jpg"],
+  "shortDetails": "An under eye serum to get rid of dark circles",
+  "description": "Moonstone is an under eye serum, an attempt from us to come up with something that can reduce the dark circles. Apart from some of the ingredients already present in “Sparkle”, there is also cucumber seed and carrot seed oil that reduces stress and tiredness from the eyes, keeping it cool. With its high content of vitamin C, beta-carotene and manganese, cucumber oil can stimulate collagen production, too. Collagen is the protein that provides the structure of your skin. It helps boosting your body’s natural collagen synthesis without having to rely on chemicals and synthetic ingredients. Carrot seed essential oil, a skin lightening agent, improves moisture retention, reduce the look of tired skin, and help nourish dry areas. Another essential added is Lavender, that helps enhance blood circulation and a natural healer along with reducing stress and anxiety. All these added with carrier oils forms this natural healer Moonstone.",
+  "stock": 5,
+  "new": false,
+  "sale": false,
+  "category": allProducts.oilsAndSerums,
+  "ingredients": [SANDALWOOD, HELICHRYSUM, GERANIUM, LAVENDER, CARROT_SEED, CUCUMBER_SEED, ROSEHIP, VITAMIN_E, JOJOBA, SWEET_ALMOND, HEMP, ALOVE],
+  "size": [TWENTY],
+  "tags": [DARK_CIRCLES],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.darkCirclesRemoval],
+  "howToUse":"It's a night application cream. Take a small quantity on your finger tip and massage gently under your eyes so that it improves blood circulation."
+},
+{
+  "id": 11,
+  "name": "Renaissance",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/hairandface/renaissance_1.jpg", "/assets/images/kurinjini-images/Oils/hairandface/renaissance_2.jpg"],
+  "shortDetails": "Extra-hydrating night application oil",
+  "description": <p>Extra-hydrating night application oil that has quick absorption quality. Its a combination of oils and essential oils having properties of skin brightening, removal of hyper-pigmentation, even removing blemishes. The basic component is Vitamin-E oil and along with carrier oils as Sweet Almond oil.
+  <br/><br/>
+  Additionally we also support specific customized needs:
+  <ul>
+    <li>For glowing skin </li>
+    <li> Anti-ageing </li>
+    <li> Acne control </li>
+  </ul>  
+  <br/>
+  <b><i> it is available in more convenient to use glass droppers.</i></b></p>,
+  "stock": 20,
+  "new": false,
+  "sale": false,
+  "category": allProducts.oilsAndSerums,
+  "ingredients": [SAFFRON, ARGAN, MORINGA, TEATREE, GERANIUM, ROSEMARY, JOJOBA, GRAPESEED, CUCUMBER_SEED, HEMP, AVOCADO, FRANKINCENSE, LEMON_GRASS, COCONUT],
+  "size": [FIFTEEN],
+  "tags": [DARK_CIRCLES, BLEMISHES, PIGMENTATION, ACNE],
+  "rating": 5,
+  "variants": VARIANTS_RENAISSANCE,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.nightOil],
+  "howToUse":"Apply after a face wash during night before going to bed."
+},
+{
+  "id": 12,
+  "name": "Resurgence - Intensive hair oil treatment",
+  "type":allProducts.hair,
+  "price": 350.00,
+  "salePrice": 350.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/hairandface/hair.jpg"],
+  "shortDetails": "An intenstive hair oil treatment",
+  "description": <p> Our hair is just as sensitive as our skin. The basic substance of hair is keratin, a strong protein. When we lose our hair as each one comes to the end, a new hair should grow in its place. This should happen instantaneously but because of our lifestyle and synthetic chemicals that we apply with shampoo or conditioners, the time between a hair getting lost and new one coming up can extend so that our hair begins to thin. “Resurgence” is an intense hair treatment oil. It consists of Argan, Grapeseed essential oils that consists of Vitamin-E, a natural anti-oxidant that nourishes dry damaged hair, repairs and rejuvenates, thereby protecting it and giving it the needed shine. Hemp oil is a great oil for scalp and helps grow hair faster, thicker and longer. Avocado oil present acts as a carrier oil stimulating the blood flow and unclog blocked follicles.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.oilsAndSerums,
+  "ingredients": [ARGAN, MORINGA, GRAPESEED, JOJOBA, HEMP, FRANKINCENSE, SWEET_ALMOND, VITAMIN_E],
+  "size": [EIGHTY],
+  "tags": [DANDRUFF, SPLIT_ENDS, HAIR_FALL],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfHair],
+  "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
+  "howToUse":"Direct application on your hair and scalp"
+},
+{
+  "id": 13,
+  "name": "Resurgence - Anti-Dandruff treatment",
+  "type":allProducts.hair,
+  "price": 350.00,
+  "salePrice": 350.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/hairandface/hair.jpg"],
+  "shortDetails": "Anti-dandruff treatment",
+  "description": <p> The little white flakes scattered on shoulders shout out loudly that someone’s head and hair are in bad condition. But with essential oils, you can get to the root of the problem and get rid of this once and for all. Essential Oils like Rosemary, Tea Tree and oils like Jojoba, Hibiscus and Neem are effective in treating dandruff and split ends.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.oilsAndSerums,
+  "ingredients": [ARGAN, TEATREE, NEEM, HIBISCUS, MORINGA, ROSEMARY, GRAPESEED, AVOCADO, JOJOBA, HEMP, FRANKINCENSE],
+  "size": [EIGHTY],
+  "tags": [DANDRUFF],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfHair],
+  "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
+  "howToUse":"Direct application on your hair and scalp"
+},
+{
+  "id": 14,
+  "name": "Resurgence - Hair treatment for kids",
+  "type":allProducts.hair,
+  "price": 300.00,
+  "salePrice": 300.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Oils/hairandface/hair.jpg"],
+  "shortDetails": "Hair oil for your kids",
+  "description": <p>Kids hair oil is gentle in nature and consist of Argan and Jojoba mixed with most effective natural cold pressed oils like Coconut and Virgin Olive. It helps keep small ones' hair hydrated & moisturized while it also serves to nourish & soften the scalp. </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.oilsAndSerums,
+  "ingredients": [ARGAN, JOJOBA, HEMP, SWEET_ALMOND, AVOCADO, VIRIN_OLIVE, COCONUT],
+  "size": [EIGHTY],
+  "tags": [DANDRUFF, HAIR_FALL],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.kidsSpecial],
+  "subCategory":[allProducts.hairOilKids],
+  "howToUse":"Direct application on your hair and scalp"
 }
 ]
 export default allItems

@@ -10,6 +10,9 @@ export const SPEARMINT = "Spearmint"
 export const VANILLA = "Vanilla"
 export const ORANGE_LIP = "Orange"
 export const ROSE_LIP_SCRUB = "Rose"
+export const GLOWING_SKIN = "Glowing Skin"
+export const ANTI_AGEING = "Anti-Ageing"
+export const ACNE_CONTROL = "Acne control"
 export const UNAVAILABLE_IMAGE = "/assets/images/imageUnavailable.jpg"
 
 export const FLAVOUR_MOISTURIZING_CREAMS = [{
@@ -109,5 +112,18 @@ export const FLAVOUR_LIP_BALMS_KIDS = [{
     "images": "/assets/images/kurinjini-images/LipCare/lipbalm_strawberry_1.jpg"
   },
   
+]
+
+export const VARIANTS_RENAISSANCE = [{
+  "flavour": GLOWING_SKIN,
+  "images": "/assets/images/kurinjini-images/Oils/hairandface/renaissance_1.jpg"
+},{
+  "flavour": ANTI_AGEING,
+  "images": "/assets/images/kurinjini-images/Oils/hairandface/renaissance_1.jpg"
+},{
+  "flavour": ACNE_CONTROL,
+  "images": "/assets/images/kurinjini-images/Oils/hairandface/renaissance_1.jpg"
+}
+
 ]
 

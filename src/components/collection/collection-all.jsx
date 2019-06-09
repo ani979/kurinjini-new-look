@@ -19,10 +19,10 @@ class CollectionAll extends Component {
     }
 
     componentWillMount() {
-        this.props.filters.category = [];
+        this.props.filters.category = [this.props.subSelection];
         this.props.filters.goodFor = [];
         this.props.filters.tags = [];
-        this.props.filters.subCategory = [this.props.subSelection];
+        this.props.filters.subCategory = [];
     }
     
     render () {

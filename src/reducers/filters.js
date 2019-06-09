@@ -7,7 +7,8 @@ const filtersReducerDefaultState = {
     value: { min: 250, max: 950 },
     sortBy: "Newest",
     category:[],
-    subCategory:[]
+    subCategory:[], 
+    type:''
 };
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
@@ -43,6 +44,11 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
         return {
             ...state,
             subCategory: action.subCategory
+        };
+        case types.FILTER_TYPE:
+        return {
+            ...state,
+            type: action.type
         };
         default:
             return state;

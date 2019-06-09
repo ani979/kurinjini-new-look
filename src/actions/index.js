@@ -98,6 +98,14 @@ export const filterGoodFor = (goodFor) => ({
     type: types.FILTER_GOODFOR,
     goodFor
 });
+export const filterCategory = (category) => ({
+    type: types.FILTER_CATEGORY,
+    category
+});
+export const filterSubCategory = (subCategory) => ({
+    type: types.FILTER_SUBCATEGORY,
+    subCategory
+});
 export const filterSolutionFor = (tags) => ({
     type: types.FILTER_SOLUTIONFOR,
     tags

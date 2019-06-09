@@ -5,10 +5,10 @@ import 'react-input-range/lib/css/index.css';
 import { SlideToggle } from 'react-slide-toggle';
 
 
-import {getGoodFor, getSolutionFor, getMinMaxPrice} from '../../../services';
+import {getGoodForHair, getSolutionForHair, getMinMaxPrice} from '../../../services';
 import {filterGoodFor, filterSolutionFor, filterPrice} from '../../../actions'
 
-class Filter extends Component {
+class FilterHair extends Component {
 
     constructor(props) {
         super(props);
@@ -22,9 +22,17 @@ class Filter extends Component {
         document.querySelector(".collection-filter").style = "left: -365px";
     }
 
-    componentWillUnmount() {
-        this.props.filters.tags = [];
+    componentWillMount() {
+        console.log("calling mount");
+        this.props.filters.category = [];
+        this.props.filters.subCategory = [];
         this.props.filters.goodFor = [];
+        this.props.filters.tags = [];
+    }
+
+    componentWillUnmount() {
+        this.props.filterGoodFor([]);
+        this.props.filterSolutionFor([]);
     }
     
 
@@ -146,8 +154,8 @@ class Filter extends Component {
 
 
 const mapStateToProps = state => ({
-    goodFor: getGoodFor(state.data.products),
-    solutionFor: getSolutionFor(state.data.products),
+    goodFor: getGoodForHair(state.data.products),
+    solutionFor: getSolutionForHair(state.data.products),
     prices: getMinMaxPrice(state.data.products),
     filters: state.filters
 })
@@ -155,4 +163,4 @@ const mapStateToProps = state => ({
 export default connect(
     mapStateToProps,
     { filterGoodFor, filterSolutionFor, filterPrice }
-)(Filter);
+)(FilterHair);

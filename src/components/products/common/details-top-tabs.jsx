@@ -54,9 +54,9 @@ class DetailsTopTabs extends Component {
                                     </tr>
                                     <tr>
                                         <th>Available in Flavours :</th>
-                                        <td>{(item.variants.map((vari, index) =>
+                                        <td>{(item.variants.length > 0 ? (item.variants.map((vari, index) =>
                                                        vari.flavour
-                                        )).join(", ")}</td>
+                                        )).join(", "):"No flavours")}</td>
                                     </tr>
                                     <tr>
                                         <th>Ingredients :</th>
@@ -93,7 +93,7 @@ class DetailsTopTabs extends Component {
                                     </div>
                                 </div>
                             </TabPanel>
-                            <TabPanel>
+                            {/* <TabPanel>
                                 <form className="theme-form mt-4">
                                     <div className="form-row">
                                         <div className="col-md-12 ">
@@ -131,7 +131,7 @@ class DetailsTopTabs extends Component {
                                         </div>
                                     </div>
                                 </form>
-                            </TabPanel>
+                            </TabPanel> */}
                         </Tabs>
                     </div>
                 </div>

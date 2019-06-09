@@ -5,12 +5,14 @@ const filtersReducerDefaultState = {
     tags: [],
     goodFor: [],
     value: { min: 250, max: 950 },
-    sortBy: "Newest"
+    sortBy: "Newest",
+    category:[],
+    subCategory:[]
 };
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
     // console.log('Action Result');
-    console.log(action);
+    //console.log(action);
     switch (action.type) {
         case types.FILTER_GOODFOR:
             return {
@@ -32,6 +34,16 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 ...state,
                 sortBy: action.sort_by
             };
+        case types.FILTER_CATEGORY:
+        return {
+            ...state,
+            category: action.category
+        };
+        case types.FILTER_SUBCATEGORY:
+        return {
+            ...state,
+            subCategory: action.subCategory
+        };
         default:
             return state;
     }

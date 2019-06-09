@@ -59,6 +59,19 @@ class DetailsWithPrice extends Component {
             focusOnSelect: true
         };
 
+        let flavour = item.variants.length > 0 ? 
+                            <div className="product-page-filter row border-product">
+                                <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose your flavour:</h4>
+                                <select className="col-md-6 col-sm-6 col-xl-6"
+                                // onChange={(e) => this.props.filterSort(e.target.value)}
+                                >
+                                    {item.variants.map((vari, i) => {
+                                        return <option key={i} value={vari.flavour}>{vari.flavour}</option>
+                                    })}
+                                    
+                                </select>
+                            </div> : '' 
+
         return (
             <div className="col-lg-6 rtl-text">
                 <div className="product-right">
@@ -72,17 +85,7 @@ class DetailsWithPrice extends Component {
                             {/* {item.variants.map((vari, i) => {
                                 return <li className="red" key={i} title={vari.flavour}></li>
                             })} */}
-                            <div className="product-page-filter row border-product">
-                                <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose your flavour:</h4>
-                                <select className="col-md-6 col-sm-6 col-xl-6"
-                                // onChange={(e) => this.props.filterSort(e.target.value)}
-                                >
-                                    {item.variants.map((vari, i) => {
-                                        return <option key={i} value={vari.flavour}>{vari.flavour}</option>
-                                    })}
-                                    
-                                </select>
-                            </div>
+                    {flavour}
                         {/* </Slider> */}
                         
                     {/* </ul> */}

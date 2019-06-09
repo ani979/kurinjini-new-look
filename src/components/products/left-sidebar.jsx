@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 
 // import custom Components
 import Service from "./common/service";
-import BrandBlock from "./common/brand-block";
 import NewProduct from "../common/new-product";
 import Breadcrumb from "../common/breadcrumb";
 import DetailsWithPrice from "./common/product/details-price";
@@ -61,6 +60,22 @@ class LeftSideBar extends Component {
             focusOnSelect: true
         };
 
+        let sliderToDisplay = item.variants.length > 0? <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
+                                    {item.variants.map((vari, index) =>
+                                    <div key={index} className="container">
+                                        <ImageZoom image={vari.images} />
+                                        <div className="image-text">{vari.flavour}</div>
+                                    </div>
+                                    )}
+                             </Slider>:
+                             <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
+                                    {item.pictures.map((vari, index) =>
+                                    <div key={index} className="container">
+                                        <ImageZoom image={vari} />
+                                    </div>
+                                    )}
+                             </Slider>
+
 
 
             return (
@@ -100,14 +115,7 @@ class LeftSideBar extends Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-lg-6 product-thumbnail">
-                                                <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
-                                                    {item.variants.map((vari, index) =>
-                                                       <div key={index} className="container">
-                                                           <ImageZoom image={vari.images} />
-                                                           <div className="image-text">{vari.flavour}</div>
-                                                       </div>
-                                                    )}
-                                                </Slider>
+                                                {sliderToDisplay}
                                                 <SmallImages item={item} settings={productsnav} navOne={this.state.nav1} />
                                             </div>
                                             <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} addToWishlistClicked={addToWishlist} />

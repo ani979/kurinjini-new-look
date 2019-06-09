@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
 import Breadcrumb from "../common/breadcrumb";
 import NewProduct from "../common/new-product";
-import Filter from "./common/filter";
+import FilterSkin from "./common/filter-skin";
+import FilterHair from "./common/filter-hair";
 import FilterBar from "./common/filter-bar";
 import ProductListing from "./common/product-listing";
 import StickyBox from "react-sticky-box";
 
 class CollectionLeftSidebar extends Component {
-
     openFilter = () => {
         document.querySelector(".collection-filter").style = "left: -15px";
     }
     
-    render (){
+    render () {
+        const {type} = this.props;
+        console.log("props ",type);
+        
+        const typeOfFilter = type === "skin"?<FilterSkin/>:<FilterHair/> 
+
         return (
             <div>
 
@@ -26,7 +31,7 @@ class CollectionLeftSidebar extends Component {
 
                                     <StickyBox offsetTop={20} offsetBottom={20}>
                                         <div>
-                                            <Filter/>
+                                            {typeOfFilter}
                                             <NewProduct/>
                                             <div className="collection-sidebar-banner">
                                                 <a href="#">

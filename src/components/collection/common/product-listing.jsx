@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import {Link} from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-
-import { getTotal, getCartProducts } from '../../../reducers'
 import { addToCart, addToWishlist, addToCompare } from '../../../actions'
 import {getVisibleproducts} from '../../../services';
 import ProductListItem from "./product-list-item";

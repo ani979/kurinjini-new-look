@@ -45,7 +45,10 @@ const allProducts = {
     delivery:"Possible delivery within",
     availableinFlavours:"Available in flavours",
     howToUse:"How to use",
-    precaution:"Precaution"
+    precaution:"Precaution",
+    allKindsOfSkin:"All Kinds of Skin",
+    skin:"skin",
+    hair:"hair"
 }
 
 export default allProducts

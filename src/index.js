@@ -15,8 +15,7 @@ import Fashion from './components/layouts/fashion';
 
 //Collection Pages
 import CollectionLeftSidebar from "./components/collection/collection-left-sidebar";
-import CollectionNoSidebar from "./components/collection/collection-no-sidebar";
-import CollectionRightSidebar from "./components/collection/collection-right-sidebar";
+import CollectionAll from "./components/collection/collection-all";
 
 // Product Pages
 import LeftSideBar from "./components/products/left-sidebar";
@@ -29,6 +28,7 @@ import ColumnLeft from "./components/products/column-left";
 import ColumnRight from "./components/products/column-right";
 import Column from "./components/products/column";
 import Vertical from "./components/products/vertical";
+
 
 // Features
 import Layout from './components/app'
@@ -55,6 +55,7 @@ import Faq from './components/pages/faq'
 import RightSide from './components/blogs/right-sidebar'
 import Details from './components/blogs/details'
 import BlogPage from './components/blogs/blog-page'
+import allProducts from './constants/ProductConstants'
 
 var lang = localStorage.getItem('locale-lang');
 
@@ -78,9 +79,9 @@ class Root extends React.Component {
 								<Route exact path={`${process.env.PUBLIC_URL}/`} component={Fashion}/>
 
 								{/*Routes For Features (Product Collection) */}
-								<Route path={`${process.env.PUBLIC_URL}/face-care/collection`} component={CollectionLeftSidebar}/>
-								<Route path={`${process.env.PUBLIC_URL}/hair-care/collection`} component={CollectionNoSidebar}/>
-								<Route path={`${process.env.PUBLIC_URL}/right-sidebar/collection`} component={CollectionRightSidebar}/>
+								<Route path={`${process.env.PUBLIC_URL}/face-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="skin" />}/>
+								<Route path={`${process.env.PUBLIC_URL}/hair-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="hair" />}/>
+								{/* <Route path={`${process.env.PUBLIC_URL}/right-sidebar/collection`} component={CollectionRightSidebar}/> */}
 
 								{/*Routes For Single Product*/}
 								<Route path={`${process.env.PUBLIC_URL}/left-sidebar/product/:id`} component={LeftSideBar}/>
@@ -93,6 +94,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/left-image/product/:id`} component={LeftImage}/>
 								<Route path={`${process.env.PUBLIC_URL}/right-image/product/:id`} component={RightImage}/>
 								<Route path={`${process.env.PUBLIC_URL}/vertical/product/:id`} component={Vertical}/>
+								<Route path={`${process.env.PUBLIC_URL}/oilsAndSerums`} render={(props) => <CollectionAll {...props} subSelection={allProducts.oilsAndSerums} />}/>
 								
 
 								{/*Routes For custom Features*/}

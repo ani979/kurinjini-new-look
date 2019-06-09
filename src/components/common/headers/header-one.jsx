@@ -36,7 +36,8 @@ class HeaderOne extends Component {
             document.getElementById("sticky").classList.add('fixed');
         } else {
             document.getElementById("sticky").classList.remove('fixed');
-        }
+		}
+		document.getElementById("sticky").classList.remove('fixed');
     }
 
     changeLanguage(lang) {

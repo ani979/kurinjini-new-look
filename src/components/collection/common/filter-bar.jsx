@@ -43,10 +43,16 @@ class FilterBar extends Component {
     }
 
     render (){
+        let title;
+        if(this.props.title && this.props.title === "") {
+            title = "Showing " + this.props.title;
+        } else {
+            title = "Showing Products 1-" + this.props.products.length +" Result";
+        }    
         return (
             <div className="product-filter-content">
                 <div className="search-count">
-                    <h5>Showing Products 1-{this.props.products.length} Result</h5>
+                    <h5>{title}</h5>
                 </div>
                 <div className="collection-view">
                     <ul>

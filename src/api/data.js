@@ -1,9 +1,11 @@
-import allProducts from './ProductConstants'
+import allProducts from '../constants/ProductConstants'
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT } from '../constants/Ingredients';
 
 const allItems = [
 {
   "id": 1,
   "name": allProducts.moisturizingCreams,
+  "type":"skin",
   "price": 250,
   "salePrice": 250,
   "discount": 0,
@@ -15,6 +17,7 @@ const allItems = [
   "sale": false,
   "quantity":"60 ml",
   "category": allProducts.faceCare,
+  "subCategory":["moisturizing", "Kids"],
   "ingredients": ["Jojoba", "Sweet Almond", "Vitamin-E", "Mango butter", "Tea Tree", "Rosemary","Coconut","Virgin Olive", "Beeswax"],
   "size": ["60ml", "120ml"],
   "tags": ["dryness", "freckles", "aging"],
@@ -33,67 +36,52 @@ const allItems = [
     "flavour": "Rose Petals",
     "images": "/assets/images/moisturizingCreams/rose_big.jpg"
   }],
-  "goodFor":["all kinds of skin"],
+  "goodFor":[allProducts.allKindsOfSkin],
   "precaution":"All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
 },
 {
   "id": 2,
-  "name": "Wrap Dress",
-  "price": 330.00,
-  "salePrice": 165.00,
-  "discount": 50,
-  "pictures": ["/assets/images/fashion/product/15.jpg", "/assets/images/fashion/product/7.jpg", "/assets/images/fashion/product/9.jpg", "/assets/images/fashion/product/13.jpg"],
-  "shortDetails": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem,",
-  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  "stock": 6,
-  "new": true,
+  "name": "Immortal",
+  "type":"skin",
+  "price": 300.00,
+  "salePrice": 300.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_two.jpg", "/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_three.jpg"],
+  "shortDetails": "Immortal is our most popular face cream.",
+  "description": "Cellular regeneration is the key to a youthful skin, and essential oils provide a way of doing this which is far more pleasant and safe than methods involving synthetic chemicals.Immortal is not only an anti-ageing cream but it also helps fight hyperpigmentation. It has ingredients that stimualte skin cells into reproducing at a quicker rate, thus reducing the time-lag between new skin growth and the elimination of old cells. Immortal has essentials that are considered to be anti-wrinkle, act as a skin tightening agent, helping in reducing dark spots and blemishes. It is high in Vitamin-A and Vitamin-E oil that prevents formation of free radicals that are scientifically proven to be one of the reasons of pre-mature ageing. Immortal is our most popular face cream. Lot of people have given a great feedback on this cream.",
+  "stock": 10,
+  "new": false,
   "sale": false,
-  "category": "women",
-  "ingredients": ["gray", "orange"],
-  "size": ["M", "L", "XL"],
-  "tags": ["pimple", "acne"],
+  "category": allProducts.faceCare,
+  "ingredients": ["Frankincense", "Geranium", "Avocado", "Moringa", "Argan", "Jojoba", "Grapeseed", "Tea Tree", "Rosemary", "Hemp", "Cucumber seed",  "Coconut", "beeswax", "Sweet Almond", "Vitamin-E", "Mango Butter", "African Shea butter", "Apricot oil"],
+  "size": ["60ml", "120ml"],
+  "tags": ["anti-ageing"],
   "rating": 5,
-  "variants": [
-  {
-    "color": "gray",
-    "images": "/assets/images/fashion/product/15.jpg"
-  },
-  {
-    "color": "orange",
-    "images": "/assets/images/fashion/product/7.jpg"
-  }],
-  "goodFor":["dry skin"]
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.moisturizingCreams]
 },
 {
   "id": 3,
-  "name": "Danim Jeans",
-  "price": 500.00,
-  "salePrice": 250.00,
-  "discount": 50,
-  "pictures": ["/assets/images/fashion/product/32.jpg", "/assets/images/fashion/product/2.jpg", "/assets/images/fashion/product/25.jpg", "/assets/images/fashion/product/26.jpg"],
-  "shortDetails": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem,",
-  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  "stock": 12,
+  "name": "Pacific",
+  "type":allProducts.skin,
+  "price": 300.00,
+  "salePrice": 300.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/pacific_small.jpg", "/assets/images/fashion/product/2.jpg", "/assets/images/fashion/product/25.jpg", "/assets/images/fashion/product/26.jpg"],
+  "shortDetails": "A cream for sensitive skin",
+  "description": "Pacific has speciality of soothing sensitive skin. It has ingredients like Rosemary, Tea tree and safflower oil that refresh oily skin without causing excess dryness. Tea tree and Rosemary are considered to be a natural antiseptic and has astringent properties. It is effective in lightening scars, soothing pimples apart from being anti-blemish, anti-microbial agents.",
+  "stock": 6,
   "new": false,
   "sale": false,
-  "category": "women",
-  "ingredients": ["blue", "white", "yellow"],
-  "size": ["M", "L", "XL"],
-  "tags": ["puma"],
-  "rating": 4,
-  "variants": [
-  {
-    "color": "blue",
-    "images": "/assets/images/fashion/product/32.jpg"
-  },
-  {
-    "color": "white",
-    "images": "/assets/images/fashion/product/2.jpg"
-  },
-  {
-    "color": "yellow",
-    "images": "/assets/images/fashion/product/25.jpg"
-  }]
+  "category": allProducts.faceCare,
+  "ingredients": [ROSEMARY, TEATREE, SAFFLOWER, LEMON, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, MORINGA, JOJOBA, GRAPESEED, BEESWAX, MANGO_BUTTER, SHEA_BUTTER, APRICOT],
+  "size": ["60ml", "120ml"],
+  "tags": ["sensitive skin", "acne"],
+  "rating": 3,
+  "variants": [],
+  "goodFor":[allProducts.sensitiveSkin],
+  "subCategory":[allProducts.moisturizingCreams]
 },
 {
   "id": 4,

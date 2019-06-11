@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.scss';
 import {Link} from 'react-router-dom'
+import ListRenderer from '../../../api/ListRenderer';
 
 class DetailsTopTabs extends Component {
 
@@ -9,7 +10,8 @@ class DetailsTopTabs extends Component {
         const {item} = this.props
         let videoTab;
         let howToUse;
-        if(item.videoLink) {
+        let precaution;
+        if(item.video) {
             videoTab = <Tab className="nav-item">
             <span className="nav-link" >
                 <i className="icofont icofont-contacts"></i>Video</span>
@@ -18,14 +20,26 @@ class DetailsTopTabs extends Component {
         } else {
             videoTab = ''
         }
+        
         if(item.howToUse) {
-            howToUse = <tr>
+            howToUse = 
+            <tr key="hello">
                 <th>How to use :</th>
-                <td>{item.howToUse}</td>
+                <td><ListRenderer items = {item.howToUse}></ListRenderer></td>
             </tr>
         
         } else {
             howToUse = ""
+        }
+
+        if(item.precaution) {
+            precaution = <tr>
+                <th>Precaution :</th>
+                <td>{item.precaution}</td>
+            </tr>
+        
+        } else {
+            precaution = ""
         }
         
         return (
@@ -74,6 +88,7 @@ class DetailsTopTabs extends Component {
                                         <td>{item.ingredients.join(", ")}</td>
                                     </tr>
                                     {howToUse}
+                                    {precaution}
                                     {/* <tr>
                                         <th>Neck :</th>
                                         <td>Round Neck</td>
@@ -98,7 +113,7 @@ class DetailsTopTabs extends Component {
                                 <div className="mt-4 text-center">
                                     <div className="embed-responsive embed-responsive-16by9">
                                         <iframe
-                                            src="https://www.youtube.com/embed/BUWzX78Ye_8"
+                                            src={item.video}
                                             allow="autoplay; encrypted-media"
                                             allowFullScreen>
                                         </iframe>

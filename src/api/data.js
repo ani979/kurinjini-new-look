@@ -1,10 +1,10 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL } from '../constants/Tags';
-import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY } from '../constants/Prices-Quantity';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER } from '../constants/Ingredients';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH } from '../constants/Tags';
+import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
-import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE } from '../constants/variants';
+import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER } from '../constants/variants';
 
 const allItems = [
 {
@@ -254,7 +254,7 @@ const allItems = [
   <br/>
   <b><i> it is available in more convenient to use glass droppers.</i></b></p>,
   "stock": 20,
-  "new": false,
+  "new": true,
   "sale": false,
   "category": allProducts.oilsAndSerums,
   "ingredients": [SAFFRON, ARGAN, MORINGA, TEATREE, GERANIUM, ROSEMARY, JOJOBA, GRAPESEED, CUCUMBER_SEED, HEMP, AVOCADO, FRANKINCENSE, LEMON_GRASS, COCONUT],
@@ -334,6 +334,404 @@ const allItems = [
   "goodFor":[allProducts.kidsSpecial],
   "subCategory":[allProducts.hairOilKids],
   "howToUse":"Direct application on your hair and scalp"
+},
+{
+  "id": 15,
+  "name": "Scrubber - Loofah based",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": [],
+  "shortDetails": "Hard scrubber for your heels",
+  "description": <p> Loofahs are made from the dried fruit of a tropical plant called Loofah. Loofah is strong and suitable for hard heels. 
+  Available with addition of some essential oils or fragrance that are proven to be not only beneficial on your skin but also your life. They have properties to reducing stress, anxiety, bringing calmness and soothing on skin too.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [UNREFINED_BEESWAX, COCOA_BUTTER, SWEET_ALMOND, JOJOBA, VITAMIN_E],
+  "size": [HUNDRED_GMS],
+  "tags": [HARD_HEELS],
+  "rating": 4,
+  "variants": VARIANTS_LOOFAH_SCRUBBER,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.scrubbers],
+  "howToUse":"After applying the scrubber, keep it on a dry surface"
+},
+{
+  "id": 16,
+  "name": "Scrubber - Caster Sugar based",
+  "type":allProducts.skin,
+  "price": 70.00,
+  "salePrice": 70.00,
+  "discount": 0,
+  "pictures": [],
+  "shortDetails": "A normal scrubber for your heels",
+  "description": <p> A soap that removes dry skin from your feet making it smooth and clean. Currently in two variants, caster sugar is fine-grained sugar that helps to maintain moisture in the skin and makes a gentle scrub, removing dead cells to brighten, smooth and moisturise the skin.
+  Available with addition of some essential oils or fragrance that are proven to be not only beneficial on your skin but also your life. They have properties to reducing stress, anxiety, bringing calmness and soothing on skin too.
+  </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [CASTER_SUGAR, SWEET_ALMOND, VITAMIN_E, FLAVOUR_OILS],
+  "size": [EIGHTY_GMS],
+  "tags": [HARD_HEELS],
+  "rating": 4,
+  "variants": VARIANTS_CASTER_SUGAR_SCRUBBER,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.scrubbers],
+  "howToUse":"After applying the scrubber, keep it on a dry surface"
+},
+{
+  "id": 17,
+  "name": "Mild scrubbers",
+  "type":allProducts.skin,
+  "price": 70.00,
+  "salePrice": 70.00,
+  "discount": 0,
+  "pictures": [],
+  "shortDetails": "Gentle scrubbing soap for your body",
+  "description": <p> These are gentle exfoliators that gently remove the dead skin cells and nourishes the layer below. These are very gentle, deeply penetrates into skin, flushes out toxins and removes dead skin cells making skin soft and supple.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [COCONUT, GLYCERINE, FLAVOUR_OILS],
+  "size": [HUNDRED_GMS],
+  "tags": [DEAD_SKIN_BODY],
+  "rating": 4,
+  "variants": VARIANTS_BODY_SCRUBBER,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.scrubbers],
+  "howToUse":"After applying the scrubber, keep it on a dry surface"
+},
+{
+  "id": 18,
+  "name": "Soap - Vanilla Chocolate",
+  "type":allProducts.skin,
+  "price": 80.00,
+  "salePrice": 80.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/vanilla_choc_3.jpg", "/assets/images/kurinjini-images/Soaps/vanilla_choc_4.jpg", "/assets/images/kurinjini-images/Soaps/vanilla_choc_2.jpg"],
+  "shortDetails": "For a chocolaty bath",
+  "description": <p>Remember when bath time used to be fun for the kids, when they enjoyed their time in bubbles, and getting clean was a joy? Somewhere along the way bath and/or shower time has become just another routine. So let’s bring back the giggles with a delicious smelling Chocolate and Vanilla. The kids will not only enjoy bathing but will have a feeling of freshness at the start of the day.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [COCONUT, SHEA_BUTTER, GLYCERINE, COCOA_POWDER, VANILLA_FRAGRANCE],
+  "size": [EIGHTY_GMS],
+  "tags": [FRESH_BATH],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin, allProducts.kidsSpecial],
+  "subCategory":[allProducts.normalSoaps]
+},
+{
+  "id": 19,
+  "name": "Soap - Shea Cashmere soap",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/shea_cashmere_1.jpg"],
+  "shortDetails": "For a fragrant bath",
+  "description": <p>A fragrance balanced perfectly between sweet, warm and comforting. A rich buttery opening note combined with warm coconut leaves a fascinating scent. A soft moisturising soaping bar made with Shea Butter, Coconut oil base, Cashmere & Cherry blossom fragrance.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [SHEA_BUTTER, COCONUT, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE],
+  "size": [HUNDRED_GMS],
+  "tags": [FRESH_BATH],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps]
+},
+{
+  "id": 20,
+  "name": "Soap - Mango Mandarin soap",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/shea_punch_mango_one.jpg", "/assets/images/kurinjini-images/Soaps/shea_punch_mango_two.jpg"],
+  "shortDetails": "For a fragrant bath",
+  "description": <p>A fragrance balanced with combination of Mango and Mandarin Orange. A coconut oil base soap that is soft moisturising with the presence of Shea Butter.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [SHEA_BUTTER, COCONUT, MANGA_MANDARIN_FRAGRANCE],
+  "size": [HUNDRED_GMS],
+  "tags": [FRESH_BATH],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps]
+},
+{
+  "id": 21,
+  "name": "Soap - Basil and Thyme soap",
+  "type":allProducts.skin,
+  "price": 80.00,
+  "salePrice": 80.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/basil_thyme_1.jpg"],
+  "shortDetails": "For a fragrant bath",
+  "description": <p>A slightly sweet and spicy aromatic soap that consists in it Basil Essential oil which is found to be stimulating, promoting mental clarity and alertness. Thyme provides a herbal culinary note along with acting as something that is anti-bacterial, anti-septic. Found to be useful to manage body odour naturally. Extremely effective for an energising bath during the daytime hours.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [THYME_LEAVES, BASIL_ESSENTIALS, COCONUT],
+  "size": [EIGHTY_GMS],
+  "tags": [FRESH_BATH],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps]
+},
+{
+  "id": 22,
+  "name": "Silk Route",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/FootCare/footScrub1.jpg"],
+  "shortDetails": "A solution for cracked heels",
+  "description": <p> One of the most common foot issues found in most of us is the issue of “cracked heels”. And, do we pay attention to it! 
+  I think its even one of the most neglected skin problem. 
+  But it does matter, these skin cracks apart from being painful, can allow bacteria and viruses to enter the body, leading to infection and illness. 
+  And, if you are diabetic, it is important to examine your feet frequently for signs of cracks or infection. 
+  Foot Healer has Rosemary essentials that saves from any fungal or bacterial infection. Cucumber seed oil being rich in Vitamin-B and Vitamin-C provides hydration to the skin and also is a healer to the dry and cracked skin.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.moisturizingCreams,
+  "ingredients": [UNREFINED_SHEA_BUTTER, COCOA_BUTTER, BEESWAX, ROSEMARY, HEMP, MORINGA,  GRAPESEED, VITAMIN_E, SWEET_ALMOND, WHEAT_GERM],
+  "size": [FORTY_GMS],
+  "tags": [HARD_HEELS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.footHealer],
+  "howToUse": "Apply on your heels. Put it in the night as absorption in the skin is better in the night.",
+  "precaution": "All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
+},
+{
+  "id": 23,
+  "name": "Rose Mist",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/rosewater/common.jpg", "/assets/images/kurinjini-images/rosewater/rose_mist.jpg"],
+  "shortDetails": "A fresh water for your face",
+  "description":  <p>
+    A few seconds of spritzing, to dress the air or your skin, could change your day. Rose water isn’t new. It has been around for almost 14 centuries, originated in Iran as part of their medical and spiritual practices.
+    <br/>
+    <br/>
+    Rose mist is a powerful beauty potion made by distilling rose-infused water. The product is a collected mist that hydrates the inside while leaving the surface toned and smooth. Being an anti-inflammatory agent and anti-oxidant, it can be used as a natural treatment for your skin related issues. 
+    Due to the astringent like properties it possesses, rose mist helps clean pores and tone the skin.
+    
+    <br/>
+    <ul>
+        <li> Can also use it with coconut oil to remove the make-up. </li>
+        <li> Spray it on your scalp so that it penetrates in transporting nutrients. They make an excellent complement to hair oils, shampoos and conditioners. </li>
+        <li> Spray it for a better, more relaxed sleep.</li>
+    </ul>
+
+  </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hydrosols,
+  "ingredients": [ROSE_PETALS],
+  "size": [FIFTY_ML],
+  "tags": [DRYNESS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.roseHydrosol],
+  "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
+  "video":"https://www.youtube.com/embed/NaNhsof3LtY"
+},
+{
+  "id": 24,
+  "name": "Rose Arka",
+  "type":allProducts.skin,
+  "price": 80.00,
+  "salePrice": 80.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/rosewater/rose_arka.jpg","/assets/images/kurinjini-images/rosewater/common.jpg"],
+  "shortDetails": "A fresh water for your face",
+  "description":  
+  <p>
+    Rose Arka or Rose water is a fragrant, rose-colored water having similar qualities as Rose Mist and it can be used to complement face packs or ubtan. 
+    <br/>
+    <br/>
+    Soak cotton pad in Rose arka and dab it all over the face for extra-hydration. The cotton pad can also be chilled in fridge and used on eyes for tired and puffy eyes.
+  </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hydrosols,
+  "ingredients": [ROSE_PETALS],
+  "size": [FIFTY_ML],
+  "tags": [DRYNESS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.roseWater],
+  "howToUse": "Soak cotton pad in Rose arka and dab it all over the face for extra-hydration. The cotton pad can also be chilled in fridge and used on eyes for tired and puffy eyes.",
+  "video":"https://www.youtube.com/embed/NaNhsof3LtY"
+},
+{
+  "id": 25,
+  "name": "Mint Cucumber Mist",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/rosewater/mintMist_1.jpg","/assets/images/kurinjini-images/rosewater/mintMist_2.jpg"],
+  "shortDetails": "A fresh water for your face",
+  "description":  
+    <p>
+      Toners or face mists generally are an essential part of our daily skin care.
+      <br/>
+      The spray freshens up the face by removing dirt and cleansing pores. Active herbs like Mint, & Cucumber protect the skin from germs and makes skin soft and fresh instantly. Fresh cucumber water contains Vitamin C and caffeic acid, both of which soothe skin irritations, reduce swelling, and prevent water retention. Cucumber has the same pH level as the skin. It restores the protective acid mantle which keeps bacteria and other contaminants from being absorbed. It has hydrating, nourishing, and astringent properties.
+      <br/>
+      <br/>
+    </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hydrosols,
+  "ingredients": [FRESH_MINT, FRESH_CUCUMBER],
+  "size": [FIFTY_ML],
+  "tags": [DRYNESS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.mintMist],
+  "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
+},
+{
+  "id": 26,
+  "name": "Mint Tea Tree Mist",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/rosewater/mintMist_2.jpg", "/assets/images/kurinjini-images/rosewater/mintMist_1.jpg"],
+  "shortDetails": "A fresh water for your face",
+  "description":  
+  <p>
+      Toners or face mists generally are an essential part of our daily skin care.
+    <br/>
+    Containing antibacterial and anti-inflammatory properties, Tea Tree oil works as a natural remedy for acne and other inflammatory skin conditions like eczema and psoriasis along with soothing skin irritations. Tea tree oil has been proven very beneficial for the health of your hair and scalp, it has the ability to soothe dry, flaking scalp and remove dandruff.                <br/>
+    <br/>
+    <b>This particular mist can be used for solving scalp itching problem. Spray it on the hair roots and massage to spread it on the scalp. It doesn’t need any wash after that.</b>
+   
+  </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hydrosols,
+  "ingredients": [FRESH_MINT, TEATREE],
+  "size": [FIFTY_ML],
+  "tags": [DRYNESS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.mintMist],
+  "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
+},
+{
+  "id": 27,
+  "name": "Roots - Hair mask for a normal scalp",
+  "type":allProducts.hair,
+  "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/hairCare/roots_1.jpg", "/assets/images/kurinjini-images/hairCare/roots_2.jpg"],
+  "shortDetails": "A natural hair cream",
+  "description":  
+  <p>
+        A natural hair cream made out of oils, butter and other hydrating ingredients. It provides treatment for primarily hair fall and split ends along with giving your hair a shiny and bouncy look. 
+        <br/>
+        <ul class = "item-desc">
+            <li>Ingredients like Brahmi, Bhringraj and Hibiscus strengthens the root follicles promotes hair growth, treats dry, itchy scalp and makes hair bouncy.</li>
+            <li>Argan oil has a number of benefits when used on hair. It can act as a moisturiser for the scalp to fight dandruff and dry scalp. </li>
+            <li>Along with it is added Rosemary that stimulates hair growth, prevents dandruff. </li>
+            <li>Avacodo butter and oil both not only provide lustrous hair but also prevent premature greying.</li>
+            <li>Moringa oil is a natural hair cleanser.  It rejuvenates your hair from deep within and the minerals and vitamins make your hair stronger and fight dandruff and split ends. It has great healing properties which makes it ideal for hair care.</li>
+        </ul>
+        
+        <p> Begin with using more frequently, weekly application and then move on to monthly application.</p>
+        <b>A regular use of hair mask is recommended for healthy hair and healthy root.</b>
+    </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hairCare,
+  "ingredients": [],
+  "size": [SIXTY, ONETWENTY],
+  "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.hairMaskNormal],
+  "subCategory":[allProducts.hairMaskNormal],
+  "howToUse": ["Wash and towel dry your hair", "Apply good amount of mask from hair roots to tips", "Keep it like that for an hour", "Do a shampoo wash after that"],
+  "video": "https://www.youtube.com/embed/wGjqT1T-Lk0"           
+},
+
+{
+  "id": 28,
+  "name": "Roots - Hair mask for oily scalp",
+  "type":allProducts.hair,
+  "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/hairCare/roots_2.jpg", "/assets/images/kurinjini-images/hairCare/roots_1.jpg"],
+  "shortDetails": "A natural hair cream",
+  "description":  
+  <p>
+                A hair cream specifically made for an oily scalp. Consists of Aloe-Vera and other hydrating ingredients. It provides treatment primarily for hair fall and split ends along with giving your hair a shiny and bouncy look. 
+                <br/>
+                <ul class = "item-desc">
+                    <li>Ingredients like Brahmi, Bhringraj and Hibiscus strengthens the root follicles promotes hair growth, treats dry, itchy scalp and makes hair bouncy.</li>
+                    <li>Argan oil has a number of benefits when used on hair. It can act as a moisturiser for the scalp to fight dandruff and dry scalp. </li>
+                    <li>Along with it is added Rosemary that stimulates hair growth, prevents dandruff. </li>
+                    <li>Aloe Vera give your hair the strength and sheen. Contains enzyme which stimulate hair growth. </li>
+                    <li>Moringa oil is a natural hair cleanser.  It rejuvenates your hair from deep within and the minerals and vitamins make your hair stronger and fight dandruff and split ends. It has great healing properties which makes it ideal for hair care.</li>
+                </ul>
+                
+                <p> Begin with using more frequently, weekly application and then move on to monthly application.</p>
+                <b>A regular use of hair mask is recommended for healthy hair and healthy root.</b>
+    </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hairCare,
+  "ingredients": [],
+  "size": [SIXTY, ONETWENTY],
+  "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.hairMaskNormal],
+  "subCategory":[allProducts.hairMaskNormal],
+  "howToUse": ["Wash and towel dry your hair", "Apply good amount of mask from hair roots to tips", "Keep it like that for an hour", "Do a shampoo wash after that"],
+  "video": "https://www.youtube.com/embed/wGjqT1T-Lk0"           
 }
 ]
+
+
 export default allItems

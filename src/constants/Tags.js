@@ -15,3 +15,6 @@ export const HAIR_FALL = "Frequent hair fall"
 
 export const SUBCATEGORY_MOISTURIZING = "moisturizing"
 export const SUBCATEGORY_KIDS = "kids"
+export const HARD_HEELS = "Hard and cracked heels"
+export const DEAD_SKIN_BODY = "Dead skin on your body"
+export const FRESH_BATH = "Not having a fragrant bath"

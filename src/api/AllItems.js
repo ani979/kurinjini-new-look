@@ -478,7 +478,6 @@ const allItems = [
         precaution:<HeadingAndText header = {allProducts.precaution} text = "All our moisturizing creams should be kept away from sunlight as it may lose its consistency"></HeadingAndText>
     },
     {
-        
         title:<h3>Rose Mist</h3>,
         type: <h6><b>{allProducts.roseHydrosol}</b></h6>,
         desc : 

@@ -131,7 +131,7 @@ class FilterSkin extends Component {
                         )}
                     </SlideToggle> */}
                     {/*price filter start here */}
-                    <SlideToggle>
+                    {/* <SlideToggle>
                         {({onToggle, setCollapsibleElement}) => (
                             <div className="collection-collapse-block open">
                                 <h3 className="collapse-block-title" onClick={onToggle}>price</h3>
@@ -148,7 +148,7 @@ class FilterSkin extends Component {
                                 </div>
                             </div>
                         )}
-                    </SlideToggle>
+                    </SlideToggle> */}
                 </div>
         )
     }

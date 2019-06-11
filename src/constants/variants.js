@@ -127,3 +127,110 @@ export const VARIANTS_RENAISSANCE = [{
 
 ]
 
+export const VARIANTS_LOOFAH_SCRUBBER = [{
+  "flavour": "Ylang Ylang",
+  "images": "/assets/images/kurinjini-images/Soaps/loofah_one.jpg"
+},{
+  "flavour": "Basil",
+  "images": "/assets/images/kurinjini-images/Soaps/loofah_two.jpg"
+},{
+  "flavour": "Lavender",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Orange",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Mango Mandarin",
+  "images": "/assets/images/kurinjini-images/Soaps/loofah_three.jpg"
+},
+{
+  "flavour": "Rosewood",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Chamomile",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Cooling Mint",
+  "images": UNAVAILABLE_IMAGE
+}
+
+]
+
+export const VARIANTS_CASTER_SUGAR_SCRUBBER = [{
+  "flavour": "Ylang Ylang",
+  "images": "/assets/images/kurinjini-images/Soaps/castersugar_scrubber_one.jpg"
+},{
+  "flavour": "Basil",
+  "images": "/assets/images/kurinjini-images/Soaps/castersugar_scrubber_two.jpg"
+},{
+  "flavour": "Lavender",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Orange",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Mango Mandarin",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Rosewood",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Chamomile",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Cooling Mint",
+  "images": UNAVAILABLE_IMAGE
+}]
+
+export const VARIANTS_BODY_SCRUBBER = [
+  {
+    "flavour": "Oatmeal",
+    "images": "/assets/images/kurinjini-images/Soaps/mildScrubber_one.jpg"
+  },
+  {
+    "flavour": "Crushed almonds and Granulated Besan",
+    "images": UNAVAILABLE_IMAGE
+  },
+  {
+  "flavour": "Oatmeal",
+  "images": "/assets/images/kurinjini-images/Soaps/mildScrubber_one.jpg"
+},{
+  "flavour": "Chia Seeds",
+  "images": "/assets/images/kurinjini-images/Soaps/ChiaSeeds.jpg"
+},{
+  "flavour": "Flax seeds",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Poppy seeds",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Walnut Shells",
+  "images": "/assets/images/kurinjini-images/Soaps/Walnut.jpg"
+},
+{
+  "flavour": "Rosewood",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Chamomile",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Cooling Mint",
+  "images": UNAVAILABLE_IMAGE
+}
+
+
+]
+

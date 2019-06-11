@@ -12,7 +12,8 @@ class DetailsWithPrice extends Component {
             open:false,
             quantity:1,
             stock: 'InStock',
-            nav3: null
+            nav3: null,
+            size:''
         }
     }
 
@@ -26,7 +27,9 @@ class DetailsWithPrice extends Component {
 
     componentDidMount() {
         this.setState({
-            nav3: this.slider3
+            nav3: this.slider3,
+            price:this.props.item.price,
+            size:this.props.item.size[0]
         });
     }
 
@@ -34,6 +37,18 @@ class DetailsWithPrice extends Component {
         if(this.state.quantity > 1) {
             this.setState({stock: 'InStock'})
             this.setState({quantity: this.state.quantity - 1})
+        }
+    }
+
+    changePriceBasedOnQuantity = (size) => {
+        console.log("this.props.item.pricePerSize ", this.props.item.pricePerSize)
+        //console.log("size is ", size);
+        
+        
+        if(this.props.item.pricePerSize) {
+            let selItem = this.props.item.pricePerSize.filter((value, index) => value.size === size);
+            console.log("sel Item ", selItem)
+            this.setState({price: selItem[0].price, size:size})
         }
     }
 
@@ -79,7 +94,7 @@ class DetailsWithPrice extends Component {
                     {/* <h4>
                         <del>{symbol}{item.price}</del>
                         <span>{item.discount}% off</span></h4> */}
-                    <h3>{symbol}{(item.price - (item.price*item.discount/100))} </h3>
+                    <h3>{symbol}{(this.state.price - (this.state.price*item.discount/100))} </h3>
                     {/* <ul > */}
                         {/* <Slider {...colorsnav} asNavFor={this.props.navOne} ref={slider => (this.slider1 = slider)} className="color-variant"> */}
                             {/* {item.variants.map((vari, i) => {
@@ -124,7 +139,7 @@ class DetailsWithPrice extends Component {
                         <div className="product-page-filter row">
                                 <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose quantity:</h4>
                                 <select className="col-md-6 col-sm-6 col-xl-6"
-                                // onChange={(e) => this.props.filterSort(e.target.value)}
+                                    onChange={(e) => this.changePriceBasedOnQuantity(e.target.value)}
                                 >
                                     {item.size.map((size, i) => {
                                         return <option key={i} value={size}>{size}</option>
@@ -151,8 +166,8 @@ class DetailsWithPrice extends Component {
                         </div>
                     </div>
                     <div className="product-buttons" >
-                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>add to cart</a>
-                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >buy now</Link>
+                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size)}>add to cart</a>
+                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price)} >buy now</Link>
                     </div>
                     <div className="border-product">
                         <h6 className="product-title">product details</h6>

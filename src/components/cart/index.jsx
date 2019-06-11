@@ -13,9 +13,21 @@ class cartComponent extends Component {
         super (props)
     }
 
-    render (){
+    getPricePerSize(item, size) {
+        //("item ", item)
+        //console.log("size ", size)
+        if(item.pricePerSize) {
+            let selItem = item.pricePerSize.filter((value, index) => value.size === size);
+            //console.log("sel Item ", selItem)
+            return selItem[0].price;
+        }
+        return item.price;
+    }
 
+    render (){
+        
         const {cartItems, symbol, total} = this.props;
+        
         return (
             <div>
                 <Breadcrumb title={'Cart Page'}/>
@@ -31,18 +43,22 @@ class cartComponent extends Component {
                                         <th scope="col">image</th>
                                         <th scope="col">product name</th>
                                         <th scope="col">price</th>
+                                        <th scope="col">size</th>
                                         <th scope="col">quantity</th>
                                         <th scope="col">action</th>
                                         <th scope="col">total</th>
                                     </tr>
                                     </thead>
                                     {cartItems.map((item, index) => {
+                                        //console.log("item ", item);
+                                        let priceToDisplay = this.getPricePerSize(item, item.choosenSize);
+                                        let imageURL = item.variants.length > 0 ? item.variants[0].images : item.pictures[0]
                                         return (
                                         <tbody key={index}>
                                             <tr>
                                                 <td>
                                                     <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>
-                                                        <img src={`${item.variants[0].images}`} alt="" />
+                                                        <img src={imageURL} alt="" />
                                                     </Link>
                                                 </td>
                                                 <td><Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>{item.name}</Link>
@@ -56,7 +72,7 @@ class cartComponent extends Component {
                                                             </div>
                                                         </div>
                                                         <div className="col-xs-3">
-                                                            <h2 className="td-color">{symbol}{(item.price*item.discount/100)}</h2>
+                                                            <h2 className="td-color">{symbol}{(item.sum)}</h2>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color">
@@ -67,19 +83,20 @@ class cartComponent extends Component {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><h2>{symbol}{(item.price*item.discount/100)}</h2></td>
+                                                <td><h2>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h2></td>
+                                                <td><h2>{(item.choosenSize)}</h2></td>
                                                 <td>
                                                     <div className="qty-box">
                                                         <div className="input-group">
                                                             <span className="input-group-prepend">
-                                                                <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id)} data-type="minus" data-field="">
+                                                                <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id, item.choosenSize)} data-type="minus" data-field="">
                                                                  <i className="fa fa-angle-left"></i>
                                                                 </button>
                                                             </span>
                                                             <input type="text" name="quantity" value={item.qty} readOnly={true} className="form-control input-number" />
 
                                                             <span className="input-group-prepend">
-                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
+                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
                                                             <i className="fa fa-angle-right"></i>
                                                             </button>
                                                            </span>

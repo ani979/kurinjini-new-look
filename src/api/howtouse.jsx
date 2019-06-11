@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ListRenderer(props) {
+function HowToUseRenderer(props) {
     //console.log("props ", Array.isArray(props));
     if(Array.isArray(props.items)) { 
         return (<ul>
@@ -13,4 +13,4 @@ function ListRenderer(props) {
     }
 }
 
-export default ListRenderer
+export default HowToUseRenderer

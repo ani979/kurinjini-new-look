@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.scss';
-import {Link} from 'react-router-dom'
-import ListRenderer from '../../../api/ListRenderer';
+import HowToUseRenderer from '../../../api/howtouse';
 
 class DetailsTopTabs extends Component {
 
@@ -25,7 +24,7 @@ class DetailsTopTabs extends Component {
             howToUse = 
             <tr key="hello">
                 <th>How to use :</th>
-                <td><ListRenderer items = {item.howToUse}></ListRenderer></td>
+                <td><HowToUseRenderer items = {item.howToUse}></HowToUseRenderer></td>
             </tr>
         
         } else {

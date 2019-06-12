@@ -52,6 +52,10 @@ class ProductItem extends Component {
         for(var i = 0; i < product.rating; i++) {
             RatingStars.push(<i className="fa fa-star" key={i}></i>)
         }
+        let delTag = '';
+        if(product.discount !== 0 ) {
+            delTag = <del><span className="money">{symbol}{product.price}</span></del>;
+        }
         return (
                 <div className="product-box">
                     <div className="img-wrapper">
@@ -68,7 +72,7 @@ class ProductItem extends Component {
                                 className="img-fluid"
                                 alt="" /></Link>
                         </div>
-                        <div className="cart-info cart-wrap">
+                        {/* <div className="cart-info cart-wrap">
                             <button title="Add to cart" onClick={onAddToCartClicked}>
                                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                             </button>
@@ -81,7 +85,7 @@ class ProductItem extends Component {
                                onClick={this.onOpenModal}><i className="fa fa-search" aria-hidden="true"></i></a>
                             <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
                                 <i className="fa fa-refresh" aria-hidden="true"></i></Link>
-                        </div>
+                        </div> */}
                         <ul className="product-thumb-list">
                             {product.variants.map((vari, i) =>
                                 <li className={`grid_thumb_img ${(vari.images === this.state.image)?'active':''}`} key={i}>
@@ -101,8 +105,8 @@ class ProductItem extends Component {
                             <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>
-                            <h4>{symbol}{(product.price*product.discount/100)}
-                                <del><span className="money">{symbol}{product.price}</span></del>
+                            <h4>{symbol}{(product.price - (product.price*product.discount/100))}
+                                {delTag}
                             </h4>
                             <ul className="color-variant">
                                 {product.variants.map((vari, i) => {

@@ -100,6 +100,11 @@ export const filterGoodFor = (goodFor) => ({
     type: types.FILTER_GOODFOR,
     goodFor
 });
+// Filters
+export const filterType = (type) => ({
+    type: types.FILTER_TYPE,
+    type
+});
 export const filterCategory = (category) => ({
     type: types.FILTER_CATEGORY,
     category

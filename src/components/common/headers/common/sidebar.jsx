@@ -33,90 +33,49 @@ class SideBar extends Component {
                     <ul id="sub-menu" className="sm pixelstrap sm-vertical ">
                         <li><a href="#">Face Care</a>
                             <ul>
-                                <li><a href="/oilsAndSerums">Oils and Serums</a></li>
-                                <li><a href="/moisturizingCreams">Moisturizing Creams</a></li>
-                                <li><a href="/kidscreams">For Kids</a></li>
-                                <li><a href="/sensitiveSkin">Creams for sensitive skin</a></li>
-                                <li><a href="/antiaging">Anti-ageing</a></li>
+                                <li><a href="/oils-serums">Oils and Serums</a></li>
+                                <li><a href="/moisturizing-creams">Moisturizing Creams</a></li>
+                                <li><a href="/sensitive-skin">Sensitive skin</a></li>
+                                <li><a href="/anti-ageing">Anti-ageing</a></li>
                                
                             </ul>
                         </li>
                         <li><a href="#">Kids Special</a>
                             <ul>
-                                <li><a href="#">shopper bags</a></li>
-                                <li><a href="#">laptop bags</a></li>
-                                <li><a href="#">clutches</a></li>
-                                <li><a href="#">purses</a>
-                                    <ul>
-                                        <li><a href="#">purses</a></li>
-                                        <li><a href="#">wallets</a></li>
-                                        <li><a href="#">leathers</a></li>
-                                        <li><a href="#">satchels</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/kids">Moisturizing Creams</a></li>
+                                <li><a href="/kids-lips">Lip Care</a></li>
+                                <li><a href="/kids-hair">hair care</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Lip care</a>
                             <ul>
-                                <li><a href="#">sport shoes</a></li>
-                                <li><a href="#">formal shoes</a></li>
-                                <li><a href="#">casual shoes</a></li>
+                                <li><a href="/lip-balms">Lip Balms</a></li>
+                                <li><a href="/lip-scrubs">Lip Scrubs</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Foot care</a>
+                            <ul>
+                                <li><a href="/foot-scrubbers">Foot scrubbers</a></li>
+                                <li><a href="/foot-healers">Foot healers</a></li>
+                            </ul>
                         </li>
                         <li><a href="#">Soaping Bars</a>
                             <ul>
-                                <li><a href="#">fashion jewellery</a></li>
-                                <li><a href="#">caps and hats</a></li>
-                                <li><a href="#">precious jewellery</a></li>
-                                <li><a href="#">more..</a>
-                                    <ul>
-                                        <li><a href="#">necklaces</a></li>
-                                        <li><a href="#">earrings</a></li>
-                                        <li><a href="#">wrist wear</a></li>
-                                        <li><a href="#">accessories</a>
-                                            <ul>
-                                                <li><a href="#">ties</a></li>
-                                                <li><a href="#">cufflinks</a></li>
-                                                <li><a href="#">pockets squares</a></li>
-                                                <li><a href="#">helmets</a></li>
-                                                <li><a href="#">scarves</a></li>
-                                                <li><a href="#">more...</a>
-                                                    <ul>
-                                                        <li><a href="#">accessory gift sets</a></li>
-                                                        <li><a href="#">travel accessories</a></li>
-                                                        <li><a href="#">phone cases</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">belts & more</a></li>
-                                        <li><a href="#">wearable</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/body-scrubbers">Body Scrubbers</a></li>
+                                <li><a href="/nourishing-bars">Nourishing Bars</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Hydrosols and Water</a>
+                        <li><a href="/hydrosols">Hydrosols and Water</a>
                         </li>
 
                         <li><a href="#">Hair care</a>
                             <ul>
-                                <li><a href="#">makeup</a></li>
-                                <li><a href="#">skincare</a></li>
-                                <li><a href="#">premium beaty</a></li>
-                                <li><a href="#">more</a>
-                                    <ul>
-                                        <li><a href="#">fragrances</a></li>
-                                        <li><a href="#">luxury beauty</a></li>
-                                        <li><a href="#">hair care</a></li>
-                                        <li><a href="#">tools & brushes</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/hair-oils">Hair Oils</a></li>
+                                <li><a href="/hair-masks">Hair Masks</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Just Oils</a>
-                        </li>
+                        {/* <li><a href="#">Just Oils</a>
+                        </li> */}
                         {/* <li><a href="#">kitchen</a>
                         </li> */}
                     </ul>

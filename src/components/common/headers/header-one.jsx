@@ -88,11 +88,7 @@ class HeaderOne extends Component {
 										{/*SideBar Navigation Component*/}
 										<SideBar/>
 			                        </div>
-			                        <div className="brand-logo">
-                                        <Link to={`${process.env.PUBLIC_URL}/`}>
-											<img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid" alt=""/>
-										</Link>
-			                        </div>
+			                        
 			                    </div>
 			                    <div className="menu-right pull-right">
 									{/*Top Navigation Bar Component*/}
@@ -101,7 +97,7 @@ class HeaderOne extends Component {
 			                        <div>
 			                            <div className="icon-nav">
 			                                <ul>
-			                                    <li className="onhover-div mobile-search">
+			                                    {/* <li className="onhover-div mobile-search">
 			                                        <div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
 			                                            <i className="fa fa-search" onClick={this.openSearch}></i></div>
 			                                        <div id="search-overlay" className="search-overlay">
@@ -123,8 +119,8 @@ class HeaderOne extends Component {
 			                                                </div>
 			                                            </div>
 			                                        </div>
-			                                    </li>
-			                                    <li className="onhover-div mobile-setting">
+			                                    </li> */}
+			                                    {/* <li className="onhover-div mobile-setting">
 			                                        <div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/setting.png`} className="img-fluid" alt="" />
 			                                            <i className="fa fa-cog"></i></div>
 			                                        <div className="show-div setting">
@@ -141,9 +137,9 @@ class HeaderOne extends Component {
 			                                                <li><a href={null} onClick={() => this.props.changeCurrency('$')}>doller</a> </li>
 			                                            </ul>
 			                                        </div>
-			                                    </li>
+			                                    </li> */}
 												{/*Header Cart Component */}
-												<CartContainer/>
+												{/* <CartContainer/> */}
 			                                </ul>
 			                            </div>
 			                        </div>

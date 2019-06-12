@@ -141,7 +141,7 @@ class FooterOne extends Component {
         let tap_to_top = {display: 'none'}
         return (
             <footer className="footer-light">
-                <div className="light-layout">
+                {/* <div className="light-layout">
                     <div className="container">
                         <section className="small-section border-section border-top-0">
                             <div className="row">
@@ -165,7 +165,7 @@ class FooterOne extends Component {
                             </div>
                         </section>
                     </div>
-                </div>
+                </div> */}
                 <section className="section-b-space light-layout">
                     <div className="container">
                         <div className="row footer-theme partition-f">
@@ -175,7 +175,7 @@ class FooterOne extends Component {
                                 </div>
                                 <div className="footer-contant">
                                     <div className="footer-logo">
-                                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/kurinjini_smallsize.png`} alt="" /></Link>
+                                        <Link to={`${process.env.PUBLIC_URL}/`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/kurinjini_smallsize.png`} alt="" /></Link>
                                     </div>
                                     <p>Lend your skin and relax</p>
                                     <div className="footer-social">

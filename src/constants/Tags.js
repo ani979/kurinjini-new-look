@@ -8,6 +8,7 @@ export const DULLSKIN = "Dull skin"
 export const DARK_CIRCLES = "Dark Circles"
 export const BLEMISHES = "Blemishes"
 export const PIGMENTATION = "Pigmentation"
+export const SENSITIVE_SKIN = "Sensitive Skin"
 
 export const DANDRUFF = "Dandruff"
 export const SPLIT_ENDS = "Split Ends"

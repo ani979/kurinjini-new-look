@@ -1,10 +1,10 @@
 import allProducts from '../constants/ProductConstants'
 import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH } from '../constants/Tags';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
-import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER } from '../constants/variants';
+import { FLAVOUR_MOISTURIZING_CREAMS, FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING } from '../constants/variants';
 
 const allItems = [
 {
@@ -22,7 +22,7 @@ const allItems = [
   "sale": false,
   "quantity":"60 ml",
   "category": allProducts.faceCare,
-  "subCategory":[SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS],
+  "subCategory":[SUBCATEGORY_MOISTURIZING],
   "ingredients": [JOJOBA, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, TEATREE, ROSEMARY,COCONUT,VIRIN_OLIVE, BEESWAX],
   "size": [SIXTY],
   "tags": [DRYNESS],
@@ -52,7 +52,7 @@ const allItems = [
   "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.moisturizingCreams]
+  "subCategory":[allProducts.moisturizingCreams, ANTI_AGEING]
 },
 {
   "id": 3,
@@ -74,7 +74,7 @@ const allItems = [
   "rating": 3,
   "variants": [],
   "goodFor":[allProducts.kidsSpecial],
-  "subCategory":[allProducts.moisturizingCreams]
+  "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS]
 },
 {
   "id": 4,
@@ -96,7 +96,7 @@ const allItems = [
   "rating": 3,
   "variants": [],
   "goodFor":[allProducts.acneproneSkin, allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.moisturizingCreams]
+  "subCategory":[allProducts.moisturizingCreams, SENSITIVE_SKIN]
 },
 {
   "id": 5,
@@ -140,7 +140,7 @@ const allItems = [
   "rating": 4,
   "variants": FLAVOUR_LIP_BALMS_KIDS,
   "goodFor":[allProducts.kidsSpecial, allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.lipbalm]
+  "subCategory":[allProducts.lipbalm, SUBCATEGORY_KIDS]
 },
 {
   "id": 7,
@@ -208,7 +208,7 @@ const allItems = [
   "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.faceSerum],
+  "subCategory":[allProducts.faceSerum, allProducts.oilsAndSerums],
   "howToUse":"It's a night application cream. Take a small quantity on your finger tip and apply gently after a face wash on your face."
 },
 {
@@ -231,7 +231,7 @@ const allItems = [
   "rating": 4,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.darkCirclesRemoval],
+  "subCategory":[allProducts.darkCirclesRemoval, allProducts.oilsAndSerums],
   "howToUse":"It's a night application cream. Take a small quantity on your finger tip and massage gently under your eyes so that it improves blood circulation."
 },
 {
@@ -263,7 +263,7 @@ const allItems = [
   "rating": 5,
   "variants": VARIANTS_RENAISSANCE,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.nightOil],
+  "subCategory":[allProducts.nightOil, allProducts.oilsAndSerums],
   "howToUse":"Apply after a face wash during night before going to bed."
 },
 {
@@ -285,7 +285,7 @@ const allItems = [
   "tags": [DANDRUFF, SPLIT_ENDS, HAIR_FALL],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.allKindsOfHair],
+  "goodFor":[allProducts.allKindsOfHair, allProducts.oilsAndSerums],
   "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
   "howToUse":"Direct application on your hair and scalp"
 },
@@ -308,7 +308,7 @@ const allItems = [
   "tags": [DANDRUFF],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.allKindsOfHair],
+  "goodFor":[allProducts.allKindsOfHair, allProducts.oilsAndSerums],
   "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
   "howToUse":"Direct application on your hair and scalp"
 },
@@ -331,8 +331,8 @@ const allItems = [
   "tags": [DANDRUFF, HAIR_FALL],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.kidsSpecial],
-  "subCategory":[allProducts.hairOilKids],
+  "goodFor":[allProducts.kidsSpecial, allProducts.oilsAndSerums],
+  "subCategory":[allProducts.hairOilKids, SUBCATEGORY_KIDS],
   "howToUse":"Direct application on your hair and scalp"
 },
 {
@@ -356,7 +356,7 @@ const allItems = [
   "rating": 4,
   "variants": VARIANTS_LOOFAH_SCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.scrubbers],
+  "subCategory":[allProducts.footScrubbers],
   "howToUse":"After applying the scrubber, keep it on a dry surface"
 },
 {
@@ -381,7 +381,7 @@ const allItems = [
   "rating": 4,
   "variants": VARIANTS_CASTER_SUGAR_SCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.scrubbers],
+  "subCategory":[allProducts.footScrubbers],
   "howToUse":"After applying the scrubber, keep it on a dry surface"
 },
 {
@@ -427,7 +427,7 @@ const allItems = [
   "rating": 4,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin, allProducts.kidsSpecial],
-  "subCategory":[allProducts.normalSoaps]
+  "subCategory":[allProducts.normalSoaps, SUBCATEGORY_KIDS]
 },
 {
   "id": 19,

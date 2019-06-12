@@ -51,7 +51,7 @@ class NavBar extends Component {
                             </div>
                         </li>
                         <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`}>{translate('home')}</Link></li>
-                        <li className="mega">
+                        {/* <li className="mega">
                             <a href="#">{translate('features')}
                                 <div className="lable-nav">{translate('new')}</div>
                             </a>
@@ -99,14 +99,18 @@ class NavBar extends Component {
                                     </div>
                                 </li>
                             </ul>
-                        </li>
-                        <li className="mega"><a href="#">{translate('products')}</a>
+                        </li> */}
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} >{translate('about_us')}</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} >Recycling</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} >{translate('FAQ')}</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/giftingIdeas`} >Gift someone!</Link></li>
+                        {/* <li className="mega"><a href="#">{translate('products')}</a>
                             <ul className="mega-menu feature-menu product-menu">
                                 <li>
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-xl-3">
-                                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/1`}>
+                                                <Link to={`${process.env.PUBLIC_URL}/product/1`}>
                                                     <img src={`${process.env.PUBLIC_URL}/assets/images/feature/product-page(left-sidebar).jpg`} alt="" />
                                                     <h6>{translate('left_sidebar')}</h6>
                                                 </Link>
@@ -157,8 +161,8 @@ class NavBar extends Component {
                                     </div>
                                 </li>
                             </ul>
-                        </li>
-                        <li><a href="#">{translate('pages')}</a>
+                        </li> */}
+                        {/* <li><a href="#">{translate('pages')}</a>
                             <ul>
                                 <li><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} >{translate('about_us')}</Link></li>
                                 <li><Link to={`${process.env.PUBLIC_URL}/pages/404`} >404</Link></li>
@@ -172,8 +176,9 @@ class NavBar extends Component {
                                 <li><Link to={`${process.env.PUBLIC_URL}/pages/dashboard`} >{translate('dashboard')}</Link></li>
                                 <li><Link to={`${process.env.PUBLIC_URL}/pages/faq`} >{translate('FAQ')}</Link></li>
                             </ul>
-                        </li>
-                        <li className="mega"><a href="#">{translate('shop')}</a>
+                        </li> */}
+                        {/* <li className="mega"><Link to={`${process.env.PUBLIC_URL}/all/collection`} >Products</Link></li> */}
+                        {/* <li className="mega"><a href="#">{translate('shop')}</a>
                             <ul className="mega-menu full-mega-menu">
                                 <li>
                                     <div className="container">
@@ -265,7 +270,7 @@ class NavBar extends Component {
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </div>

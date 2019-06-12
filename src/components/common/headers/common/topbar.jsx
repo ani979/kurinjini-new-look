@@ -10,6 +10,13 @@ class TopBar extends Component {
             <div className="top-header">
                 <div className="container">
                     <div className="row">
+                        <div className = "col-lg-6 text-left">
+                            <div className="brand-logo">
+                                    <Link to={`${process.env.PUBLIC_URL}/`}>
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>
+                                    </Link>
+                            </div>
+                        </div>
                         <div className="col-lg-6">
                             <div className="header-contact">
                                 <ul>

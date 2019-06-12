@@ -69,7 +69,7 @@ class Compare extends Component {
                                                     <span aria-hidden="true">×</span>
                                                 </button>
                                                 <div className="img-secton">
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>
+                                                    <Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>
                                                     <img src={`${item.variants[0].images}`} className="img-fluid" alt="" />
                                                     <h5>{item.name}</h5></Link>
                                                     <h5>{symbol}{(item.price*item.discount/100)}

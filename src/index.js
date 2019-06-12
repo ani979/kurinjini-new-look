@@ -56,6 +56,8 @@ import RightSide from './components/blogs/right-sidebar'
 import Details from './components/blogs/details'
 import BlogPage from './components/blogs/blog-page'
 import allProducts from './constants/ProductConstants'
+import { SUBCATEGORY_KIDS, SENSITIVE_SKIN } from './constants/Tags';
+import { ANTI_AGEING } from './constants/variants';
 
 var lang = localStorage.getItem('locale-lang');
 
@@ -84,7 +86,7 @@ class Root extends React.Component {
 								{/* <Route path={`${process.env.PUBLIC_URL}/right-sidebar/collection`} component={CollectionRightSidebar}/> */}
 
 								{/*Routes For Single Product*/}
-								<Route path={`${process.env.PUBLIC_URL}/left-sidebar/product/:id`} component={LeftSideBar}/>
+								<Route path={`${process.env.PUBLIC_URL}/product/:id`} component={LeftSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/right-sidebar/product/:id`} component={RightSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/no-sidebar/product/:id`} component={NoSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/col-left/product/:id`} component={ColumnLeft}/>
@@ -94,8 +96,31 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/left-image/product/:id`} component={LeftImage}/>
 								<Route path={`${process.env.PUBLIC_URL}/right-image/product/:id`} component={RightImage}/>
 								<Route path={`${process.env.PUBLIC_URL}/vertical/product/:id`} component={Vertical}/>
-								<Route path={`${process.env.PUBLIC_URL}/oilsAndSerums`} render={(props) => <CollectionAll {...props} subSelection={allProducts.oilsAndSerums} />}/>
+
+								<Route path={`${process.env.PUBLIC_URL}/oils-serums`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.oilsAndSerums} subSelection={allProducts.oilsAndSerums} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/moisturizing-creams`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.moisturizingCreams} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/kids`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={SUBCATEGORY_KIDS} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/sensitive-skin`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={SENSITIVE_SKIN} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/anti-ageing`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={ANTI_AGEING} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/lip-balms`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} subSelection={allProducts.lipbalm} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/lip-scrubs`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} subSelection={allProducts.lipScrubs} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/kids-lips`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} subSelection={SUBCATEGORY_KIDS} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/kids-hair`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} subSelection={SUBCATEGORY_KIDS} />}/>
+
+								<Route path={`${process.env.PUBLIC_URL}/foot-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.footScrubbers} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/foot-healers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.moisturizingCreams} subSelection={allProducts.footHealer} />}/>
+
+								<Route path={`${process.env.PUBLIC_URL}/body-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.scrubbers} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/nourishing-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.normalSoaps} />}/>
 								
+								<Route path={`${process.env.PUBLIC_URL}/body-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.scrubbers} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/nourishing-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.normalSoaps} />}/>
+
+								<Route path={`${process.env.PUBLIC_URL}/hydrosols`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.hydrosols}/>}/>
+
+								<Route path={`${process.env.PUBLIC_URL}/hair-oils`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.oilsAndSerums}/>}/>
+								<Route path={`${process.env.PUBLIC_URL}/hair-masks`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.hairCare} />}/>
+
 
 								{/*Routes For custom Features*/}
 								<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart}/>

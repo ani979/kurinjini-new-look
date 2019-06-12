@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import FilterBar from "./common/filter-bar";
 import ProductListing from "./common/product-listing";
 import StickyBox from "react-sticky-box";
-import {filterCategory, filterSubCategory} from '../../actions'
+import {filterCategory, filterSubCategory, filterType} from '../../actions'
 
 class CollectionAll extends Component {
     openFilter = () => {
@@ -19,10 +19,11 @@ class CollectionAll extends Component {
     }
 
     componentWillMount() {
-        this.props.filters.category = [this.props.subSelection];
+        this.props.filters.category = this.props.mainSelection ?  this.props.mainSelection : [];
         this.props.filters.goodFor = [];
         this.props.filters.tags = [];
-        this.props.filters.subCategory = [];
+        this.props.filters.subCategory = this.props.subSelection ?  [this.props.subSelection] : [];
+        this.props.filters.type = this.props.typeSelection;
     }
     
     render () {
@@ -110,5 +111,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { filterCategory, filterSubCategory}
+    { filterCategory, filterSubCategory, filterType}
 )(CollectionAll);

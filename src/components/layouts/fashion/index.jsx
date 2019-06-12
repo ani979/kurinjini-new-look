@@ -10,6 +10,7 @@ import SpecialProducts from "./products";
 import BlogSection from "./blogsection";
 import Instagram from "./instagram";
 import FooterOne from "../../common/footers/footer-one";
+import { FREE_SHIPPING, FREE_SHIPPING_BANGALORE, ALWAYS_AVAILABLE, ALWAYS_AVAILABLE_WHATSAPP } from '../../../constants/general';
 
 class Fashion extends Component {
 
@@ -230,7 +231,7 @@ class Fashion extends Component {
                 <TopCollection />
 
                 {/*Parallax banner*/}
-                <section className="p-0">
+                {/* <section className="p-0">
                     <div className="full-banner parallax-banner1 parallax text-center p-left">
                         <div className="container">
                             <div className="row">
@@ -244,34 +245,34 @@ class Fashion extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/*Parallax banner End*/}
 
-                <SpecialProducts />
+                {/* <SpecialProducts /> */}
 
                 {/*service layout*/}
                 <div className="container">
                     <section className="service border-section small-section ">
                         <div className="row">
-                            <div className="col-md-4 service-block">
+                            <div className="col-md-6 service-block">
                                 <div className="media">
                                     <div dangerouslySetInnerHTML={{ __html: svgFreeShipping }} />
                                     <div className="media-body">
-                                        <h4>free shipping</h4>
-                                        <p>free shipping world wide</p>
+                                        <h4>{FREE_SHIPPING}</h4>
+                                        <p>{FREE_SHIPPING_BANGALORE}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 service-block">
+                            <div className="col-md-6 service-block">
                                 <div className="media">
                                     <div dangerouslySetInnerHTML={{ __html: svgservice }} />
                                     <div className="media-body">
-                                        <h4>24 X 7 service</h4>
-                                        <p>online service for new customer</p>
+                                        <h4>{ALWAYS_AVAILABLE}</h4>
+                                        <p>{ALWAYS_AVAILABLE_WHATSAPP}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 service-block">
+                            {/* <div className="col-md-4 service-block">
                                 <div className="media">
                                     <div dangerouslySetInnerHTML={{ __html: svgoffer }} />
                                     <div className="media-body">
@@ -279,18 +280,18 @@ class Fashion extends Component {
                                         <p>new online special festival offer</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </section>
                 </div>
                 {/*service layout end*/}
 
-                <BlogSection />
+                {/* <BlogSection />
 
-                <Instagram />
+                <Instagram /> */}
 
                 {/*logo section*/}
-                <section className="section-b-space">
+                {/* <section className="section-b-space">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
@@ -355,7 +356,7 @@ class Fashion extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/*logo section end*/}
 
 			</div>

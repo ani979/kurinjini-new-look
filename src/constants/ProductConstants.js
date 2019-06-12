@@ -28,6 +28,7 @@ const allProducts = {
     normalSoaps: "Nourishing Bars",
     scrubbers:"Scrubbers",
     footCare: "Foot care",
+    footScrubbers:"Foot scrubber",
     bodyButter:"Body Butter",
     oils:"Oils",
     serums:"Serums",

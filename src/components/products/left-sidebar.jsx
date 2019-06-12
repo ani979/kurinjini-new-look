@@ -68,15 +68,14 @@ class LeftSideBar extends Component {
                                     </div>
                                     )}
                              </Slider>:
+                             (item.variants.length > 1 ?
                              <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
                                     {item.pictures.map((vari, index) =>
                                     <div key={index} className="container">
                                         <ImageZoom image={vari} />
                                     </div>
                                     )}
-                             </Slider>
-
-
+                             </Slider>:'')
 
             return (
             <div>
@@ -107,10 +106,10 @@ class LeftSideBar extends Component {
                                     <div className="">
                                         <div className="row">
                                             <div className="col-xl-12">
-                                                <div className="filter-main-btn mb-2">
+                                                {/* <div className="filter-main-btn mb-2">
                                                     <span onClick={this.filterClick}  className="filter-btn" >
                                                         <i className="fa fa-filter" aria-hidden="true"></i> filter</span>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                         <div className="row">

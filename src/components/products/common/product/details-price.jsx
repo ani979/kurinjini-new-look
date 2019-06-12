@@ -147,7 +147,7 @@ class DetailsWithPrice extends Component {
                                     
                                 </select>
                             </div>
-                        <span className="instock-cls">{this.state.stock}</span>
+                        {/* <span className="instock-cls">{this.state.stock}</span>
                         <h6 className="product-title">How many?</h6>
                         <div className="qty-box">
                             <div className="input-group">
@@ -163,12 +163,12 @@ class DetailsWithPrice extends Component {
                                 </button>
                                </span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="product-buttons" >
+                    {/* <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size)}>add to cart</a>
                         <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price)} >buy now</Link>
-                    </div>
+                    </div> */}
                     <div className="border-product">
                         <h6 className="product-title">product details</h6>
                         <p>{item.shortDetails}</p>

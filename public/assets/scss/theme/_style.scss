@@ -154,10 +154,14 @@ button {
   background-color: #1b1b1b;
 }
 section ,.section-t-space{
-  padding-top: 70px;
+  padding-top: 10px;
 }
 .section-b-space {
-  padding-bottom: 70px;
+  padding-bottom: 20px;
+}
+
+.margin-auto {
+  margin:auto;
 }
 .p-t-0 {
   padding-top: 0;
@@ -606,8 +610,8 @@ button {
     1.3.Brand logo CSS start
 ==========================*/
 .small-image-logo {
-  width:20vw;
-  height:auto;
+  width:auto;
+  height:20vh;
 
 }
 .logo-block{
@@ -2919,7 +2923,7 @@ header {
   }
   .offer-slider {
     img {
-      height: 160px;
+      // height: 160px;
       padding: 15px 15px 15px 0;
     }
     > div {

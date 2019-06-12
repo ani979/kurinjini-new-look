@@ -68,7 +68,7 @@ class Service extends Component {
                             <p>free shipping for orders within Bangalore</p>
                         </div>
                     </div>
-                    <div className="media">
+                    <div className="media border-0 m-0">
                         <div dangerouslySetInnerHTML={{ __html: svgservice }} />
                         <div className="media-body">
                             <h4>Always available</h4>

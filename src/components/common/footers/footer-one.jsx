@@ -22,11 +22,11 @@ class FooterOne extends Component {
      Tap on Top
      ==========================*/
     handleScroll = () => {
-        if (document.documentElement.scrollTop > 600) {
-            document.querySelector(".tap-top").style = "display: block";
-        } else {
-            document.querySelector(".tap-top").style = "display: none";
-        }
+        // if (document.documentElement.scrollTop > 600) {
+        //     document.querySelector(".tap-top").style = "display: block";
+        // } else {
+        //     document.querySelector(".tap-top").style = "display: none";
+        // }
     }
     clickToTop(){
         window.scroll({top: 0, left: 0, behavior: 'smooth' })
@@ -106,17 +106,17 @@ class FooterOne extends Component {
                 }
             }
 
-            var elems = document.querySelectorAll(".footer-title");
-            [].forEach.call(elems, function(elemt) {
-                let el = elemt.nextElementSibling;
-                el.style = "display: none";
-            });
+            // var elems = document.querySelectorAll(".footer-title");
+            // [].forEach.call(elems, function(elemt) {
+            //     let el = elemt.nextElementSibling;
+            //     el.style = "display: none";
+            // });
         } else {
-            var elems = document.querySelectorAll(".footer-title");
-            [].forEach.call(elems, function(elemt) {
-                let el = elemt.nextElementSibling;
-                el.style = "display: block";
-            });
+            // var elems = document.querySelectorAll(".footer-title");
+            // [].forEach.call(elems, function(elemt) {
+            //     let el = elemt.nextElementSibling;
+            //     el.style = "display: block";
+            // });
         }
 
 
@@ -169,11 +169,33 @@ class FooterOne extends Component {
                 <section className="section-b-space light-layout">
                     <div className="container">
                         <div className="row footer-theme partition-f">
-                            <div className="col-lg-4 col-md-6">
-                                <div className="footer-title footer-mobile-title">
-                                    <h4>about</h4>
+                            <div className="col-xl-6 col-md-6 col-sm-12">
+                                <div className="sub-title">
+                                    <div className="footer-title">
+                                        <h4>store information</h4>
+                                    </div>
+                                    <div className="footer-contant">
+                                        <ul className="contact-list">
+                                            <li><i className="fa fa-map-marker"></i>Kurinjini Skin Care
+                                            </li>
+                                            <li><i className="fa fa-phone"></i>Call Us: 7483897810</li>
+                                            <li><i className="fa fa-envelope-o"></i>Email Us: <a
+                                                href="#">shilpi@kurinjiniskincare.com</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
+                            </div>
+                            <div className="col-xl-6 col-md-6 col-sm-12 margin-auto">
                                 <div className="footer-contant">
+                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</p>
+                                </div>
+                            </div>
+                            
+                            {/* <div className="col-lg-4 col-md-6"> */}
+                                {/* <div className="footer-title footer-mobile-title">
+                                    <h4>about</h4>
+                                </div> */}
+                                {/* <div className="footer-contant">
                                     <div className="footer-logo">
                                         <Link to={`${process.env.PUBLIC_URL}/`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/kurinjini_smallsize.png`} alt="" /></Link>
                                     </div>
@@ -197,8 +219,8 @@ class FooterOne extends Component {
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
+                                </div> */}
+                            {/* </div> */}
                             {/* <div className="col offset-xl-1">
                                 <div className="sub-title">
                                     <div className="footer-title">
@@ -214,7 +236,7 @@ class FooterOne extends Component {
                                     </div>
                                 </div>
                             </div> */}
-                            <div className="col">
+                            {/* <div className="col">
                                 <div className="sub-title">
                                     <div className="footer-title">
                                         <h4>why we choose</h4>
@@ -228,8 +250,20 @@ class FooterOne extends Component {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col">
+                            </div> */}
+                            
+                        </div>
+                    </div>
+                </section>
+                {/* <div className="sub-footer ">
+                    <div className="container">
+                        <div className="row"> */}
+                            {/* <div className="col-xl-6 col-md-6 col-sm-12">
+                                <div className="footer-end">
+                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</p>
+                                </div>
+                            </div> */}
+                            {/* <div className="col-xl-6 col-md-6 col-sm-12">
                                 <div className="sub-title">
                                     <div className="footer-title">
                                         <h4>store information</h4>
@@ -244,18 +278,7 @@ class FooterOne extends Component {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div className="sub-footer ">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-6 col-md-6 col-sm-12">
-                                <div className="footer-end">
-                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</p>
-                                </div>
-                            </div>
+                            </div> */}
                             {/* <div className="col-xl-6 col-md-6 col-sm-12">
                                 <div className="payment-card-bottom">
                                     <ul>
@@ -277,10 +300,10 @@ class FooterOne extends Component {
                                     </ul>
                                 </div>
                             </div> */}
-                        </div>
+                        {/* </div>
                     </div>
-                </div>
-                <div className="addcart_btm_popup" id="fixed_cart_icon">
+                </div> */}
+                {/* <div className="addcart_btm_popup" id="fixed_cart_icon">
                     <a href={null} className="fixed_cart" onClick={ () => this.ChangeRtl(this.state.divName)}>
                         {this.state.divName}
                     </a>
@@ -313,7 +336,7 @@ class FooterOne extends Component {
                     <div>
                         <i className="fa fa-angle-double-up"></i>
                     </div>
-                </div>
+                </div> */}
             </footer>
         )
     }

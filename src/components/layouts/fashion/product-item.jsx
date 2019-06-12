@@ -99,9 +99,9 @@ class ProductItem extends Component {
                     </div>
                     <div className="product-detail">
                         <div>
-                            <div className="rating">
+                            {/* <div className="rating">
                                 {RatingStars}
-                            </div>
+                            </div> */}
                             <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>

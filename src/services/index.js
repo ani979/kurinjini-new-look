@@ -240,7 +240,7 @@ export const getTopCollection = products => {
 // Get Best Seller
 export const getBestSeller = products => {
     const items = products.filter(product => {
-        return product.sale === true;
+        return product.new === true;
     })
 
     return items.slice(0,8)

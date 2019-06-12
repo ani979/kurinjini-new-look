@@ -76,7 +76,7 @@ var module = {
     en: {
         locale: 'en_US',
         messages: {
-            topbar_title: 'Welcome to Kurinjini',
+            topbar_title: 'Welcome to Kurinjini skin care',
             call_us: 'Call Us',
             home: 'home',
             features: 'features',

@@ -49,7 +49,6 @@ import Collection from './components/pages/collection'
 import ForgetPassword from './components/pages/forget-password'
 import Contact from './components/pages/contact'
 import Dashboard from './components/pages/dashboard'
-import Faq from './components/pages/faq'
 
 // Blog Pages
 import RightSide from './components/blogs/right-sidebar'
@@ -58,6 +57,9 @@ import BlogPage from './components/blogs/blog-page'
 import allProducts from './constants/ProductConstants'
 import { SUBCATEGORY_KIDS, SENSITIVE_SKIN } from './constants/Tags';
 import { ANTI_AGEING } from './constants/variants';
+import AboutUs from './components/pages/about-us/AboutUs';
+import FAQ from './components/pages/faq/faq';
+import Recycling from './components/pages/recyciling/recycling';
 
 var lang = localStorage.getItem('locale-lang');
 
@@ -130,7 +132,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/order-success`} component={orderSuccess}/>
 
 								{/*Routes For Extra Pages*/}
-                                <Route path={`${process.env.PUBLIC_URL}/pages/about-us`} component={aboutUs}/>
+                                <Route path={`${process.env.PUBLIC_URL}/pages/about-us`} component={AboutUs}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/404`} component={PageNotFound}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/lookbook`} component={lookbook}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/login`} component={Login}/>
@@ -140,7 +142,8 @@ class Root extends React.Component {
                                 <Route path={`${process.env.PUBLIC_URL}/pages/forget-password`} component={ForgetPassword}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/contact`} component={Contact}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/dashboard`} component={Dashboard}/>
-                                <Route path={`${process.env.PUBLIC_URL}/pages/faq`} component={Faq}/>
+                                <Route path={`${process.env.PUBLIC_URL}/pages/faq`} component={FAQ}/>
+								<Route path={`${process.env.PUBLIC_URL}/pages/recycling`} component={Recycling}/>
 
 								{/*Blog Pages*/}
                                 <Route path={`${process.env.PUBLIC_URL}/blog/right-sidebar`} component={RightSide}/>

@@ -234,3 +234,14 @@ export const VARIANTS_BODY_SCRUBBER = [
 
 ]
 
+export const VARIANTS_UBTAN_SOAPS = [{
+  "flavour": "Ubtan",
+  "images": "/assets/images/kurinjini-images/Soaps/ubtan_2.jpg",
+  "price":80.00
+},{
+  "flavour": "With Almond, Chandan and Saffron",
+  "images": "/assets/images/kurinjini-images/Soaps/ubtan_customized.jpg",
+  "price":100.00
+},
+
+]

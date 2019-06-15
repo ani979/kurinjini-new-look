@@ -111,7 +111,7 @@ class Fashion extends Component {
                                                 <div>
                                                     {/* <h4>welcome to fashion</h4> */}
                                                     {/* <h4>Home made creams</h4> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@ class Fashion extends Component {
                                                 <div>
                                                     {/* <h4>Oils for you</h4> */}
                                                     {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@ class Fashion extends Component {
                                                 <div>
                                                     {/* <h4>Oils for you</h4> */}
                                                     {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,7 +162,7 @@ class Fashion extends Component {
                                                 <div>
                                                     {/* <h4>Oils for you</h4> */}
                                                     {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@ class Fashion extends Component {
                                                 <div>
                                                     {/* <h4>Oils for you</h4> */}
                                                     {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
                                                 </div>
                                             </div>
                                         </div>

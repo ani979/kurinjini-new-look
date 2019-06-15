@@ -41,14 +41,26 @@ class DetailsWithPrice extends Component {
     }
 
     changePriceBasedOnQuantity = (size) => {
-        console.log("this.props.item.pricePerSize ", this.props.item.pricePerSize)
+        //console.log("this.props.item.pricePerSize ", this.props.item.pricePerSize)
         //console.log("size is ", size);
         
         
         if(this.props.item.pricePerSize) {
             let selItem = this.props.item.pricePerSize.filter((value, index) => value.size === size);
-            console.log("sel Item ", selItem)
+            //console.log("sel Item ", selItem)
             this.setState({price: selItem[0].price, size:size})
+        }
+    }
+
+    changePriceBasedOnVariety = (flavour) => {
+        
+        //console.log("flavour is ", flavour);
+        if(this.props.item.variants) {
+            let selItem = this.props.item.variants.filter((value, index) => value.flavour === flavour);
+            //console.log("sel Item ", selItem)
+            if(selItem[0].price) {
+                this.setState({price: selItem[0].price})
+            }    
         }
     }
 
@@ -78,7 +90,7 @@ class DetailsWithPrice extends Component {
                             <div className="product-page-filter row border-product">
                                 <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose your flavour:</h4>
                                 <select className="col-md-6 col-sm-6 col-xl-6"
-                                // onChange={(e) => this.props.filterSort(e.target.value)}
+                                onChange={(e) => this.changePriceBasedOnVariety(e.target.value)}
                                 >
                                     {item.variants.map((vari, i) => {
                                         return <option key={i} value={vari.flavour}>{vari.flavour}</option>
@@ -169,6 +181,9 @@ class DetailsWithPrice extends Component {
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size)}>add to cart</a>
                         <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price)} >buy now</Link>
                     </div> */}
+                    <div className="product-buttons" >
+                        <Link to={`${process.env.PUBLIC_URL}/pages/howTo`} className="btn btn-solid" >How to Buy</Link>
+                    </div>
                     <div className="border-product">
                         <h6 className="product-title">product details</h6>
                         <p>{item.shortDetails}</p>

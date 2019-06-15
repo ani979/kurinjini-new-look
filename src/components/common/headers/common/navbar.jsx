@@ -50,7 +50,7 @@ class NavBar extends Component {
                                 Back<i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
                             </div>
                         </li>
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`}>{translate('home')}</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`} onClick={this.closeNav.bind(this)}>{translate('home')}</Link></li>
                         {/* <li className="mega">
                             <a href="#">{translate('features')}
                                 <div className="lable-nav">{translate('new')}</div>
@@ -100,10 +100,10 @@ class NavBar extends Component {
                                 </li>
                             </ul>
                         </li> */}
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} >{translate('about_us')}</Link></li>
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} >Recycling</Link></li>
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} >{translate('FAQ')}</Link></li>
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/giftingIdeas`} >Gift someone!</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} onClick={this.closeNav.bind(this)}>{translate('about_us')}</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} onClick={this.closeNav.bind(this)}>Recycling</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} onClick={this.closeNav.bind(this)}>{translate('FAQ')}</Link></li>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/howTo`} onClick={this.closeNav.bind(this)}>How To Order</Link></li>
                         {/* <li className="mega"><a href="#">{translate('products')}</a>
                             <ul className="mega-menu feature-menu product-menu">
                                 <li>

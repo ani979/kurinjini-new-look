@@ -1,0 +1,22 @@
+
+
+@media (min-width: 100px) {
+    .order-img {
+        background-image: url("HowTo_Mobile.jpg");
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-position: center;
+        height:100vh;
+        background-color:#31315f;
+    }
+}   
+
+@media (min-width: 800px) {
+    .order-img {
+        background-image: url("HowTo.jpg");
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position: center;
+        height:100vh;
+    }
+}

@@ -68,16 +68,16 @@ class CollectionAll extends Component {
                                                     <div className="collection-product-wrapper">
                                                         <div className="product-top-filter">
                                                             <div className="container-fluid p-0">
-                                                                <div className="row">
+                                                                {/* <div className="row">
                                                                     <div className="col-xl-12">
                                                                         <div className="filter-main-btn">
                                                                             <span onClick={this.openFilter}
                                                                                 className="filter-btn btn btn-theme"><i
                                                                                 className="fa fa-filter"
-                                                                                aria-hidden="true"></i> Filter</span>
+                                                                                aria-hidden="true"></i> New products</span>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> */}
                                                                 <div className="row">
                                                                     <div className="col-12">
                                                                         <FilterBar title={this.props.subSelection}/>

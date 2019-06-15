@@ -33,7 +33,10 @@ class NavBar extends Component {
         this.setState({navClose: {right:'0px'}})
     }
     closeNav() {
-        this.setState({navClose: {right:'-410px'}})
+        console.log("window innerwidth ", window.innerWidth);
+        if (window.innerWidth < 750) {
+            this.setState({navClose: {right:'-410px'}})
+        }    
     }
     render() {
         const {translate} = this.props;
@@ -50,7 +53,9 @@ class NavBar extends Component {
                                 Back<i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
                             </div>
                         </li>
-                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`} onClick={this.closeNav.bind(this)}>{translate('home')}</Link></li>
+                        <br/>
+                        <br/>
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`} style= {{zIndex:10}} onClick={this.closeNav.bind(this)}></Link></li>
                         {/* <li className="mega">
                             <a href="#">{translate('features')}
                                 <div className="lable-nav">{translate('new')}</div>
@@ -100,6 +105,7 @@ class NavBar extends Component {
                                 </li>
                             </ul>
                         </li> */}
+                        <li className="mega"><Link to={`${process.env.PUBLIC_URL}/`} onClick={this.closeNav.bind(this)}>{translate('home')}</Link></li>
                         <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} onClick={this.closeNav.bind(this)}>{translate('about_us')}</Link></li>
                         <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} onClick={this.closeNav.bind(this)}>Recycling</Link></li>
                         <li className="mega"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} onClick={this.closeNav.bind(this)}>{translate('FAQ')}</Link></li>

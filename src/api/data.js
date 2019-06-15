@@ -27,7 +27,6 @@ const allItems = [
   "size": [SIXTY],
   "tags": [DRYNESS],
   "rating": 4,
-  "flavours":[FLH, CHERRY_BLOSSOM, WINTER_BLOOM, ORANGE, ROSE_PETALS],
   "variants": FLAVOUR_MOISTURIZING_CREAMS,
   "goodFor":[allProducts.allKindsOfSkin],
   "precaution":"All our moisturizing creams should be kept away from sunlight as it may lose its consistency"

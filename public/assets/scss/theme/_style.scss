@@ -1228,6 +1228,7 @@ header {
       content: "\f104";
     }
   }
+  
   .home{
     background-size: cover;
     background-repeat: no-repeat;
@@ -1235,7 +1236,13 @@ header {
     height: 75vh;
     @for $i from 1 through 40 {
       &.home#{$i} {
-        background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
+
+        @media (min-width: 100px) {
+          background-image:url("#{$assetspath}/home-banner/mobile/#{$i}.jpg");
+        } 
+        @media (min-width: 800px) {
+          background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
+        } 
       }
     }
   }

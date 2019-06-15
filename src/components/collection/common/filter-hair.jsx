@@ -24,7 +24,7 @@ class FilterHair extends Component {
     }
 
     componentWillMount() {
-        console.log("calling mount");
+        //console.log("calling mount");
         this.props.filters.category = [];
         this.props.filters.subCategory = [];
         this.props.filters.goodFor = [];
@@ -55,16 +55,16 @@ class FilterHair extends Component {
         goodFor.push(event.target.value); // push in array checked value
         else
         goodFor.splice(index, 1); // removed in array unchecked value
-        console.log("goodFor ", goodFor);
+        //console.log("goodFor ", goodFor);
         this.props.filterGoodFor(goodFor);
     }
 
     render (){
-        console.log("this.filters ", this.props.filters);
+        //console.log("this.filters ", this.props.filters);
         const filteredSolutions = this.props.filters.tags;
         const filteredGoodness = this.props.filters.goodFor;
 
-        console.log("filteredGoodness ", filteredGoodness);
+        //console.log("filteredGoodness ", filteredGoodness);
         return (
                 <div className="collection-filter-block">
                     {/*brand filter start*/}

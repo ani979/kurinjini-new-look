@@ -11,10 +11,16 @@ class CollectionLeftSidebar extends Component {
     openFilter = () => {
         document.querySelector(".collection-filter").style = "left: -15px";
     }
+
+    componentDidMount() {
+        if (window.innerWidth < 750) {
+            document.querySelector(".collection-filter").style = "left: -15px";
+        }
+    }
     
     render () {
         const {type} = this.props;
-        console.log("props ",type);
+        //console.log("props ",type);
         
         const typeOfFilter = type === "skin"?<FilterSkin/>:<FilterHair/> 
 

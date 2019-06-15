@@ -13,7 +13,7 @@ export const getSolutionForSkin = (products) => {
             }   
         }     
     )
-    console.log(uniqueBrands)
+    //console.log(uniqueBrands)
     return uniqueBrands;
 }
 
@@ -36,7 +36,7 @@ export const getGoodForSkin = (products) => {
         }     
             
     )
-    console.log(uniqueGoodness)
+    //console.log(uniqueGoodness)
     return uniqueGoodness;
 }
 
@@ -54,7 +54,7 @@ export const getSolutionForHair = (products) => {
             }
         }     
     )
-    console.log(uniqueBrands)
+    //console.log(uniqueBrands)
     return uniqueBrands;
 }
 
@@ -71,7 +71,7 @@ export const getCategory = (products) => {
             }    
         }
     )
-    console.log(uniqueBrands)
+    //console.log(uniqueBrands)
     return uniqueBrands;
 }
 
@@ -79,7 +79,7 @@ export const getCategory = (products) => {
 export const getType = (products) => {
     var uniqueBrands = [];
     products.map((product, index) => {
-            console.log("product.type ", product.type);
+            //console.log("product.type ", product.type);
             if(product.type) {
                 if(uniqueBrands.indexOf(product.type) === -1){
                     uniqueBrands.push(product.type);
@@ -88,7 +88,7 @@ export const getType = (products) => {
             }    
         }
     )
-    console.log(uniqueBrands)
+    //console.log(uniqueBrands)
     return uniqueBrands;
 }
 
@@ -106,7 +106,7 @@ export const getSubCategory = (products) => {
             }
         }    
     )
-    console.log(uniqueBrands)
+    //console.log(uniqueBrands)
     return uniqueBrands;
 }
 
@@ -128,7 +128,7 @@ export const getGoodForHair = (products) => {
             }
         }    
     )
-    console.log(uniqueGoodness)
+    //console.log(uniqueGoodness)
     return uniqueGoodness;
 }
 
@@ -151,7 +151,7 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
         //console.log("product.goodFor ? ", product.goodFor, goodFor);
         let brandMatch;
         //const brandMatch = product.tags.some(tag => tags.includes(tag))
-        console.log("tags? ", tags)
+        //console.log("tags? ", tags)
         if(tags.length != 0) {
             //console.log("product.tags ", product.tags)
             brandMatch = product.tags? product.tags.some(tag => tags.includes(tag)):''
@@ -160,7 +160,7 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
             brandMatch = true;
         }
         let colorMatch;
-        console.log("goodFor? ", goodFor)
+        //console.log("goodFor? ", goodFor)
         if(goodFor.length != 0) {
             //console.log("product.goodFor.includes(goodFor) ", product.goodFor.every( e => goodFor.includes(e)));
             colorMatch = product.goodFor? product.goodFor.some( e => goodFor.includes(e)):''
@@ -170,7 +170,7 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
         //console.log("match ? ", brandMatch, colorMatch);
 
         let categoryMatch;
-        console.log("category ", category);
+        //console.log("category ", category);
         if(category.length != 0) {
             //console.log("product.tags ", product.tags)
             categoryMatch = product.category ? category.includes(product.category):''
@@ -180,7 +180,7 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
         }
 
         let subCategoryMatch;
-        console.log("subCategory ", subCategory);
+        //console.log("subCategory ", subCategory);
         if(subCategory.length != 0) {
             //console.log("product.tags ", product.tags)
             subCategoryMatch = product.subCategory? subCategory.every( e => product.subCategory.includes(e)):''
@@ -190,7 +190,7 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
         }
 
         let typeMatch;
-        console.log("type ", type);
+        //console.log("type ", type);
         if(type !== '') {
             //console.log("product.tags ", product.tags)
             typeMatch = product.type? type === product.type:''

@@ -47,7 +47,7 @@ const allItems = [
   "category": allProducts.faceCare,
   "ingredients": [FRANKINCENSE, GERANIUM, AVOCADO, MORINGA, ARGAN, JOJOBA, GRAPESEED, TEATREE, ROSEMARY, HEMP, CUCUMBER_SEED,  COCONUT, BEESWAX, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, PURE_AFRICAN_SHEA_BUTTER, APRICOT],
   "size": ["60ml", "120ml"],
-  "tags": [AGEING],
+  "tags": [AGEING, DULLSKIN, DRYNESS, BLEMISHES],
   "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
@@ -94,7 +94,7 @@ const allItems = [
   "tags": [ACNE],
   "rating": 3,
   "variants": [],
-  "goodFor":[allProducts.acneproneSkin, allProducts.allKindsOfSkin],
+  "goodFor":[allProducts.acneproneSkin, allProducts.allKindsOfSkin, allProducts.oilySkin],
   "subCategory":[allProducts.moisturizingCreams, SENSITIVE_SKIN]
 },
 {
@@ -203,7 +203,7 @@ const allItems = [
   "category": allProducts.oilsAndSerums,
   "ingredients": [SANDALWOOD, HELICHRYSUM, ROSEHIP, FRANKINCENSE, VITAMIN_E, JOJOBA, SWEET_ALMOND, HEMP, AVOCADO, MORINGA, ALOVE],
   "size": [TWENTY],
-  "tags": [DULLSKIN],
+  "tags": [DULLSKIN, DRYNESS],
   "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
@@ -258,7 +258,7 @@ const allItems = [
   "category": allProducts.oilsAndSerums,
   "ingredients": [SAFFRON, ARGAN, MORINGA, TEATREE, GERANIUM, ROSEMARY, JOJOBA, GRAPESEED, CUCUMBER_SEED, HEMP, AVOCADO, FRANKINCENSE, LEMON_GRASS, COCONUT],
   "size": [FIFTEEN],
-  "tags": [DARK_CIRCLES, BLEMISHES, PIGMENTATION, ACNE],
+  "tags": [DARK_CIRCLES, BLEMISHES, PIGMENTATION, ACNE, DRYNESS, DULLSKIN],
   "rating": 5,
   "variants": VARIANTS_RENAISSANCE,
   "goodFor":[allProducts.allKindsOfSkin],
@@ -284,7 +284,7 @@ const allItems = [
   "tags": [DANDRUFF, SPLIT_ENDS, HAIR_FALL],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.allKindsOfHair, allProducts.oilsAndSerums],
+  "goodFor":[allProducts.allKindsOfHair],
   "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
   "howToUse":"Direct application on your hair and scalp"
 },
@@ -307,7 +307,7 @@ const allItems = [
   "tags": [DANDRUFF],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.allKindsOfHair, allProducts.oilsAndSerums],
+  "goodFor":[allProducts.allKindsOfHair],
   "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
   "howToUse":"Direct application on your hair and scalp"
 },
@@ -330,7 +330,7 @@ const allItems = [
   "tags": [DANDRUFF, HAIR_FALL],
   "rating": 5,
   "variants": [],
-  "goodFor":[allProducts.kidsSpecial, allProducts.oilsAndSerums],
+  "goodFor":[allProducts.kidsSpecial],
   "subCategory":[allProducts.hairOilKids, SUBCATEGORY_KIDS],
   "howToUse":"Direct application on your hair and scalp"
 },

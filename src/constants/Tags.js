@@ -1,6 +1,6 @@
 export const KIDS_FRIENDLY = 'Kids'
 export const AGEING = 'Ageing Skin'
-export const DRYNESS = 'Dryness'
+export const DRYNESS = 'Dry skin'
 export const ACNE = "Acne"
 export const DRYLIPS = "Dry Lips"
 export const FLAKYLIPS = "Flaky Lips"
@@ -18,5 +18,5 @@ export const HAIR_FALL = "Frequent hair fall"
 export const SUBCATEGORY_MOISTURIZING = "moisturizing"
 export const SUBCATEGORY_KIDS = "kids"
 export const HARD_HEELS = "Hard and cracked heels"
-export const DEAD_SKIN_BODY = "Dead skin on your body"
-export const FRESH_BATH = "Not having a fragrant bath"
+export const DEAD_SKIN_BODY = "Dead skin"
+export const FRESH_BATH = "BODY ODOUR"

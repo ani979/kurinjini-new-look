@@ -17,7 +17,7 @@ class NewProduct extends Component {
         
         return (
             <div className="theme-card">
-                <h5 className="title-border">new product</h5>
+                <h5 className="title-border">new products</h5>
                 <Slider className="offer-slider slide-1">
                     {arrays.map((products, index) =>
                         <div key={index}>

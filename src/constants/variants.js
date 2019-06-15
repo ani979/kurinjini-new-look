@@ -13,11 +13,11 @@ export const ROSE_LIP_SCRUB = "Rose"
 export const GLOWING_SKIN = "Glowing Skin"
 export const ANTI_AGEING = "Anti-Ageing"
 export const ACNE_CONTROL = "Acne control"
-export const UNAVAILABLE_IMAGE = "/assets/images/imageUnavailable.jpg"
+export const UNAVAILABLE_IMAGE = "/assets/images/ImageUnavailable.jpg"
 
 export const FLAVOUR_MOISTURIZING_CREAMS = [{
     "flavour": FLH,
-    "images": "/assets/images/moisturizingCreams/frenchLavender_1.jpg"
+    "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg"
   },
   {
     "flavour": CHERRY_BLOSSOM,
@@ -25,7 +25,7 @@ export const FLAVOUR_MOISTURIZING_CREAMS = [{
   },
   {
     "flavour": ORANGE,
-    "images": "/assets/images/moisturizingCreams/orange_big.jpg"
+    "images": "/assets/images/MoisturizingCreams/orange_big.jpg"
   },
   {
     "flavour": WINTER_BLOOM,
@@ -33,7 +33,7 @@ export const FLAVOUR_MOISTURIZING_CREAMS = [{
   },
   {
     "flavour": ROSE_PETALS,
-    "images": "/assets/images/moisturizingCreams/rose_big.jpg"
+    "images": "/assets/images/MoisturizingCreams/rose_big.jpg"
   }
 ]
 
@@ -132,14 +132,14 @@ export const VARIANTS_LOOFAH_SCRUBBER = [{
   "images": "/assets/images/kurinjini-images/Soaps/loofah_one.jpg"
 },{
   "flavour": "Basil",
-  "images": "/assets/images/kurinjini-images/Soaps/loofah_two.jpg"
+  "images": UNAVAILABLE_IMAGE
 },{
   "flavour": "Lavender",
   "images": UNAVAILABLE_IMAGE
 },
 {
   "flavour": "Orange",
-  "images": UNAVAILABLE_IMAGE
+  "images": "/assets/images/kurinjini-images/Soaps/loofah_orange.jpg"
 },
 {
   "flavour": "Mango Mandarin",
@@ -162,10 +162,10 @@ export const VARIANTS_LOOFAH_SCRUBBER = [{
 
 export const VARIANTS_CASTER_SUGAR_SCRUBBER = [{
   "flavour": "Ylang Ylang",
-  "images": "/assets/images/kurinjini-images/Soaps/castersugar_scrubber_one.jpg"
-},{
-  "flavour": "Basil",
   "images": "/assets/images/kurinjini-images/Soaps/castersugar_scrubber_two.jpg"
+},{
+  "flavour": "Watermelon",
+  "images": "/assets/images/kurinjini-images/Soaps/castersugar_scrubber_one.jpg"
 },{
   "flavour": "Lavender",
   "images": UNAVAILABLE_IMAGE
@@ -188,6 +188,10 @@ export const VARIANTS_CASTER_SUGAR_SCRUBBER = [{
 },
 {
   "flavour": "Cooling Mint",
+  "images": UNAVAILABLE_IMAGE
+},
+{
+  "flavour": "Basil",
   "images": UNAVAILABLE_IMAGE
 }]
 

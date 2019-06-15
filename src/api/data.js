@@ -82,7 +82,7 @@ const allItems = [
   "price": 300.00,
   "salePrice": 300.00,
   "discount": 0,
-  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/pacific_big.jpg","/assets/images/kurinjini-images/FaceCare/SpecialNeeds/pacific_small.jpg"],
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/pacific_big.jpg"],
   "shortDetails": "A cream for sensitive skin",
   "description": "Pacific has speciality of soothing sensitive skin. It has ingredients like Rosemary, Tea tree and safflower oil that refresh oily skin without causing excess dryness. Tea tree and Rosemary are considered to be a natural antiseptic and has astringent properties. It is effective in lightening scars, soothing pimples apart from being anti-blemish, anti-microbial agents.",
   "stock": 6,
@@ -110,7 +110,7 @@ const allItems = [
   "stock": 20,
   "new": false,
   "sale": false,
-  "category": allProducts.faceCare,
+  "category": allProducts.lipCare,
   "ingredients": [UNREFINED_BEESWAX, COCOA_BUTTER, JOJOBA, SWEET_ALMOND, VITAMIN_E, AVOCADO],
   "size": [ROUND_FIVEGM, STICK_FIVEGM],
   "tags": [DRYLIPS],
@@ -184,7 +184,7 @@ const allItems = [
   "rating": 4,
   "variants": VEGAN_LIP_SCRUBS,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.lipScrubsVegan, allProducts.vegan],
+  "subCategory":[allProducts.lipScrubsVegan, allProducts.vegan, allProducts.lipScrubs],
   "howToUse":"Rub gently on the lips and after some continuous rounds of rubbing, wipe off with towel or rinse with water"
 },
 {

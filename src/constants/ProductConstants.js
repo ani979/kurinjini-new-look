@@ -52,7 +52,7 @@ const allProducts = {
     precaution:"Precaution",
     allKindsOfSkin:"All kinds of skin",
     oilySkin:"Oily skin",
-    allKindsOfHair:"All Kkinds of hair",
+    allKindsOfHair:"All kinds of hair",
     skin:"skin",
     hair:"hair",
     lipCare:"Lip care",

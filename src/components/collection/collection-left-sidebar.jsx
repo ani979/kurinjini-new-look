@@ -8,6 +8,7 @@ import ProductListing from "./common/product-listing";
 import StickyBox from "react-sticky-box";
 
 class CollectionLeftSidebar extends Component {
+
     openFilter = () => {
         document.querySelector(".collection-filter").style = "left: -15px";
     }
@@ -15,8 +16,10 @@ class CollectionLeftSidebar extends Component {
     componentDidMount() {
         if (window.innerWidth < 750) {
             document.querySelector(".collection-filter").style = "left: -15px";
+            
         }
     }
+
     
     render () {
         const {type} = this.props;

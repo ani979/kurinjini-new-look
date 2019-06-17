@@ -28,16 +28,10 @@ class FilterHair extends Component {
         //console.log("calling mount");
         this.props.filters.category = [];
         this.props.filters.subCategory = [];
-        this.props.filters.goodFor = [];
-        this.props.filters.tags = [];
+        // this.props.filters.goodFor = [];
+        // this.props.filters.tags = [];
         this.props.filters.type = allProducts.hair;
     }
-
-    componentWillUnmount() {
-        this.props.filterGoodFor([]);
-        this.props.filterSolutionFor([]);
-    }
-    
 
     clickSolutionHandle(event, solutions) {
 

@@ -1537,9 +1537,9 @@ $theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
   .compare-mobile {
     display: none;
   }
-  .top-header {
-    height: 0;
-  }
+  // .top-header {
+  //   height: 0;
+  // }
   .main-nav-center {
     .toggle-nav {
       right: 15px;
@@ -1682,13 +1682,15 @@ $theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
     }
   }
   .brand-logo {
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translateX(-50%);
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    // position: absolute;
+    // left: 50%;
+    // margin-right: -50%;
+    // transform: translateX(-50%);
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     z-index:10;
+    text-align:center;
+    color: #31315f;
   }
   .toggle-nav {
     padding-top: 30px;

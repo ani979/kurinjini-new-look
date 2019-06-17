@@ -29,7 +29,7 @@ class SideBar extends Component {
     }
 
     swipeLeft() {
-        console.log("here in swipe left");
+        //console.log("here in swipe left");
         this.closeNav();
     }
     render() {

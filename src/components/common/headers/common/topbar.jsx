@@ -5,15 +5,27 @@ import { withTranslate } from 'react-redux-multilingual'
 class TopBar extends Component {
 
     render() {
+         
         const {translate} = this.props;
+        let logoDisplay = <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>;
+        if (window.innerWidth < 750) { 
+            logoDisplay = <div>
+                            <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
+                            <h5 style={{color:"#31315f"}}>
+                                {translate('call_us')}:  748- 389 - 7810
+                            </h5>
+                          </div>;
+        }   
         return (
             <div className="top-header">
                 <div className="container">
                     <div className="row">
                         <div className = "col-lg-6 text-left">
+
                             <div className="brand-logo">
                                     <Link to={`${process.env.PUBLIC_URL}/`}>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>
+                                       {logoDisplay}
+                                        {/* <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/> */}
                                     </Link>
                             </div>
                         </div>

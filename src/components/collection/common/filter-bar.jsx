@@ -47,7 +47,11 @@ class FilterBar extends Component {
         if(this.props.title && this.props.title === "") {
             title = "Showing " + this.props.title;
         } else {
-            title = "Showing Products 1-" + this.props.products.length +" Result";
+            if(this.props.products.length > 0) {
+                title = "Showing Products 1-" + this.props.products.length +" Result";
+            } else {
+                title = "Showing Results";
+            }    
         }    
         return (
             <div className="product-filter-content">

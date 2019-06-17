@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import { SlideToggle } from 'react-slide-toggle';
-
+import {Swipeable } from 'react-swipeable'
 
 import {getGoodForHair, getSolutionForHair, getMinMaxPrice, getType} from '../../../services';
 import {filterGoodFor, filterSolutionFor, filterPrice} from '../../../actions'
 import allProducts from '../../../constants/ProductConstants';
+
 
 class FilterHair extends Component {
 
@@ -66,6 +67,7 @@ class FilterHair extends Component {
 
         //console.log("filteredGoodness ", filteredGoodness);
         return (
+            <Swipeable onSwiped ={this.closeFilter} >
                 <div className="collection-filter-block">
                     {/*brand filter start*/}
                     <div className="collection-mobile-back">
@@ -150,6 +152,7 @@ class FilterHair extends Component {
                         )}
                     </SlideToggle> */}
                 </div>
+            </Swipeable>
         )
     }
 }

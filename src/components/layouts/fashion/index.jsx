@@ -55,6 +55,16 @@ class Fashion extends Component {
             '                                            fill="#ff4c3b"/>\n' +
             '                                    </svg>';
 
+            var mainSlider = {
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay:true,
+                autoplaySpeed:2000
+            }
+            
             var slidesix = {
                 dots: false,
                 infinite: true,
@@ -101,7 +111,7 @@ class Fashion extends Component {
 			<div>
                 {/*Home Slider*/}
                 <section className="p-0">
-                    <Slider  className="slide-1 home-slider">
+                    <Slider  {...mainSlider} className="slide-1 home-slider">
                         <div>
                             <div className="home home1 text-center">
                                 <div className="container">

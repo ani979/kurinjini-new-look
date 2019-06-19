@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import { SlideToggle } from 'react-slide-toggle';
 import {Swipeable } from 'react-swipeable'
@@ -25,11 +24,13 @@ class FilterHair extends Component {
     }
 
     componentWillMount() {
-        //console.log("calling mount");
+        //console.log("calling mount type ", this.props.filters.type);
         this.props.filters.category = [];
         this.props.filters.subCategory = [];
-        // this.props.filters.goodFor = [];
-        // this.props.filters.tags = [];
+        if(this.props.filters.type === "skin") {
+            this.props.filters.goodFor = [];
+            this.props.filters.tags = [];
+        }
         this.props.filters.type = allProducts.hair;
     }
 

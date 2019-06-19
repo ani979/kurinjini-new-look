@@ -14,17 +14,12 @@ class CollectionLeftSidebar extends Component {
     }
 
     componentDidMount() {
-        if (window.innerWidth < 750) {
-            document.querySelector(".collection-filter").style = "left: -15px";
-            
-        }
+
     }
 
     
     render () {
         const {type} = this.props;
-        //console.log("props ",type);
-        
         const typeOfFilter = type === "skin"?<FilterSkin/>:<FilterHair/> 
 
         return (
@@ -73,7 +68,7 @@ class CollectionLeftSidebar extends Component {
                                                                             <span onClick={this.openFilter}
                                                                                 className="filter-btn btn btn-theme"><i
                                                                                 className="fa fa-filter"
-                                                                                aria-hidden="true"></i> Filter</span>
+                                                                                aria-hidden="true"></i> Apply Filter </span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

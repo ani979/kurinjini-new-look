@@ -28,8 +28,10 @@ class FilterSkin extends Component {
         console.log("calling mount");
         this.props.filters.category = [];
         this.props.filters.subCategory = [];
-        //this.props.filters.goodFor = [];
-        //this.props.filters.tags = [];
+        if(this.props.filters.type === "hair") {
+            this.props.filters.goodFor = [];
+            this.props.filters.tags = [];
+        }
         this.props.filters.type = allProducts.skin;
     }
 

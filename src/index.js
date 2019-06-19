@@ -84,8 +84,8 @@ class Root extends React.Component {
 								<Route exact path={`${process.env.PUBLIC_URL}/`} component={Fashion}/>
 
 								{/*Routes For Features (Product Collection) */}
-								<Route path={`${process.env.PUBLIC_URL}/face-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="skin" />}/>
-								<Route path={`${process.env.PUBLIC_URL}/hair-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="hair" />}/>
+								<Route path={`${process.env.PUBLIC_URL}/face-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="skin"/>}/>
+								<Route path={`${process.env.PUBLIC_URL}/hair-care/collection`} render={(props) => <CollectionLeftSidebar {...props} type="hair"/>}/>
 								{/* <Route path={`${process.env.PUBLIC_URL}/right-sidebar/collection`} component={CollectionRightSidebar}/> */}
 
 								{/*Routes For Single Product*/}

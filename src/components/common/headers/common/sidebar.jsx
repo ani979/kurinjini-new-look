@@ -53,6 +53,7 @@ class SideBar extends Component {
                                     <li><a href="/moisturizing-creams">Moisturizing Creams</a></li>
                                     <li><a href="/sensitive-skin">Sensitive skin</a></li>
                                     <li><a href="/anti-ageing">Anti-ageing</a></li>
+                                    <li><a href="/spf-creams">Sun protection</a></li>
                                 
                                 </ul>
                             </li>

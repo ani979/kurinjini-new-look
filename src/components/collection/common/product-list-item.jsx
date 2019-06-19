@@ -64,7 +64,7 @@ class ProductListItem extends Component {
         }
         
         let openingTag = "col-xl-3 col-md-6 col-grid-box";
-        if(this.props.source && this.props.source == "collection") {
+        if(this.props.source && this.props.source === "collection") {
             openingTag = "";
         }
         return (

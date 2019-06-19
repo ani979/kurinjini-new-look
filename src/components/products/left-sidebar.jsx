@@ -68,7 +68,7 @@ class LeftSideBar extends Component {
                                     </div>
                                     )}
                              </Slider>:
-                             (item.variants.length > 1 ?
+                             (item.variants.length === 0 ?
                              <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
                                     {item.pictures.map((vari, index) =>
                                     <div key={index} className="container">

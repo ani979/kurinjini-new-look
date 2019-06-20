@@ -1230,7 +1230,7 @@ header {
   }
   
   .home{
-    background-size: cover;
+    
     background-repeat: no-repeat;
     background-position: center;
     height: 75vh;
@@ -1238,9 +1238,11 @@ header {
       &.home#{$i} {
 
         @media (min-width: 100px) {
+          background-size: cover;
           background-image:url("#{$assetspath}/home-banner/mobile/#{$i}.jpg");
         } 
         @media (min-width: 800px) {
+          background-size: contain;
           background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
         } 
       }

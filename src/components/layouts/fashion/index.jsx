@@ -58,7 +58,7 @@ class Fashion extends Component {
             var mainSlider = {
                 dots: false,
                 infinite: true,
-                speed: 500,
+                speed: 750,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay:true,

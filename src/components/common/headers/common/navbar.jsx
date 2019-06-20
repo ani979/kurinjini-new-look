@@ -42,6 +42,10 @@ class NavBar extends Component {
         if (window.innerWidth < 750) {
             this.setState({navClose: {right:'-410px'}})
             
+        }
+        if (window.innerWidth < 1199)
+        {
+            this.setState({navClose: {right:'-300px'}})
         }    
     }
     swipeRight() {

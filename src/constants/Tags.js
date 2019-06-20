@@ -11,6 +11,7 @@ export const PIGMENTATION = "Pigmentation"
 export const SENSITIVE_SKIN = "Sensitive Skin"
 export const TANNEDSKIN = "Tanned skin"
 export const SUNPROTECTION = "Sun Protection"
+export const SCARS = "Visible skin damage"
 
 export const DANDRUFF = "Dandruff"
 export const SPLIT_ENDS = "Split Ends"

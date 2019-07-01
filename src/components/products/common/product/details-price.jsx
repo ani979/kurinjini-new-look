@@ -159,7 +159,7 @@ class DetailsWithPrice extends Component {
                                     
                                 </select>
                             </div>
-                        {/* <span className="instock-cls">{this.state.stock}</span>
+                        <span className="instock-cls">{this.state.stock}</span>
                         <h6 className="product-title">How many?</h6>
                         <div className="qty-box">
                             <div className="input-group">
@@ -175,12 +175,12 @@ class DetailsWithPrice extends Component {
                                 </button>
                                </span>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
-                    {/* <div className="product-buttons" >
+                    <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size)}>add to cart</a>
                         <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price)} >buy now</Link>
-                    </div> */}
+                    </div>
                     <div className="product-buttons" >
                         <Link to={`${process.env.PUBLIC_URL}/pages/howTo`} className="btn btn-solid" >How to Buy</Link>
                     </div>
@@ -226,7 +226,7 @@ class DetailsWithPrice extends Component {
                         </div>
                     </div> */}
                 </div>
-                <Modal open={this.state.open} onClose={this.onCloseModal} center>
+                {/* <Modal open={this.state.open} onClose={this.onCloseModal} center>
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
@@ -237,7 +237,7 @@ class DetailsWithPrice extends Component {
                             </div>
                         </div>
                     </div>
-                </Modal>
+                </Modal> */}
             </div>
         )
     }

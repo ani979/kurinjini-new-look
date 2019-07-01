@@ -139,7 +139,7 @@ class HeaderOne extends Component {
 			                                        </div>
 			                                    </li> */}
 												{/*Header Cart Component */}
-												{/* <CartContainer/> */}
+												<CartContainer/>
 			                                </ul>
 			                            </div>
 			                        </div>

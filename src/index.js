@@ -19,15 +19,6 @@ import CollectionAll from "./components/collection/collection-all";
 
 // Product Pages
 import LeftSideBar from "./components/products/left-sidebar";
-import RightSideBar from "./components/products/right-sidebar";
-import NoSideBar from "./components/products/no-sidebar";
-import LeftImage from "./components/products/left-image";
-import RightImage from "./components/products/right-image";
-import Accordian from "./components/products/accordian";
-import ColumnLeft from "./components/products/column-left";
-import ColumnRight from "./components/products/column-right";
-import Column from "./components/products/column";
-import Vertical from "./components/products/vertical";
 
 
 // Features
@@ -51,9 +42,6 @@ import Contact from './components/pages/contact'
 import Dashboard from './components/pages/dashboard'
 
 // Blog Pages
-import RightSide from './components/blogs/right-sidebar'
-import Details from './components/blogs/details'
-import BlogPage from './components/blogs/blog-page'
 import allProducts from './constants/ProductConstants'
 import { SUBCATEGORY_KIDS, SENSITIVE_SKIN } from './constants/Tags';
 import { ANTI_AGEING } from './constants/variants';
@@ -61,6 +49,7 @@ import AboutUs from './components/pages/about-us/AboutUs';
 import FAQ from './components/pages/faq/faq';
 import Recycling from './components/pages/recyciling/recycling';
 import HowToOrder from './components/pages/order/how-to-order';
+import asyncComponent from './AsyncComponent'
 
 var lang = localStorage.getItem('locale-lang');
 
@@ -68,8 +57,17 @@ if(lang==null){
 	lang='en';
 }
 
+const oilAndSerum = asyncComponent(() =>
+	import("./components/collection/collection-all").then(module => module.default),
+	{typeSelection:allProducts.skin,
+		mainSelection:allProducts.oilsAndSerums,
+		subSelection:allProducts.oilsAndSerums}
+)
+
+
 class Root extends React.Component {
 
+	
     render() {
         store.dispatch(getAllProducts());
 		store.dispatch(IntlActions.setLocale(lang))
@@ -90,19 +88,12 @@ class Root extends React.Component {
 
 								{/*Routes For Single Product*/}
 								<Route path={`${process.env.PUBLIC_URL}/product/:id`} component={LeftSideBar}/>
-								<Route path={`${process.env.PUBLIC_URL}/right-sidebar/product/:id`} component={RightSideBar}/>
-								<Route path={`${process.env.PUBLIC_URL}/no-sidebar/product/:id`} component={NoSideBar}/>
-								<Route path={`${process.env.PUBLIC_URL}/col-left/product/:id`} component={ColumnLeft}/>
-								<Route path={`${process.env.PUBLIC_URL}/col-right/product/:id`} component={ColumnRight}/>
-								<Route path={`${process.env.PUBLIC_URL}/accordian/product/:id`} component={Accordian}/>
-								<Route path={`${process.env.PUBLIC_URL}/column/product/:id`} component={Column}/>
-								<Route path={`${process.env.PUBLIC_URL}/left-image/product/:id`} component={LeftImage}/>
-								<Route path={`${process.env.PUBLIC_URL}/right-image/product/:id`} component={RightImage}/>
-								<Route path={`${process.env.PUBLIC_URL}/vertical/product/:id`} component={Vertical}/>
 
-								<Route path={`${process.env.PUBLIC_URL}/all/collection`} render={(props) => <CollectionAll {...props} typeSelection=""/>}/>
-								<Route path={`${process.env.PUBLIC_URL}/oils-serums`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.oilsAndSerums} subSelection={allProducts.oilsAndSerums} />}/>
-								<Route path={`${process.env.PUBLIC_URL}/body-butter`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.bodyCare} subSelection={allProducts.bodyButter} />}/>
+								{/* <Route path={`${process.env.PUBLIC_URL}/all/collection`} render={
+									(props) => 	import("./components/collection/collection-all").then(CollectionAll => 
+										<CollectionAll {...props} typeSelection=""/>
+								)}/> */}
+								<Route path={`${process.env.PUBLIC_URL}/oils-serums`} component = {oilAndSerum}/> 
 								<Route path={`${process.env.PUBLIC_URL}/moisturizing-creams`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.moisturizingCreams} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/spf-creams`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.sunProtection} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/kids`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={SUBCATEGORY_KIDS} />}/>
@@ -151,9 +142,9 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/pages/howTo`} component={HowToOrder}/>
 
 								{/*Blog Pages*/}
-                                <Route path={`${process.env.PUBLIC_URL}/blog/right-sidebar`} component={RightSide}/>
+                                {/* <Route path={`${process.env.PUBLIC_URL}/blog/right-sidebar`} component={RightSide}/>
                                 <Route path={`${process.env.PUBLIC_URL}/blog/details`} component={Details}/>
-                                <Route path={`${process.env.PUBLIC_URL}/blog/blog-page`} component={BlogPage}/>
+                                <Route path={`${process.env.PUBLIC_URL}/blog/blog-page`} component={BlogPage}/> */}
 
 								<Route component={PageNotFound} />
                             </Switch>

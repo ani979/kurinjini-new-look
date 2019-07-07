@@ -3,14 +3,10 @@ import React, {Component} from 'react';
 
 class orderSuccess extends Component {
 
-    constructor (props) {
-        super (props)
-
-    }
-
-    render (){
+    render () {
 
         const {payment, items, symbol, orderTotal} = this.props.location.state;
+        console.log("items ", items);
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var current = new Date();
         var next5days = new Date(Date.now() + 5 * 86400000);
@@ -18,7 +14,7 @@ class orderSuccess extends Component {
         let deliveryDate = next5days.toLocaleDateString("en-US", options).toString()
 
         return (
-            (payment)?
+            
             <div>
                 <section className="section-b-space light-layout">
                     <div className="container">
@@ -27,8 +23,9 @@ class orderSuccess extends Component {
                                 <div className="success-text">
                                     <i className="fa fa-check-circle" aria-hidden="true"></i>
                                     <h2>thank you</h2>
-                                    <p>Payment Is Has Been Received Order Placed Successfully</p>
-                                    <p>Transaction ID: {(payment.paymentID)?payment.paymentID:payment.id}</p>
+                                    <p>We have sent you an email confirming your order</p>
+                                    {/* <p>Transaction ID: {(payment.paymentID)?payment.paymentID:payment.id}</p> */}
+                                    <p>We will get in touch with your shortly on delivery and payment. Thanks.</p>
                                 </div>
                             </div>
                         </div>
@@ -43,9 +40,9 @@ class orderSuccess extends Component {
                                     <h3>your order details</h3>
                                     {items.map((item, index) => {
                                     return <div className="row product-order-detail" key={index}>
-                                                <div className="col-3">
+                                                {/* <div className="col-3">
                                                     <img src={`${item.variants[0].images}`} alt="" className="img-fluid" />
-                                                </div>
+                                                </div> */}
                                                 <div className="col-3 order_detail">
                                                     <div>
                                                         <h4>product name</h4>
@@ -69,8 +66,8 @@ class orderSuccess extends Component {
                                     <div className="total-sec">
                                         <ul>
                                             <li>subtotal <span>{symbol}{orderTotal}</span></li>
-                                            <li>shipping <span>$0</span></li>
-                                            <li>tax(GST) <span>$0</span></li>
+                                            {/* <li>shipping <span>$0</span></li>
+                                            <li>tax(GST) <span>$0</span></li> */}
                                         </ul>
                                     </div>
                                     <div className="final-total">
@@ -78,7 +75,7 @@ class orderSuccess extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6">
+                            {/* <div className="col-lg-6">
                                 <div className="row order-success-sec">
                                     <div className="col-sm-6">
                                         <h4>summery</h4>
@@ -117,26 +114,13 @@ class orderSuccess extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
                 </section>
             </div>
-            :
-            <section className="p-0">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12">
-                            <div className="error-section">
-                                <h1>404</h1>
-                                <h2>page not found</h2>
-                                <a href="index.html" className="btn btn-solid">back to home</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         )
     }
 }

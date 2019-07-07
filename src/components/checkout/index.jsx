@@ -3,10 +3,13 @@ import { connect } from 'react-redux'
 import {Link, Redirect } from 'react-router-dom'
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 import SimpleReactValidator from 'simple-react-validator';
+import axios from "axios";
 
 import Breadcrumb from "../common/breadcrumb";
-import {removeFromWishlist} from '../../actions'
+import {emptyCart} from '../../actions'
 import {getCartTotal} from "../../services";
+import { resolve } from '../../../node_modules/url';
+import store from '../../store';
 
 class checkOut extends Component {
 
@@ -56,24 +59,39 @@ class checkOut extends Component {
     StripeClick = () => {
 
         if (this.validator.allValid()) {
-            alert('You submitted the form and stuff!');
+            //alert('You submitted the form and stuff!');
 
-            var handler = (window).StripeCheckout.configure({
-                key: 'pk_test_glxk17KhP7poKIawsaSgKtsL',
-                locale: 'auto',
-                token: (token: any) => {
-                    console.log(token)
-                      this.props.history.push({
-                          pathname: '/order-success',
-                              state: { payment: token, items: this.props.cartItems, orderTotal: this.props.total, symbol: this.props.symbol }
-                      })
-                }
-              });
-              handler.open({
-                name: 'Multikart',
-                description: 'Online Fashion Store',
-                amount: this.amount * 100
-              })
+            // var handler = (window).StripeCheckout.configure({
+            //     key: 'pk_test_glxk17KhP7poKIawsaSgKtsL',
+            //     locale: 'auto',
+            //     token: (token: any) => {
+            //         console.log(token)
+            //           this.props.history.push({
+            //               pathname: '/order-success',
+            //                   state: { payment: token, items: this.props.cartItems, orderTotal: this.props.total, symbol: this.props.symbol }
+            //           })
+            //     }
+            //   });
+            //   handler.open({
+            //     name: 'Multikart',
+            //     description: 'Online Fashion Store',
+            //     amount: this.amount * 100
+            //   })
+            const user = {"fname":this.state.first_name, 
+                        "lname":this.state.last_name, 
+                        "email":this.state.email, 
+                        "phone":this.state.phone}
+            axios
+            .post('http://localhost:8000/kbe/api/customers/', {user}).then((response) => {
+                console.log("response is ", response);
+                //this.props.emptyCart();
+                console.log("this.state.cartItems ", this.props.cartItems);
+                this.props.history.push({
+                    pathname: '/order-success',
+                        state: { items: this.props.cartItems, orderTotal: this.props.total, symbol: this.props.symbol }
+                })
+                //resolve(response);
+            })
         } else {
           this.validator.showMessages();
           // rerender to show messages for the first time
@@ -136,14 +154,14 @@ class checkOut extends Component {
                                                 <div className="form-group col-md-6 col-sm-6 col-xs-12">
                                                     <div className="field-label">Phone</div>
                                                     <input type="text" name="phone"  value={this.state.phone} onChange={this.setStateFromInput} />
-                                                    {this.validator.message('phone', this.state.phone, 'required|phone')}
+                                                    {this.validator.message('phone', this.state.phone, 'phone')}
                                                 </div>
                                                 <div className="form-group col-md-6 col-sm-6 col-xs-12">
                                                     <div className="field-label">Email Address</div>
                                                     <input type="text" name="email" value={this.state.email} onChange={this.setStateFromInput} />
                                                     {this.validator.message('email', this.state.email, 'required|email')}
                                                 </div>
-                                                <div className="form-group col-md-12 col-sm-12 col-xs-12">
+                                                {/* <div className="form-group col-md-12 col-sm-12 col-xs-12">
                                                     <div className="field-label">Country</div>
                                                     <select name="country" value={this.state.country} onChange={this.setStateFromInput}>
                                                         <option>India</option>
@@ -172,12 +190,12 @@ class checkOut extends Component {
                                                     <div className="field-label">Postal Code</div>
                                                     <input type="text" name="pincode" value={this.state.spincode} onChange={this.setStateFromInput} />
                                                     {this.validator.message('pincode', this.state.pincode, 'required|integer')}
-                                                </div>
-                                                <div className="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                </div> */}
+                                                {/* <div className="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                     <input type="checkbox" name="create_account" id="account-option"  checked={this.state.create_account} onChange={this.setStateFromCheckbox}/>
                                                     &ensp; <label htmlFor="account-option">Create An Account?</label>
                                                     {this.validator.message('checkbox', this.state.create_account, 'create_account')}
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-sm-12 col-xs-12">
@@ -193,16 +211,9 @@ class checkOut extends Component {
                                                     </ul>
                                                     <ul className="sub-total">
                                                         <li>Subtotal <span className="count">{symbol}{total}</span></li>
-                                                        <li>Shipping <div className="shipping">
-                                                            <div className="shopping-option">
-                                                                <input type="checkbox" name="free-shipping" id="free-shipping" />
-                                                                    <label htmlFor="free-shipping">Free Shipping</label>
-                                                            </div>
-                                                            <div className="shopping-option">
-                                                                <input type="checkbox" name="local-pickup" id="local-pickup" />
-                                                                    <label htmlFor="local-pickup">Local Pickup</label>
-                                                            </div>
-                                                        </div>
+                                                        <li>Shipping 
+                                                            <p> Once you click on <b>Place order</b>, a mail will be sent to you on your order and we will connect to you on mail or phone for delivery.
+                                                            </p>
                                                         </li>
                                                     </ul>
 
@@ -212,7 +223,7 @@ class checkOut extends Component {
                                                 </div>
 
                                                 <div className="payment-box">
-                                                    <div className="upper-box">
+                                                    {/* <div className="upper-box">
                                                         <div className="payment-options">
                                                             <ul>
                                                                 <li>
@@ -229,18 +240,19 @@ class checkOut extends Component {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                     {(total !== 0)?
                                                     <div className="text-right">
-                                                        {(this.state.payment === 'stripe')? <button type="button" className="btn-solid btn" onClick={() => this.StripeClick()} >Place Order</button>:
-                                                         <PaypalExpressBtn env={'sandbox'} client={client} currency={'USD'} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />}
+                                                        {/* {(this.state.payment === 'stripe')? <button type="button" className="btn-solid btn" onClick={() => this.StripeClick()} >Place Order</button>:
+                                                         <PaypalExpressBtn env={'sandbox'} client={client} currency={'USD'} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />} */}
+                                                         <button type="button" className="btn-solid btn" onClick={() => this.StripeClick()} >Place Order</button>
                                                     </div>
                                                     : ''}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="row section-t-space">
+                                    {/* <div className="row section-t-space">
                                         <div className="col-lg-6">
                                             <div className="stripe-section">
                                                 <h5>stripe js example</h5>
@@ -289,7 +301,7 @@ class checkOut extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </form>
                             </div>
                         </div>
@@ -307,5 +319,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {removeFromWishlist}
+    {emptyCart}
 )(checkOut)

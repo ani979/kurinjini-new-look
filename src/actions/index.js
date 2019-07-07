@@ -51,6 +51,9 @@ export const removeFromCart = product_id => ({
     type: types.REMOVE_FROM_CART,
     product_id
 });
+export const emptyCart =() => ({
+    type: types.EMPTY_CART
+});
 export const incrementQty = (product,qty, size) => (dispatch) => {
     dispatch(addToCartUnsafe(product, qty, size))
 

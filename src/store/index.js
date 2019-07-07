@@ -53,8 +53,8 @@ const store = createStore(rootReducer, persistedState, compose(
 
 const unsubscribe = store.subscribe(() => {
     const state = store.getState();
-    saveToLocalStorage(state);
-    //removeFromLocalStorage();
+    //saveToLocalStorage(state);
+    removeFromLocalStorage();
 });
 
 export default store;

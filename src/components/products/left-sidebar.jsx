@@ -9,7 +9,7 @@ import NewProduct from "../common/new-product";
 import Breadcrumb from "../common/breadcrumb";
 import DetailsWithPrice from "./common/product/details-price";
 import DetailsTopTabs from "./common/details-top-tabs";
-import { addToCart, addToCartUnsafe, addToWishlist } from '../../actions'
+import { addToCart, addToCartUnsafe} from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
 
@@ -117,7 +117,7 @@ class LeftSideBar extends Component {
                                                 {sliderToDisplay}
                                                 <SmallImages item={item} settings={productsnav} navOne={this.state.nav1} />
                                             </div>
-                                            <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} addToWishlistClicked={addToWishlist} />
+                                            <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe}  />
                                         </div>
                                     </div>
                                     <DetailsTopTabs item={item} />
@@ -140,4 +140,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist}) (LeftSideBar);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (LeftSideBar);

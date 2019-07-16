@@ -62,7 +62,7 @@ export const getSolutionForHair = (products) => {
 export const getCategory = (products) => {
     var uniqueBrands = [];
     products.map((product, index) => {
-            console.log("product.category ", product.category);
+            //console.log("product.category ", product.category);
             if(product.category) {
                 if(uniqueBrands.indexOf(product.category) === -1){
                     uniqueBrands.push(product.category);

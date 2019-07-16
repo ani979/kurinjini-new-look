@@ -73,7 +73,7 @@ export default function cartReducer(state = {
 
         case EMPTY_CART:
             //console.log("here in empty cart");
-            return { ...state, cart:[]}   
+            return { cart:[]}   
 
         default:
     }

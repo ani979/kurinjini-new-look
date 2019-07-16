@@ -49,7 +49,7 @@ class NavBar extends Component {
         }    
     }
     swipeRight() {
-        console.log("here in swipe right");
+        //console.log("here in swipe right");
         this.closeNav();
     }
     render() {

@@ -13,7 +13,7 @@ class CollectionAll extends Component {
     }
 
     componentWillUnmount() {
-        console.log("Unmounting!!");
+        //console.log("Unmounting!!");
         this.props.filterCategory([]);
         this.props.filterSubCategory([]);
     }

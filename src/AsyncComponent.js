@@ -6,7 +6,7 @@ export default function asyncComponent(getComponent, props) {
 
         
         componentWillMount() {
-            console.log("this.state.component ", this.state)
+            //console.log("this.state.component ", this.state)
             if (!this.state.Component) {
                 getComponent().then(Component => {
                     AsyncComponent.Component = Component

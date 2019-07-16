@@ -82,13 +82,13 @@ class checkOut extends Component {
                         "email":this.state.email, 
                         "phone":this.state.phone}
             axios
-            .post('http://localhost:8000/kbe/api/customers/', {user}).then((response) => {
-                console.log("response is ", response);
-                //this.props.emptyCart();
-                console.log("this.state.cartItems ", this.props.cartItems);
+            .post('http://localhost:8000/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
+                //console.log("response is ", response);
+                this.props.emptyCart();
+                //console.log("this.state.cartItems ", this.props.cartItems);
                 this.props.history.push({
                     pathname: '/order-success',
-                        state: { items: this.props.cartItems, orderTotal: this.props.total, symbol: this.props.symbol }
+                        state: { orderNumber:response.data.order_id, items:response.data.products, email:response.data.customer, orderTotal:response.data.price }
                 })
                 //resolve(response);
             })
@@ -104,7 +104,7 @@ class checkOut extends Component {
 
         // Paypal Integration
         const onSuccess = (payment) => {
-            console.log("The payment was succeeded!", payment);
+            //console.log("The payment was succeeded!", payment);
             this.props.history.push({
                 pathname: '/order-success',
                     state: { payment: payment, items: cartItems, orderTotal: total, symbol: symbol }
@@ -113,11 +113,11 @@ class checkOut extends Component {
         }
 
         const onCancel = (data) => {
-            console.log('The payment was cancelled!', data);
+            //console.log('The payment was cancelled!', data);
         }
 
         const onError = (err) => {
-            console.log("Error!", err);
+            //console.log("Error!", err);
         }
 
         const client = {

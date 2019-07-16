@@ -45,16 +45,16 @@ class FilterProductCategory extends Component {
             subCategories.push(event.target.value); // push in array checked value
         else
             subCategories.splice(index, 1); // removed in array unchecked value
-        console.log("subCategories ", subCategories);
+        //console.log("subCategories ", subCategories);
         this.props.filterSubCategory(subCategories);
     }
 
     render (){
-        console.log("this.filters ", this.props.filters);
+        //console.log("this.filters ", this.props.filters);
         const filteredCategory = this.props.filters.category;
         const filteredSubCategory = this.props.filters.subCategory;
 
-        console.log("filteredSubCategory ", filteredSubCategory);
+        //console.log("filteredSubCategory ", filteredSubCategory);
         return (
                 <div className="collection-filter-block">
                     {/*brand filter start*/}

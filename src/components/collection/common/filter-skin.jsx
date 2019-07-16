@@ -25,7 +25,7 @@ class FilterSkin extends Component {
     }
 
     componentWillMount() {
-        console.log("calling mount");
+        //console.log("calling mount");
         this.props.filters.category = [];
         this.props.filters.subCategory = [];
         if(this.props.filters.type === "hair") {
@@ -58,7 +58,7 @@ class FilterSkin extends Component {
         goodFor.push(event.target.value); // push in array checked value
         else
         goodFor.splice(index, 1); // removed in array unchecked value
-        console.log("goodFor ", goodFor);
+        //console.log("goodFor ", goodFor);
         this.props.filterGoodFor(goodFor);
     }
 

@@ -40,8 +40,8 @@ class cartComponent extends Component {
                                 <table className="table cart-table table-responsive-xs">
                                     <thead>
                                     <tr className="table-head">
-                                        <th scope="col">image</th>
                                         <th scope="col">product name</th>
+                                        <th scope="col">flavour</th>
                                         <th scope="col">price</th>
                                         <th scope="col">size</th>
                                         <th scope="col">quantity</th>
@@ -56,11 +56,11 @@ class cartComponent extends Component {
                                         return (
                                         <tbody key={index}>
                                             <tr>
-                                                <td>
+                                                {/* <td>
                                                     <Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>
                                                         <img src={imageURL} alt="" />
                                                     </Link>
-                                                </td>
+                                                </td> */}
                                                 <td><Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>{item.name}</Link>
                                                     <div className="mobile-cart-content row">
                                                         <div className="col-xs-3">
@@ -83,8 +83,9 @@ class cartComponent extends Component {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><h2>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h2></td>
-                                                <td><h2>{(item.choosenSize)}</h2></td>
+                                                <td><h3>{(item.flavour)}</h3></td>
+                                                <td><h3>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h3></td>
+                                                <td><h3>{(item.choosenSize)}</h3></td>
                                                 <td>
                                                     <div className="qty-box">
                                                         <div className="input-group">

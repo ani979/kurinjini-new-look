@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import {Link, Redirect } from 'react-router-dom'
-import PaypalExpressBtn from 'react-paypal-express-checkout';
 import SimpleReactValidator from 'simple-react-validator';
 import axios from "axios";
 
 import Breadcrumb from "../common/breadcrumb";
 import {emptyCart} from '../../actions'
 import {getCartTotal} from "../../services";
-import { resolve } from '../../../node_modules/url';
-import store from '../../store';
 
 class checkOut extends Component {
 
@@ -59,33 +55,14 @@ class checkOut extends Component {
     StripeClick = () => {
 
         if (this.validator.allValid()) {
-            //alert('You submitted the form and stuff!');
-
-            // var handler = (window).StripeCheckout.configure({
-            //     key: 'pk_test_glxk17KhP7poKIawsaSgKtsL',
-            //     locale: 'auto',
-            //     token: (token: any) => {
-            //         console.log(token)
-            //           this.props.history.push({
-            //               pathname: '/order-success',
-            //                   state: { payment: token, items: this.props.cartItems, orderTotal: this.props.total, symbol: this.props.symbol }
-            //           })
-            //     }
-            //   });
-            //   handler.open({
-            //     name: 'Multikart',
-            //     description: 'Online Fashion Store',
-            //     amount: this.amount * 100
-            //   })
             const user = {"fname":this.state.first_name, 
                         "lname":this.state.last_name, 
                         "email":this.state.email, 
                         "phone":this.state.phone}
+            
             axios
             .post('http://localhost:8000/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
-                //console.log("response is ", response);
                 this.props.emptyCart();
-                //console.log("this.state.cartItems ", this.props.cartItems);
                 this.props.history.push({
                     pathname: '/order-success',
                         state: { orderNumber:response.data.order_id, items:response.data.products, email:response.data.customer, orderTotal:response.data.price }
@@ -101,31 +78,6 @@ class checkOut extends Component {
 
     render (){
         const {cartItems, symbol, total} = this.props;
-
-        // Paypal Integration
-        const onSuccess = (payment) => {
-            //console.log("The payment was succeeded!", payment);
-            this.props.history.push({
-                pathname: '/order-success',
-                    state: { payment: payment, items: cartItems, orderTotal: total, symbol: symbol }
-            })
-
-        }
-
-        const onCancel = (data) => {
-            //console.log('The payment was cancelled!', data);
-        }
-
-        const onError = (err) => {
-            //console.log("Error!", err);
-        }
-
-        const client = {
-            sandbox:    'AZ4S98zFa01vym7NVeo_qthZyOnBhtNvQDsjhaZSMH-2_Y9IAJFbSD3HPueErYqN8Sa8WYRbjP7wWtd_',
-            production: 'AZ4S98zFa01vym7NVeo_qthZyOnBhtNvQDsjhaZSMH-2_Y9IAJFbSD3HPueErYqN8Sa8WYRbjP7wWtd_',
-        }
-
-
         return (
             <div>
                 <Breadcrumb  title={'Checkout'}/>

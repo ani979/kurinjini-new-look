@@ -31,9 +31,9 @@ export const fetchSingleProduct = productId => ({
 
 
 //it seems that I should probably use this as the basis for "Cart"
-export const addToCart = (product,qty, size) => (dispatch) => {
+export const addToCart = (product,qty, size, variant) => (dispatch) => {
     toast.success("Item Added to Cart");
-        dispatch(addToCartUnsafe(product, qty, size))
+        dispatch(addToCartUnsafe(product, qty, size, variant))
 
 }
 export const addToCartAndRemoveWishlist = (product,qty) => (dispatch) => {
@@ -41,11 +41,12 @@ export const addToCartAndRemoveWishlist = (product,qty) => (dispatch) => {
     dispatch(addToCartUnsafe(product, qty));
     dispatch(removeFromWishlist(product));
 }
-export const addToCartUnsafe = (product, qty, size) => ({
+export const addToCartUnsafe = (product, qty, size, variant) => ({
     type: types.ADD_TO_CART,
     product,
     qty,
-    size
+    size,
+    variant
 });
 export const removeFromCart = product_id => ({
     type: types.REMOVE_FROM_CART,

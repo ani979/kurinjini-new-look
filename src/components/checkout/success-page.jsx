@@ -38,7 +38,7 @@ class orderSuccess extends Component {
                 <section className="section-b-space">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-lg-12 col-sm-12 col-md-12">
                                 <div className="product-order">
                                     <h3>your order details</h3>
                                     {itemsJson.map((item, index) => {
@@ -46,19 +46,31 @@ class orderSuccess extends Component {
                                                 {/* <div className="col-3">
                                                     <img src={`${item.variants[0].images}`} alt="" className="img-fluid" />
                                                 </div> */}
-                                                <div className="col-3 order_detail">
+                                                <div className="col-2 order_detail">
                                                     <div>
                                                         <h4>product name</h4>
                                                         <h5>{item.name}</h5>
                                                     </div>
                                                 </div>
-                                                <div className="col-3 order_detail">
+                                                <div className="col-2 order_detail">
+                                                    <div>
+                                                        <h4>product flavour</h4>
+                                                        <h5>{item.flavour ? item.flavour : ""}</h5>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2 order_detail">
+                                                    <div>
+                                                        <h4>Volume</h4>
+                                                        <h5>{item.volume}</h5>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2 order_detail">
                                                     <div>
                                                         <h4>quantity</h4>
                                                         <h5>{item.quantity}</h5>
                                                     </div>
                                                 </div>
-                                                <div className="col-3 order_detail">
+                                                <div className="col-2 order_detail">
                                                     <div>
                                                         <h4>price</h4>
                                                         <h5>{item.price}</h5>

@@ -28,13 +28,20 @@ class DetailsWithPrice extends Component {
             nav3: this.slider3,
             price:this.props.item.price,
             size:this.props.item.size[0],
-            quantity:1
+            quantity:1,
+            flavour:this.props.item.variants && this.props.item.variants.length > 0 ? this.props.item.variants[0].flavour: ""
         });
     }
 
     componentDidUpdate(prevProps) {
         if(this.props.item.name !== prevProps.item.name) {
-            this.setState({quantity:1})
+            this.setState({
+                price:this.props.item.price,
+                size:this.props.item.size[0],
+                quantity:1,
+                flavour:this.props.item.variants && this.props.item.variants.length > 0 ? this.props.item.variants[0].flavour: ""
+    
+            })
         }
     }
 
@@ -54,6 +61,8 @@ class DetailsWithPrice extends Component {
             let selItem = this.props.item.pricePerSize.filter((value, index) => value.size === size);
             //console.log("sel Item ", selItem)
             this.setState({price: selItem[0].price, size:size})
+        } else {
+            this.setState({size:size})
         }
     }
 
@@ -64,8 +73,15 @@ class DetailsWithPrice extends Component {
             let selItem = this.props.item.variants.filter((value, index) => value.flavour === flavour);
             //console.log("sel Item ", selItem)
             if(selItem[0].price) {
-                this.setState({price: selItem[0].price})
-            }    
+                this.setState({
+                    flavour:flavour,
+                    price: selItem[0].price
+                })
+            } else {
+                this.setState({
+                    flavour:flavour
+                })
+            }   
         }
     }
 
@@ -136,8 +152,8 @@ class DetailsWithPrice extends Component {
                         </div>
                     </div>
                     <div className="product-buttons" >
-                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size)}>add to cart</a>
-                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price)} >buy now</Link>
+                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size, this.state.flavour)}>add to cart</a>
+                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.price, this.state.flavour)} >buy now</Link>
                     </div>
                     {/* <div className="product-buttons" >
                         <Link to={`${process.env.PUBLIC_URL}/pages/howTo`} className="btn btn-solid" >How to Buy</Link>

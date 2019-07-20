@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import '../../common/index.scss';
+import NavCarousel from '../../common/headers/common/nav-carousel'
 import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
+import $ from 'jquery';
+import 'smartmenus';
 
 // Import custom components
-import HeaderOne from '../../common/headers/header-one'
 import TopCollection from './collection';
-import SpecialProducts from "./products";
-import BlogSection from "./blogsection";
-import Instagram from "./instagram";
-import FooterOne from "../../common/footers/footer-one";
 import { FREE_SHIPPING, FREE_SHIPPING_BANGALORE, ALWAYS_AVAILABLE, ALWAYS_AVAILABLE_WHATSAPP } from '../../../constants/general';
 
 class Fashion extends Component {
@@ -99,8 +97,8 @@ class Fashion extends Component {
                     {
                         breakpoint: 480,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
+                            slidesToShow: 3,
+                            slidesToScroll: 3
                         }
                     }
 
@@ -110,95 +108,19 @@ class Fashion extends Component {
 		return (
 			<div>
                 {/*Home Slider*/}
-                <section className="p-0">
-                    <Slider  {...mainSlider} className="slide-1 home-slider">
-                        <div>
-                            <div className="home home1 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>welcome to fashion</h4> */}
-                                                    {/* <h4>Home made creams</h4> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home2 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home3 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home4 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home5 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/all/collection`} className="btn btn-solid">View them all</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Slider>
-                </section>
+                {/* <div class = "container">
+                    <div class = "row col-12">
+                        <nav id="main-nav">
+                            <ul id="main-menu" className="sm pixelstrap sm-horizontal" >
+                                <li className="mega"><a href="#">Skin Care</a>
+                                    
+                                </li>
+                            </ul>
+                        </nav>   
+                    </div> 
+                </div>                         */}
+                                            
+                <TopCollection />
                 {/*Home Section End*/}
 
                 {/*collection banner*/}
@@ -238,7 +160,7 @@ class Fashion extends Component {
                 </section>
                 {/*collection banner end*/}
 
-                <TopCollection />
+                
 
                 {/*Parallax banner*/}
                 {/* <section className="p-0">

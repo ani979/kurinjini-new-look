@@ -67,11 +67,17 @@ export default function cartReducer(state = {
                                 flavour:action.variant }] }
 
         case DECREMENT_QTY:
-            
-            if (state.cart.findIndex(product => product.id === action.productId && product.choosenSize === action.size) !== -1) {
+            console.log("action ", action);
+            if (state.cart.findIndex(
+                product => 
+                    product.id === action.productId && 
+                    product.choosenSize === action.size &&
+                    product.flavour === action.variant) !== -1) {
                 const cart = state.cart.reduce((cartAcc, product) => {
-                    if (product.id === action.productId && product.choosenSize === action.size && product.qty > 1) {
-                        //console.log('action.size: ', action.size);
+                    if (product.id === action.productId && 
+                        product.choosenSize === action.size && 
+                        product.flavour === action.variant && 
+                        product.qty > 1) {
                         const price = getPricePerSize(product, action.size);
                         cartAcc.push({ ...product, qty: product.qty-1, sum: (price - (price*product.discount/100))*(product.qty-1) }) // Decrement qty
                     } else {
@@ -87,7 +93,7 @@ export default function cartReducer(state = {
             return { ...state, cart: [...state.cart, { ...action.product, qty: action.qty, sum: action.product.price*action.qty }] }
 
         case REMOVE_FROM_CART:
-            
+            //console.log("action.product_id ", action)
             return {
                 cart: state.cart.filter(id => id !== action.product_id)
             }

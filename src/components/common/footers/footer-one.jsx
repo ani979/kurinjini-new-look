@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link} from 'react-router-dom';
+import NavBar from "../headers/common/navbar";
 
 class FooterOne extends Component {
 
@@ -166,6 +167,7 @@ class FooterOne extends Component {
                         </section>
                     </div>
                 </div> */}
+                <NavBar/>
                 <section className="section-b-space light-layout">
                     <div className="container">
                         <div className="row footer-theme partition-f">

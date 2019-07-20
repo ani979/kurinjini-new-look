@@ -160,6 +160,10 @@ section ,.section-t-space{
   padding-bottom: 20px;
 }
 
+.slider-bg {
+  background-color: #31315f !important;
+}
+
 .margin-auto {
   margin:auto;
 }
@@ -1238,7 +1242,9 @@ header {
       &.home#{$i} {
 
         @media (min-width: 100px) {
-          background-image:url("#{$assetspath}/home-banner/mobile/#{$i}.jpg");
+          background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
+          height: 100px;
+          width: 100px;
         } 
         @media (min-width: 800px) {
           background-image:url("#{$assetspath}/home-banner/#{$i}.jpg");
@@ -8229,6 +8235,32 @@ body.rtl {
       text-align: center;
     }
   }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  opacity:1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 

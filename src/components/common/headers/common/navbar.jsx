@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'smartmenus';
 import { withTranslate } from 'react-redux-multilingual'
 import {Swipeable } from 'react-swipeable'
+import CartContainer from "../../../../containers/CartContainer";
 
 class NavBar extends Component {
     constructor(props){

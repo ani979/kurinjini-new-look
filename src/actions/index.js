@@ -55,14 +55,15 @@ export const removeFromCart = product_id => ({
 export const emptyCart =() => ({
     type: types.EMPTY_CART
 });
-export const incrementQty = (product,qty, size) => (dispatch) => {
-    dispatch(addToCartUnsafe(product, qty, size))
+export const incrementQty = (product,qty, size, flavour) => (dispatch) => {
+    dispatch(addToCartUnsafe(product, qty, size, flavour))
 
 }
-export const decrementQty = (productId,size) => ({
+export const decrementQty = (productId,size, variant) => ({
     type: types.DECREMENT_QTY,
     productId,
-    size
+    size,
+    variant
 });
 
 

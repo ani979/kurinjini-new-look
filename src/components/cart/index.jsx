@@ -90,14 +90,14 @@ class cartComponent extends Component {
                                                     <div className="qty-box">
                                                         <div className="input-group">
                                                             <span className="input-group-prepend">
-                                                                <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id, item.choosenSize)} data-type="minus" data-field="">
+                                                                <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id, item.choosenSize, item.flavour)} data-type="minus" data-field="">
                                                                  <i className="fa fa-angle-left"></i>
                                                                 </button>
                                                             </span>
                                                             <input type="text" name="quantity" value={item.qty} readOnly={true} className="form-control input-number" />
 
                                                             <span className="input-group-prepend">
-                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
+                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize, item.flavour)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
                                                             <i className="fa fa-angle-right"></i>
                                                             </button>
                                                            </span>

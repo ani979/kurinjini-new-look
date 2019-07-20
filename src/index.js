@@ -24,8 +24,6 @@ import LeftSideBar from "./components/products/left-sidebar";
 // Features
 import Layout from './components/app'
 import Cart from './components/cart'
-import Compare from './components/compare/index'
-import wishList from './components/wishlist'
 import checkOut from './components/checkout'
 import orderSuccess from './components/checkout/success-page'
 
@@ -103,6 +101,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/lip-scrubs`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} subSelection={allProducts.lipScrubs} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/kids-lips`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} subSelection={SUBCATEGORY_KIDS} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/kids-hair`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} subSelection={SUBCATEGORY_KIDS} />}/>
+								<Route path={`${process.env.PUBLIC_URL}/lips`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} />}/>
 
 								<Route path={`${process.env.PUBLIC_URL}/foot-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.footScrubbers} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/foot-healers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.moisturizingCreams} subSelection={allProducts.footHealer} />}/>
@@ -112,7 +111,7 @@ class Root extends React.Component {
 								
 								<Route path={`${process.env.PUBLIC_URL}/body-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.scrubbers} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/nourishing-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.normalSoaps} />}/>
-
+								<Route path={`${process.env.PUBLIC_URL}/soaping-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/hydrosols`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.hydrosols}/>}/>
 
 								<Route path={`${process.env.PUBLIC_URL}/hair-oils`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.oilsAndSerums}/>}/>
@@ -121,8 +120,6 @@ class Root extends React.Component {
 
 								{/*Routes For custom Features*/}
 								<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart}/>
-								<Route path={`${process.env.PUBLIC_URL}/wishlist`} component={wishList}/>
-								<Route path={`${process.env.PUBLIC_URL}/compare`} component={Compare}/>
 								<Route path={`${process.env.PUBLIC_URL}/checkout`} component={checkOut}/>
 								<Route path={`${process.env.PUBLIC_URL}/order-success`} component={orderSuccess}/>
 

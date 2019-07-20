@@ -1,0 +1,17 @@
+.description-tab {
+    background-color:#6fd0ef !important;
+}
+
+.detail-tab {
+    background-color:#f2f2d4 !important;
+}
+
+li.react-tabs__tab--selected .nav-link .show-forward-icon { 
+    /*content: "∧"; */
+    visibility: visible;
+}
+
+li .nav-link .show-forward-icon { 
+    /*content: "∧"; */
+    visibility: hidden;
+}

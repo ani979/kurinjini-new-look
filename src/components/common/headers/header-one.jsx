@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IntlActions } from 'react-redux-multilingual'
 import Pace from 'react-pace-progress'
+import '../../../index.scss'
 
 // Import custom components
 import store from '../../../store';

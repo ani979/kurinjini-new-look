@@ -1487,6 +1487,27 @@ $theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
   }
 }
 @media (min-width: 578px) {
+  .mobile-search, .mobile-cart, .mobile-setting {
+    i {
+      display: none;
+    }
+    .close-circle {
+      i {
+        display: block;
+      }
+    }
+  }
+  .mobile-search {
+    .show-div {
+      .form-inline {
+        button {
+          i {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
   .main-menu {
     .menu-right {
       .icon-nav {
@@ -1590,6 +1611,26 @@ $theme-deafult__toggle-spacing: floor($theme-deafult__item-height * 0.1);
       }
     }
   }
+  .mobile-cart {
+    right: 48%;
+    .close-circle {
+      i {
+        font-size: 14px;
+      }
+    }
+    i {
+      display: inline-block;
+      font-size: 22px;
+      color: $header-font;
+    }
+    > div {
+      img {
+        display: none;
+      }
+    }
+  }
+  
+  
   .main-menu {
     .menu-left {
       &.category-nav-right {

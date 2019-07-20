@@ -70,7 +70,7 @@ const allItems = [
   "ingredients": [JOJOBA, VITAMIN_E, SWEET_ALMOND, ARGAN, AVOCADO, VIRGIN_COCONUT, VIRIN_OLIVE, COCOA_BUTTER, MANGO_BUTTER, SHEA_BUTTER],
   "size": [SIXTY],
   "tags": [DRYNESS],
-  "rating": 3,
+  "rating": 4,
   "variants": [],
   "goodFor":[allProducts.kidsSpecial],
   "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS]

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.scss';
 import HowToUseRenderer from '../../../api/howtouse';
+import "./details-tabs.css"
 
 class DetailsTopTabs extends Component {
 
@@ -47,13 +48,17 @@ class DetailsTopTabs extends Component {
                     <div className="col-sm-12 col-lg-12">
                         <Tabs className="tab-content nav-material">
                             <TabList className="nav nav-tabs nav-material">
-                                <Tab className="nav-item">
+                                <Tab className="nav-item description-tab">
                                     <span className="nav-link active">
-                                        <i className="icofont icofont-ui-home"></i>Description</span>
+                                    <i className="show-forward-icon fa fa-forward"></i>
+                                    Details
+                                    </span>
+                                    
                                     <div className="material-border"></div>
                                 </Tab>
-                                <Tab className="nav-item">
-                                    <span className="nav-link" ><i className="icofont icofont-man-in-glasses"></i>Details</span>
+                                <Tab className="nav-item detail-tab">
+                                    <span className="nav-link" >
+                                    <i className="show-forward-icon fa fa-forward"></i>Description</span>
                                     <div className="material-border"></div>
                                 </Tab>
                                 

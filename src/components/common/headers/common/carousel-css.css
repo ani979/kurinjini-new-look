@@ -4,3 +4,28 @@
     flex-direction:row;
     justify-content:space-between;
 }
+
+.top-bar-row {
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    justify-content:space-around;
+    font-size:18px;
+}
+
+.top-bar-sidebar {
+    margin:15px;
+
+}
+
+.top-bar-brand-logo {
+    margin:5px;
+}
+
+.block-style {
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}

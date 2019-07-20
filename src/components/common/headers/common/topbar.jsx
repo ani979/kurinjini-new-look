@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { withTranslate } from 'react-redux-multilingual'
+import SideBar from "../common/sidebar";
+import './carousel-css.css'
+import CartContainer from '../../../../containers/CartContainer';
 
 class TopBar extends Component {
-
+    openNav() {
+        var openmyslide = document.getElementById("mySidenav");
+        if(openmyslide){
+            openmyslide.classList.add('open-side')
+		}
+    }
     render() {
          
         const {translate} = this.props;
@@ -19,24 +27,51 @@ class TopBar extends Component {
         return (
             <div className="top-header">
                 <div className="container">
-                    <div className="row">
-                        <div className = "col-lg-6 text-left">
-
-                            <div className="brand-logo">
-                                    <Link to={`${process.env.PUBLIC_URL}/`}>
-                                       {logoDisplay}
-                                        {/* <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/> */}
-                                    </Link>
+                        <div className = "top-bar-row">
+                            
+                            <div className="brand-logo top-bar-sidebar">
+                                <div>
+                                    <a href="javascript:void(0)" onClick={this.openNav}>
+                                        <div className="sidebar-back text-left bar-style"> <i className="fa fa-bars sidebar-bar pr-2" style={{color:"#31315f"}}aria-hidden="true"></i></div>
+                                    </a>
+                                    {/*SideBar Navigation Component*/}
+                                    <SideBar/>
+                                </div>
+                                
                             </div>
+                            <div className="top-bar-brand-logo">
+                                <Link to={`${process.env.PUBLIC_URL}/`}>
+                                    {logoDisplay}
+                                    {/* <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/> */}
+                                </Link>
+                            </div>   
+                            <div>
+                                <div className="header-contact">
+                                    <ul>
+                                        <li>{translate('topbar_title', { theme_name: ' Kurinjini' })}</li>
+                                        <li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  748- 389 - 7810</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div>
+                                <CartContainer/>
+                           </div>     
                         </div>
-                        <div className="col-lg-6">
-                            <div className="header-contact">
-                                <ul>
-                                    <li>{translate('topbar_title', { theme_name: ' Kurinjini' })}</li>
-                                    <li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  748- 389 - 7810</li>
-                                </ul>
-                            </div>
-                        </div>
+                        
+                           
+                        <div className="container">
+						<div className="row">
+							<div className="col-sm-12">
+								<div className="main-menu">
+									<div className="menu-left">
+										
+										
+									</div>
+										
+									
+								</div>
+							</div>
+						</div>
                         {/* <div className="col-lg-6 text-right">
                             <ul className="header-dropdown">
                                 <li className="mobile-wishlist compare-mobile"><Link to={`${process.env.PUBLIC_URL}/compare`}><i className="fa fa-random" aria-hidden="true"></i>{translate('compare')}</Link></li>

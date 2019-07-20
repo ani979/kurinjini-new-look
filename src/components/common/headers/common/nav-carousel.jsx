@@ -1,10 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import {Link} from 'react-router-dom';
 import OneBlock from './one-block'
-import TwoBlock from './two-block'
-
-import ReactTooltip from 'react-tooltip'
 
 export default function NavCarousel() {
 
@@ -62,7 +58,9 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/skin_cream.png`}
-                        linkPath = "moisturizing-cream">
+                        linkPath = "moisturizing-cream"
+                        quickName = "Creams">
+                        
                     </OneBlock>
                     
                 </div>
@@ -71,7 +69,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/kids.png`}
-                        linkPath = "kids">
+                        linkPath = "kids"
+                        quickName = "Kids friendly">
                     </OneBlock>
                 </div>
                 <div>
@@ -79,7 +78,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/lip-balm.png`} 
-                        linkPath = "lips">
+                        linkPath = "lips"
+                        quickName = "lip care">
                     </OneBlock>
                 </div>
                 <div>
@@ -87,7 +87,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/soap.png`} 
-                        linkPath = "soaping-bars">
+                        linkPath = "soaping-bars"
+                        quickName = "Soaps">
                     </OneBlock>
                 </div>
             {/* <div class = "row col-12"> */}
@@ -96,7 +97,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/oils.png`} 
-                        linkPath = "oils">
+                        linkPath = "oils"
+                        quickName = "Oils and serums">
                     </OneBlock>
                 </div>
                 <div>
@@ -104,7 +106,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/old.png`} 
-                        linkPath = "anti-ageing">
+                        linkPath = "anti-ageing"
+                        quickName = "Anti-ageing">
                     </OneBlock>
                 </div>  
                 <div>
@@ -112,7 +115,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/hair.png`} 
-                        linkPath = "anti-ageing">
+                        linkPath = "anti-ageing"
+                        quickName = "Hair care">
                     </OneBlock>
                 </div>
                 <div>
@@ -120,7 +124,9 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/hydrosol.png`} 
-                        linkPath = "anti-ageing">
+                        linkPath = "anti-ageing"
+                        quickName = "Hydrosols">
+
                     </OneBlock>
                 </div>
                 <div>
@@ -128,7 +134,8 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/sun-guard.png`} 
-                        linkPath = "anti-ageing">
+                        linkPath = "anti-ageing"
+                        quickName = "Sun protection">
                     </OneBlock>
                 </div>
             </Slider>

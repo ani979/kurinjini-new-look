@@ -8,17 +8,23 @@ import {getVisibleproducts} from '../../../services';
 import ProductListItem from "./product-list-item";
 
 class ProductListing extends Component {
-
     constructor (props) {
         super (props)
 
-        this.state = { limit: 5, hasMoreItems: true };
+        this.state = { limit: 5, hasMoreItems: true, _isLoading:true };
 
     }
 
-    componentWillMount(){
+    componentWillUnmount() {
+        this.setState = (state,callback)=>{
+            return;
+        };
+    }
+
+    componentWillMount() {
         this.fetchMoreItems();
     }
+    
 
     fetchMoreItems = () => {
         if (this.state.limit >= this.props.products.length) {
@@ -35,7 +41,7 @@ class ProductListing extends Component {
 
     }
 
-    render (){
+    render () {
         const {products, addToCart, symbol, addToWishlist, addToCompare} = this.props;
 
         return (

@@ -258,11 +258,11 @@ const allItems = [
   "category": allProducts.oilsAndSerums,
   "ingredients": [SAFFRON, ARGAN, MORINGA, TEATREE, GERANIUM, ROSEMARY, JOJOBA, GRAPESEED, CUCUMBER_SEED, HEMP, AVOCADO, FRANKINCENSE, LEMON_GRASS, COCONUT],
   "size": [FIFTEEN],
-  "tags": [DARK_CIRCLES, BLEMISHES, PIGMENTATION, ACNE, DRYNESS, DULLSKIN],
+  "tags": [DARK_CIRCLES, BLEMISHES, PIGMENTATION, ACNE, DRYNESS, DULLSKIN, AGEING],
   "rating": 5,
   "variants": VARIANTS_RENAISSANCE,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.nightOil, allProducts.oilsAndSerums],
+  "subCategory":[allProducts.nightOil, allProducts.oilsAndSerums, ANTI_AGEING],
   "howToUse":"Apply after a face wash during night before going to bed."
 },
 {
@@ -769,7 +769,7 @@ const allItems = [
   "category": allProducts.faceCare,
   "ingredients": [RASPBERRY_SEED, CARROT_SEED, WHEAT_GERM, COCOA_BUTTER, SUNFLOWER_WAX, CHAMOMILE],
   "size": [FIFTY_ML],
-  "tags": [SUNPROTECTION],
+  "tags": [SUNPROTECTION, AGEING],
   "rating": 4,
   "variants": [],
   "goodFor":[allProducts.drySkin],
@@ -795,7 +795,7 @@ const allItems = [
   "rating": 4,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.bodyButter, allProducts.fadeScars]
+  "subCategory":[allProducts.sunProtection, ANTI_AGEING, allProducts.fadeScars]
 }
 
 ]

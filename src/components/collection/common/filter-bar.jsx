@@ -99,6 +99,7 @@ class FilterBar extends Component {
                 <div className="product-page-filter">
                     <select onChange={(e) => this.props.filterSort(e.target.value)}>
                         <option value="">Sorting items</option>
+                        <option value="Rating">Most rated</option>
                         <option value="HighToLow">Price: High to Low</option>
                         <option value="LowToHigh">Price: Low to High</option>
                         <option value="Newest">Newest Items</option>

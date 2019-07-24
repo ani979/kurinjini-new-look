@@ -58,7 +58,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/skin_cream.png`}
-                        linkPath = "moisturizing-cream"
+                        linkPath = "moisturizing-creams"
                         quickName = "Creams">
                         
                     </OneBlock>
@@ -69,7 +69,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/kids.png`}
-                        linkPath = "kids"
+                        linkPath = "kids-friendly"
                         quickName = "Kids friendly">
                     </OneBlock>
                 </div>
@@ -97,7 +97,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/oils.png`} 
-                        linkPath = "oils"
+                        linkPath = "all-oils-serums"
                         quickName = "Oils and serums">
                     </OneBlock>
                 </div>
@@ -115,7 +115,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/hair.png`} 
-                        linkPath = "anti-ageing"
+                        linkPath = "hair"
                         quickName = "Hair care">
                     </OneBlock>
                 </div>
@@ -124,7 +124,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/hydrosol.png`} 
-                        linkPath = "anti-ageing"
+                        linkPath = "hydrosols"
                         quickName = "Hydrosols">
 
                     </OneBlock>

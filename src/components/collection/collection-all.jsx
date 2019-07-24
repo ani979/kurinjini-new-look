@@ -8,15 +8,25 @@ import StickyBox from "react-sticky-box";
 import {filterCategory, filterSubCategory, filterType} from '../../actions'
 
 class CollectionAll extends Component {
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         mainSelection:this.props.mainSelection,
+    //         subSelection:this.props.subSelection,
+    //         typeSelection:this.props.typeSelection
+    //     }
+    // }
     openFilter = () => {
         document.querySelector(".collection-filter").style = "left: -15px";
     }
 
-    componentWillUnmount() {
-        //console.log("Unmounting!!");
-        this.props.filterCategory([]);
-        this.props.filterSubCategory([]);
-    }
+    // componentWillUnmount() {
+    //     console.log("in unmount");
+    //     this.props.filterCategory([]);
+    //     this.props.filterSubCategory([]);
+    // }
+
 
     componentWillMount() {
         this.props.filters.category = this.props.mainSelection ?  this.props.mainSelection : [];
@@ -25,13 +35,13 @@ class CollectionAll extends Component {
         this.props.filters.subCategory = this.props.subSelection ?  [this.props.subSelection] : [];
         this.props.filters.type = this.props.typeSelection;
     }
-    
+
     render () {
         
         return (
             <div>
 
-                <Breadcrumb title={this.props.subSelection}/>
+                <Breadcrumb title={this.props.subSelection ? this.props.subSelection : this.props.mainSelection}/>
 
                 <section className="section-b-space">
                     <div className="collection-wrapper">
@@ -87,7 +97,7 @@ class CollectionAll extends Component {
                                                         </div>
 
                                                         {/*Products Listing Component*/}
-                                                        <ProductListing/>
+                                                        <ProductListing key = {this.props.mainSelection + this.props.subSelection + this.props.typeSelection}/>
 
                                                     </div>
                                                 </div>

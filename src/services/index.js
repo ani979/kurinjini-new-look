@@ -146,9 +146,9 @@ export const getMinMaxPrice = (products) => {
 }
 
 export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category, subCategory, type }) => {
-    //console.log("do i come here?? ", tags)
+   //console.log("do i come here?? ", tags, goodFor, category, subCategory, type);
     return data.products.filter(product => {
-        //console.log("product.goodFor ? ", product.goodFor, goodFor);
+        //console.log("product ", product);
         let brandMatch;
         //const brandMatch = product.tags.some(tag => tags.includes(tag))
         //console.log("tags? ", tags)
@@ -191,16 +191,22 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
 
         let typeMatch;
         //console.log("type ", type);
-        if(type !== '') {
+        if(type) {
             //console.log("product.tags ", product.tags)
             typeMatch = product.type? type === product.type:''
             //console.log("brandmatch ", brandMatch);
         } else {
+            //console.log("or here");
             typeMatch = true;
         }
 
         const startPriceMatch = typeof value.min !== 'number' || value.min <= product.price;
         const endPriceMatch = typeof value.max !== 'number' || product.price <= value.max;
+        // console.log("brandMatch ", brandMatch);
+        // console.log("colorMatch ", colorMatch);
+        // console.log("categoryMatch ", categoryMatch);
+        // console.log("subCategoryMatch ", subCategoryMatch);
+        // console.log("typeMatch ", typeMatch);
 
         return brandMatch && colorMatch && categoryMatch && subCategoryMatch && typeMatch;
     }).sort((product1, product2) => {
@@ -214,6 +220,8 @@ export const getVisibleproducts = (data, {tags, goodFor, value, sortBy, category
             return product1.name.localeCompare(product2.name);
         } else if (sortBy === 'DescOrder') {
             return product2.name.localeCompare(product1.name);
+        } else {
+            return product2.rating >= product1.rating;
         }
     });
 }

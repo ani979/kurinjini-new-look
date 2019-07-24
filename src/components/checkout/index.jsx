@@ -61,7 +61,7 @@ class checkOut extends Component {
                         "phone":this.state.phone}
             
             axios
-            .post('http://localhost:8000/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
+            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
                 this.props.emptyCart();
                 this.props.history.push({
                     pathname: '/order-success',

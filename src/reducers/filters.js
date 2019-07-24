@@ -5,7 +5,7 @@ const filtersReducerDefaultState = {
     tags: [],
     goodFor: [],
     value: { min: 250, max: 950 },
-    sortBy: "Newest",
+    sortBy: "Rating",
     category:[],
     subCategory:[], 
     type:''

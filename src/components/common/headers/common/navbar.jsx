@@ -15,7 +15,7 @@ class NavBar extends Component {
                     <nav id="main-nav" className = "nav-block">
                         
                         {/*Horizontal menu*/}
-                            <ul id="main-menu" className="row col-12">
+                            <ul id="main-menu" className="row">
                                 
                                 {/* <li className="mega">
                                     <a href="#">{translate('features')}

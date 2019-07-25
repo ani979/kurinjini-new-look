@@ -143,7 +143,7 @@ class FooterOne extends Component {
         return (
             <footer className="footer-light">
                 <div className="footer-title light-layout">
-                    <NavBar/>
+                    
                 </div>
                 
                 <section className="section-b-space light-layout">
@@ -157,18 +157,20 @@ class FooterOne extends Component {
                                         <h4>store information</h4>
                                     </div> */}
                                     <div className="footer-contant">
-                                        <ul className="contact-list">
-                                            <li><i className="fa fa-map-marker"></i>Kurinjini Skin Care
-                                            </li>
-                                            <li><i className="fa fa-phone"></i>Call Us: 7483897810</li>
-                                            <li><i className="fa fa-envelope-o"></i>Email Us: <a
-                                                href="#">shilpi@kurinjiniskincare.com</a></li>
-                                        </ul>
+                                        <NavBar/>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-md-6 col-sm-12 margin-auto">
+                            <div className="col-xl-6 col-md-6 col-sm-12 sub-title">
                                 <div className="footer-contant">
+                                    <ul className="contact-list">
+                                        <li><i className="fa fa-map-marker"></i>Kurinjini Skin Care
+                                        </li>
+                                        <li><i className="fa fa-phone"></i>Call Us: 7483897810</li>
+                                        <li><i className="fa fa-envelope-o"></i>Email Us: <a
+                                            href="#">shilpi@kurinjiniskincare.com</a></li>
+                                    </ul>
                                     <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</p>
                                 </div>
                             </div>

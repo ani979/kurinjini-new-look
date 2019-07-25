@@ -17,15 +17,20 @@ class TopBar extends Component {
     render() {
          
         const {translate} = this.props;
-        let logoDisplay = <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>;
+        let logoDisplay = <span>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>
+                         </span>;
         if (document.documentElement.clientWidth < 750) { 
-            logoDisplay = <div>
-                            <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
-                            <h5 style={{color:"#31315f"}}>
-                                {translate('call_us')}:  748- 389 - 7810
-                            </h5>
-                          </div>;
+            logoDisplay = <Link to={`${process.env.PUBLIC_URL}/`}> 
+                            <div>
+                                <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
+                                <h5 style={{color:"#31315f"}}>
+                                    {translate('call_us')}:  748- 389 - 7810
+                                </h5>
+                            </div>
+                           </Link> 
         }   
+        
         return (
             <div className="top-header sticky"  id="sticky" >
                 <div className="container">
@@ -48,12 +53,14 @@ class TopBar extends Component {
                                 </Link>
                             </div>   
                             <div>
-                                <div className="header-contact">
-                                    <ul>
-                                        <li>{translate('topbar_title', { theme_name: ' Kurinjini' })}</li>
-                                        <li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  748- 389 - 7810</li>
-                                    </ul>
-                                </div>
+                                <Link to={`${process.env.PUBLIC_URL}/`}>
+                                    <div className="header-contact">
+                                        <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
+                                        <h5 style={{color:"#31315f"}}>
+                                            {translate('call_us')}:  748- 389 - 7810
+                                        </h5>
+                                    </div>
+                                </Link>    
                             </div> 
                             <div>
                                 <CartContainer/>

@@ -13,7 +13,12 @@ const App = ({children }) => {
                 <HeaderOne />
                 {children}
                 <FooterOne/>
-                <ToastContainer />
+                <ToastContainer position="top-left"
+                    autoClose={2000}
+                    hideProgressBar
+                    newestOnTop
+                    closeOnClick={true}
+                rtl/>
             </div>
         )
 }

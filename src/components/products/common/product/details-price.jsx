@@ -100,8 +100,8 @@ class DetailsWithPrice extends Component {
         const {symbol, item, addToCartClicked, BuynowClicked} = this.props
         let flavour = item.variants.length > 1 ? 
                             <div className="product-page-filter row border-product">
-                                <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose your flavour:</h4>
-                                <select className="col-md-6 col-sm-6 col-xl-6"
+                                <p className="col-md-6 col-sm-6 col-xl-6 col-6 product-detail-flavour"> Choose your flavour:</p>
+                                <select className="col-md-6 col-sm-6 col-xl-6 col-5 quantity-border"
                                 onChange={(e) => this.changePriceBasedOnVariety(e.target.value)}
                                 >
                                     {item.variants.map((vari, i) => {
@@ -123,8 +123,8 @@ class DetailsWithPrice extends Component {
                     <div className="product-description">
 
                         <div className="product-page-filter row">
-                                <h4 className="col-md-6 col-sm-6 col-xl-6"> Choose quantity:</h4>
-                                <select className="col-md-6 col-sm-6 col-xl-6"
+                                <p className="col-md-6 col-sm-6 col-xl-6 col-6 product-detail-flavour"> Choose quantity:</p>
+                                <select className="col-md-6 col-sm-6 col-xl-6 col-5 quantity-border"
                                     onChange={(e) => this.changePriceBasedOnQuantity(e.target.value)}
                                 >
                                     {item.size.map((size, i) => {
@@ -132,7 +132,7 @@ class DetailsWithPrice extends Component {
                                     })}
                                     
                                 </select>
-                            </div>
+                        </div>
                         <span className="instock-cls">{this.state.stock}</span>
                         <h6 className="product-title">How many?</h6>
                         <div className="qty-box">
@@ -147,9 +147,9 @@ class DetailsWithPrice extends Component {
                                     <button type="button" className="btn quantity-right-plus" onClick={this.plusQty} data-type="plus" data-field="">
                                         <i className="fa fa-angle-right"></i>
                                     </button>
-                               </span>
+                            </span>
                             </div>
-                        </div>
+                        </div>    
                     </div>
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size, this.state.flavour)}>add to cart</a>

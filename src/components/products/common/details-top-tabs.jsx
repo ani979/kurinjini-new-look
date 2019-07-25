@@ -12,9 +12,9 @@ class DetailsTopTabs extends Component {
         let howToUse;
         let precaution;
         if(item.video) {
-            videoTab = <Tab className="nav-item">
-            <span className="nav-link" >
-                <i className="icofont icofont-contacts"></i>Video</span>
+            videoTab = <Tab className="nav-item video-tab">
+            <span className="nav-link active">
+                    <i className="show-forward-icon fa fa-forward"></i>Video</span>
             <div className="material-border"></div>
         </Tab>;
         } else {

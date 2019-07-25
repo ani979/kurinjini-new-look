@@ -5676,6 +5676,17 @@ footer{
     margin-bottom: 0;
     line-height: 1.5em;
   }
+
+  .product-detail-flavour {
+    font-weight: 400;
+    color:black;
+  }
+
+  .quantity-border {
+    border: 1px solid #31315f;
+    background-color: whitesmoke;
+  }
+
   .product-title {
     color: $dark-font;
     text-transform: capitalize;

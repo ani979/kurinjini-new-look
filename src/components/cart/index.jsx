@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import Breadcrumb from "../common/breadcrumb";
 import {getCartTotal} from "../../services";
 import {removeFromCart, incrementQty, decrementQty} from '../../actions'
+import "./cart.css"
 
 class cartComponent extends Component {
 
@@ -35,7 +36,7 @@ class cartComponent extends Component {
                 {cartItems.length>0 ?
                 <section className="cart-section section-b-space">
                     <div className="container">
-                        <div className="row">
+                        <div className="row cart-display">
                             <div className="col-sm-12">
                                 <table className="table cart-table table-responsive-xs">
                                     <thead>
@@ -83,7 +84,16 @@ class cartComponent extends Component {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><h3>{(item.flavour)}</h3></td>
+                                                <td><h3>{(item.flavour)}</h3>
+                                                <div className="mobile-cart-content row">
+                                                        <div className="col-xs-12">
+                                                            <div className="qty-box">
+                                                            {(item.choosenSize)}
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </td>
                                                 <td><h3>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h3></td>
                                                 <td><h3>{(item.choosenSize)}</h3></td>
                                                 <td>

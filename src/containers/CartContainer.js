@@ -12,7 +12,7 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
             <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cart.png`} 
             className="img-fluid" alt=""/>
         </Link>
-        <ul className="show-div shopping-cart">
+        {/* <ul className="show-div shopping-cart">
             { cartList.map((item,index) => (
                 <CartPage key={index} item={item} total={total} symbol={symbol} removeFromCart={() => removeFromCart(item)}  />
             ))}
@@ -31,7 +31,7 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
             </li></div>
                     :
             <li><h5>Your cart is currently empty.</h5></li>}
-        </ul>
+        </ul> */}
 
     </li>
 )

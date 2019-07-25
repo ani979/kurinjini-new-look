@@ -1,0 +1,12 @@
+.cart-display {
+    display:flex;
+    flex-direction: column;
+}
+
+.cart-header-display {
+    display:flex;
+}
+
+.cart-items-display {
+    display:flex;
+}

@@ -23,22 +23,29 @@ class HeaderOne extends Component {
 		}
     }
 
-    componentWillMount(){
+    componentDidMount() {
+        //console.log("here");
         window.addEventListener('scroll', this.handleScroll);
 	}
     componentWillUnmount() {
+        //console.log("here umounr");
         window.removeEventListener('scroll', this.handleScroll);
     }
 
     handleScroll = () => {
         let number = window.pageXOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
+        //console.log("number is window.innerWidth ", number, " ", document.documentElement.clientWidth);
+        if (document.documentElement.clientWidth > 750) {
+            return;
+        } 
+        //console.log("document.getElementById(sticky) ", document.getElementById("sticky"))
+        //console.log("contains ", document.getElementById("sticky").classList.contains("fixed"));
         if (number >= 300) {
             document.getElementById("sticky").classList.add('fixed');
         } else {
             document.getElementById("sticky").classList.remove('fixed');
 		}
-		document.getElementById("sticky").classList.remove('fixed');
+		//document.getElementById("sticky").classList.remove('fixed');
     }
 
     changeLanguage(lang) {
@@ -72,7 +79,7 @@ class HeaderOne extends Component {
 
 		return (
 			<div>
-				<header id="sticky" className="sticky">
+				<header >
 					{this.state.isLoading ? <Pace color="#27ae60"/> : null}
 					{/* <div className="mobile-fix-option"></div> */}
 					{/*Top Header Component*/}

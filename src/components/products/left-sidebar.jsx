@@ -48,9 +48,9 @@ class LeftSideBar extends Component {
         var products = {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: false,
-            arrows: true,
-            fade: true
+            dots: true,
+            fade: true,
+            arrows:false
         };
         var productsnav = {
             slidesToShow: 3,
@@ -60,22 +60,24 @@ class LeftSideBar extends Component {
             focusOnSelect: true
         };
 
-        let sliderToDisplay = item.variants.length > 0? <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
+        let sliderToDisplay = item.variants.length > 0? 
+                                <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)}>
                                     {item.variants.map((vari, index) =>
                                     <div key={index} className="container">
                                         <ImageZoom image={vari.images} />
                                         <div className="image-text">{vari.flavour}</div>
                                     </div>
                                     )}
-                             </Slider>:
-                             (item.variants.length === 0 ?
-                             <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
-                                    {item.pictures.map((vari, index) =>
-                                    <div key={index} className="container">
-                                        <ImageZoom image={vari} />
-                                    </div>
-                                    )}
-                             </Slider>:'')
+                                </Slider>:
+                                (item.variants.length === 0 ?
+                                    <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)}>
+                                        {item.pictures.map((vari, index) =>
+                                        <div key={index} className="container">
+                                            <ImageZoom image={vari} />
+                                        </div>
+                                        )}
+                                    </Slider>:''
+                                )
 
             return (
             <div>

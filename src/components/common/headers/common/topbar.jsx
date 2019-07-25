@@ -6,6 +6,8 @@ import './carousel-css.css'
 import CartContainer from '../../../../containers/CartContainer';
 
 class TopBar extends Component {
+    
+
     openNav() {
         var openmyslide = document.getElementById("mySidenav");
         if(openmyslide){
@@ -16,7 +18,7 @@ class TopBar extends Component {
          
         const {translate} = this.props;
         let logoDisplay = <img src={`${process.env.PUBLIC_URL}/assets/images/icon/Kurinjini_smallsize.png`} className="img-fluid small-image-logo" alt=""/>;
-        if (window.innerWidth < 750) { 
+        if (document.documentElement.clientWidth < 750) { 
             logoDisplay = <div>
                             <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
                             <h5 style={{color:"#31315f"}}>
@@ -25,7 +27,7 @@ class TopBar extends Component {
                           </div>;
         }   
         return (
-            <div className="top-header">
+            <div className="top-header sticky"  id="sticky" >
                 <div className="container">
                         <div className = "top-bar-row">
                             

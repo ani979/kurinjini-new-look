@@ -3,7 +3,11 @@
 }
 
 .detail-tab {
-    background-color:#f2f2d4 !important;
+    background-color:#c7b9fa !important;
+}
+
+.video-tab {
+    background-color:#e7eed3 !important;
 }
 
 li.react-tabs__tab--selected .nav-link .show-forward-icon { 

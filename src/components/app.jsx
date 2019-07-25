@@ -17,8 +17,8 @@ const App = ({children }) => {
                     autoClose={2000}
                     hideProgressBar
                     newestOnTop
-                    closeOnClick={true}
-                rtl/>
+                    closeButton={false}
+                    rtl/>
             </div>
         )
 }

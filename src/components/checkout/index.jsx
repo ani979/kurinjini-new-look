@@ -6,6 +6,7 @@ import axios from "axios";
 import Breadcrumb from "../common/breadcrumb";
 import {emptyCart} from '../../actions'
 import {getCartTotal} from "../../services";
+import { toast } from '../../../node_modules/react-toastify';
 
 class checkOut extends Component {
 
@@ -53,6 +54,13 @@ class checkOut extends Component {
     }
 
     StripeClick = () => {
+        if(!this.validator.allValid()) {
+            this.validator.showMessages();
+            // rerender to show messages for the first time
+            this.forceUpdate();
+            toast.warn("Issue in the entries, please check!");
+            return;
+        }
 
         if (this.validator.allValid()) {
             const user = {"fname":this.state.first_name, 
@@ -60,9 +68,13 @@ class checkOut extends Component {
                         "email":this.state.email, 
                         "phone":this.state.phone}
             
+            let toastId = toast.warn("Sending you mail with details ", {
+                autoClose :false,
+              });
             axios
             .post('http://api.kurinjiniskincare.com/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
                 this.props.emptyCart();
+                toast.dismiss(toastId);
                 this.props.history.push({
                     pathname: '/order-success',
                         state: { orderNumber:response.data.order_id, items:response.data.products, email:response.data.customer, orderTotal:response.data.price }
@@ -94,12 +106,12 @@ class checkOut extends Component {
                                             </div>
                                             <div className="row check-out">
                                                 <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <div className="field-label">First Name</div>
+                                                    <div className="field-label">First Name*</div>
                                                     <input type="text" name="first_name" value={this.state.first_name} onChange={this.setStateFromInput} />
                                                     {this.validator.message('first_name', this.state.first_name, 'required|alpha')}
                                                 </div>
                                                 <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <div className="field-label">Last Name</div>
+                                                    <div className="field-label">Last Name*</div>
                                                     <input type="text" name="last_name" value={this.state.last_name} onChange={this.setStateFromInput} />
                                                     {this.validator.message('last_name', this.state.last_name, 'required|alpha')}
                                                 </div>
@@ -109,7 +121,7 @@ class checkOut extends Component {
                                                     {this.validator.message('phone', this.state.phone, 'phone')}
                                                 </div>
                                                 <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <div className="field-label">Email Address</div>
+                                                    <div className="field-label">Email Address*</div>
                                                     <input type="text" name="email" value={this.state.email} onChange={this.setStateFromInput} />
                                                     {this.validator.message('email', this.state.email, 'required|email')}
                                                 </div>

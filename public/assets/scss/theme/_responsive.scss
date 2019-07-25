@@ -4983,7 +4983,24 @@
     }
   }
 }
-
+@media (max-width:450px) {
+  .cart-section {
+    tbody {
+      tr {
+        td {
+          min-width: 105px;
+          .qty-box {
+            .input-group {
+              .form-control {
+                width: 52px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
 @media (max-width: 360px){
   .btn-solid, .btn-outline {
     padding: 10px 15px;

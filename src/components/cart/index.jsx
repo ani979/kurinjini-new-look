@@ -73,7 +73,7 @@ class cartComponent extends Component {
                                                             </div>
                                                         </div>
                                                         <div className="col-xs-3">
-                                                            <h2 className="td-color">{symbol}{(item.sum)}</h2>
+                                                            <h2 className="td-color">{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h2>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color">
@@ -94,7 +94,7 @@ class cartComponent extends Component {
                                                         
                                                     </div>
                                                 </td>
-                                                <td><h3>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h3></td>
+                                                <td><h3>{symbol}{(item.sum)}</h3></td>
                                                 <td><h3>{(item.choosenSize)}</h3></td>
                                                 <td>
                                                     <div className="qty-box">

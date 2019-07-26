@@ -38,7 +38,7 @@ const allItems = [
   "price": 300.00,
   "salePrice": 300.00,
   "discount": 0,
-  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_two.jpg", "/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_three.jpg"],
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_three.jpg", "/assets/images/kurinjini-images/FaceCare/SpecialNeeds/Immortal_two.jpg"],
   "shortDetails": "Immortal is our most popular face cream.",
   "description": "Cellular regeneration is the key to a youthful skin, and essential oils provide a way of doing this which is far more pleasant and safe than methods involving synthetic chemicals.Immortal is not only an anti-ageing cream but it also helps fight hyperpigmentation. It has ingredients that stimualte skin cells into reproducing at a quicker rate, thus reducing the time-lag between new skin growth and the elimination of old cells. Immortal has essentials that are considered to be anti-wrinkle, act as a skin tightening agent, helping in reducing dark spots and blemishes. It is high in Vitamin-A and Vitamin-E oil that prevents formation of free radicals that are scientifically proven to be one of the reasons of pre-mature ageing. Immortal is our most popular face cream. Lot of people have given a great feedback on this cream.",
   "stock": 10,

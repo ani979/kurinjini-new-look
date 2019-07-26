@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import '../../common/index.scss';
-import NavCarousel from '../../common/headers/common/nav-carousel'
 import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
-import $ from 'jquery';
 import 'smartmenus';
 
 // Import custom components
 import TopCollection from './collection';
+import NewCollection from './new-collection';
 import { FREE_SHIPPING, FREE_SHIPPING_BANGALORE, ALWAYS_AVAILABLE, ALWAYS_AVAILABLE_WHATSAPP } from '../../../constants/general';
 
 class Fashion extends Component {
@@ -53,74 +52,14 @@ class Fashion extends Component {
             '                                            fill="#ff4c3b"/>\n' +
             '                                    </svg>';
 
-            var mainSlider = {
-                dots: false,
-                infinite: true,
-                speed: 750,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay:true,
-                autoplaySpeed:2000
-            }
             
-            var slidesix = {
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 6,
-                slidesToScroll: 6,
-                responsive: [
-                    {
-                        breakpoint: 1367,
-                        settings: {
-                            slidesToShow: 5,
-                            slidesToScroll: 5,
-                            infinite: true
-                        }
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 4,
-                            infinite: true
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3
-                        }
-                    }
-
-                ]
-            }
 
 		return (
 			<div>
                 {/*Home Slider*/}
-                {/* <div class = "container">
-                    <div class = "row col-12">
-                        <nav id="main-nav">
-                            <ul id="main-menu" className="sm pixelstrap sm-horizontal" >
-                                <li className="mega"><a href="#">Skin Care</a>
-                                    
-                                </li>
-                            </ul>
-                        </nav>   
-                    </div> 
-                </div>                         */}
-                                            
-                <TopCollection />
+                
+                <NewCollection/>                            
+                <TopCollection/>
                 {/*Home Section End*/}
 
                 {/*collection banner*/}

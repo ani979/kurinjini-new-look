@@ -6,12 +6,9 @@ import '../../../index.scss'
 // Import custom components
 import store from '../../../store';
 import NavCarousel from "./common/nav-carousel";
-import CartContainer from "./../../../containers/CartContainer";
 import TopBar from "./common/topbar";
 import {changeCurrency} from '../../../actions'
-import {Autocomplete} from '../autocomplete'
 import {connect} from "react-redux";
-import _products from '../../../api/data.js'
 
 class HeaderOne extends Component {
 

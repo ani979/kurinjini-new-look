@@ -46,7 +46,7 @@ class ProductItem extends Component {
     }
 
     render() {
-        const {product, symbol, onAddToCartClicked, onAddToWishlistClicked, onAddToCompareClicked} = this.props;
+        const {product, symbol} = this.props;
 
         let RatingStars = []
         for(var i = 0; i < product.rating; i++) {

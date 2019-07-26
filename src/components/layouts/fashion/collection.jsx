@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux'
 
 import {getTopCollection} from '../../../services'
@@ -58,10 +57,7 @@ class TopCollection extends Component {
                                 <Slider {...settings} className="product-4 product-m no-arrow">
                                     { items.map((product, index ) =>
                                         <div key={index}>
-                                        <ProductItem product={product} symbol={symbol}
-                                                     onAddToCompareClicked={() => addToCompare(product)}
-                                                     onAddToWishlistClicked={() => addToWishlist(product)}
-                                                     onAddToCartClicked={() => addToCart(product, 1)} key={index} />
+                                        <ProductItem product={product} symbol={symbol}/>
                                         </div>)
                                     }
                                 </Slider>

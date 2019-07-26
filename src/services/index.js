@@ -246,7 +246,7 @@ export const getTopCollection = products => {
 }
 
 // Get Best Seller
-export const getBestSeller = products => {
+export const getNewCollection = products => {
     const items = products.filter(product => {
         return product.new === true;
     })

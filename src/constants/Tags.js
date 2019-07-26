@@ -3,6 +3,7 @@ export const AGEING = 'Ageing Skin'
 export const DRYNESS = 'Dry skin'
 export const ACNE = "Acne"
 export const DRYLIPS = "Dry Lips"
+export const DARKLIPS = "Dark Lips"
 export const FLAKYLIPS = "Flaky Lips"
 export const DULLSKIN = "Dull skin"
 export const DARK_CIRCLES = "Dark Circles"

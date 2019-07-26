@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 
-import {getBestSeller} from "../../services";
+import {getNewCollection} from "../../services";
 
 
 class NewProduct extends Component {
@@ -50,7 +50,7 @@ class NewProduct extends Component {
 
 function mapStateToProps(state) {
     return {
-        items: getBestSeller(state.data.products),
+        items: getNewCollection(state.data.products),
         symbol: state.data.symbol
     }
 }

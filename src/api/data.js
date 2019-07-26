@@ -1,6 +1,6 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS } from '../constants/Tags';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA } from '../constants/Ingredients';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
@@ -18,7 +18,7 @@ const allItems = [
   "shortDetails": "Moisturizing cream for daily use",
   "description": "Daily moisturizing is vital for a healthy skin. Leaving skin without a moisturizer means compromising the protective skin barrier. Kurinjini brings to you a Shea, Mango butter based moisturizer that also has the anti-oxidant properties brought by Vitamin-E. Along with these, we have also added Jojoba and Sweet Almond oils provide that extra nourishment to the skin. We also take customized orders for your specific requirement on fragrance.",
   "stock": 10,
-  "new": true,
+  "new": false,
   "sale": false,
   "quantity":"60 ml",
   "category": allProducts.faceCare,
@@ -70,7 +70,7 @@ const allItems = [
   "ingredients": [JOJOBA, VITAMIN_E, SWEET_ALMOND, ARGAN, AVOCADO, VIRGIN_COCONUT, VIRIN_OLIVE, COCOA_BUTTER, MANGO_BUTTER, SHEA_BUTTER],
   "size": [SIXTY],
   "tags": [DRYNESS],
-  "rating": 4,
+  "rating": 5,
   "variants": [],
   "goodFor":[allProducts.kidsSpecial],
   "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS]
@@ -305,7 +305,7 @@ const allItems = [
   "ingredients": [ARGAN, TEATREE, NEEM, HIBISCUS, MORINGA, ROSEMARY, GRAPESEED, AVOCADO, JOJOBA, HEMP, FRANKINCENSE],
   "size": [EIGHTY],
   "tags": [DANDRUFF],
-  "rating": 5,
+  "rating": 4,
   "variants": [],
   "goodFor":[allProducts.allKindsOfHair],
   "subCategory":[allProducts.hairOilIntensive, allProducts.hairOilAntiDandruff],
@@ -328,7 +328,7 @@ const allItems = [
   "ingredients": [ARGAN, JOJOBA, HEMP, SWEET_ALMOND, AVOCADO, VIRIN_OLIVE, COCONUT],
   "size": [EIGHTY],
   "tags": [DANDRUFF, HAIR_FALL],
-  "rating": 5,
+  "rating": 4,
   "variants": [],
   "goodFor":[allProducts.kidsSpecial],
   "subCategory":[allProducts.hairOilKids, SUBCATEGORY_KIDS],
@@ -461,7 +461,7 @@ const allItems = [
   "shortDetails": "For a fragrant bath",
   "description": <p>A fragrance balanced with combination of Mango and Mandarin Orange. A coconut oil base soap that is soft moisturising with the presence of Shea Butter.</p>,
   "stock": 10,
-  "new": true,
+  "new": false,
   "sale": false,
   "category": allProducts.soaps,
   "ingredients": [SHEA_BUTTER, COCONUT, MANGA_MANDARIN_FRAGRANCE],
@@ -483,7 +483,7 @@ const allItems = [
   "shortDetails": "For a fragrant bath",
   "description": <p>A slightly sweet and spicy aromatic soap that consists in it Basil Essential oil which is found to be stimulating, promoting mental clarity and alertness. Thyme provides a herbal culinary note along with acting as something that is anti-bacterial, anti-septic. Found to be useful to manage body odour naturally. Extremely effective for an energising bath during the daytime hours.</p>,
   "stock": 10,
-  "new": true,
+  "new": false,
   "sale": false,
   "category": allProducts.soaps,
   "ingredients": [THYME_LEAVES, BASIL_ESSENTIALS, COCONUT],
@@ -515,7 +515,7 @@ const allItems = [
   "ingredients": [UNREFINED_SHEA_BUTTER, COCOA_BUTTER, BEESWAX, ROSEMARY, HEMP, MORINGA,  GRAPESEED, VITAMIN_E, SWEET_ALMOND, WHEAT_GERM],
   "size": [FORTY_GMS],
   "tags": [HARD_HEELS],
-  "rating": 4,
+  "rating": 3,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.footHealer],
@@ -723,7 +723,7 @@ const allItems = [
   "ingredients": [],
   "size": [SIXTY, ONETWENTY],
   "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
-  "rating": 4,
+  "rating": 3,
   "variants": [],
   "goodFor":[allProducts.hairMaskNormal],
   "subCategory":[allProducts.hairMaskNormal],
@@ -796,6 +796,30 @@ const allItems = [
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.sunProtection, ANTI_AGEING, allProducts.fadeScars]
+},
+{
+  "id": 32,
+  "name": "Hemp Intensive Lip Care",
+  "type":allProducts.skin,
+  "price": 120.00,
+  "salePrice": 120.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/LipCare/hemp_1.jpg", "/assets/images/kurinjini-images/LipCare/hemp_2.jpg"],
+  "shortDetails": "Hemp Intensive Lip Care",
+  "description": <p>Introducing Hemp Intensive Lip care, a non-sticky, super moisturising lip balm. Along with providing nourishment, it also acts as a strong guard against <b>lip darkening</b>.  Meant for healing super dry lips without feeling too sticky.
+      <ul><li>It is colourless - can use any matte lipstick over it</li><li>Smells like distinctive pure green hemp(can hate or love) ;-)</li></ul>
+      </p>,
+  "stock": 10,
+  "new": true,
+  "sale": false,
+  "category": allProducts.lipbalm,
+  "ingredients": [CANNABIS_SATIVA, COCOA_BUTTER],
+  "size": [ROUND_FIVEGM, STICK_FIVEGM],
+  "tags": [DRYLIPS, DARKLIPS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.lipbalm]
 }
 
 ]

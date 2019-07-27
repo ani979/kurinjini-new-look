@@ -37,11 +37,12 @@ class ProductListItem extends Component {
     }
 
     plusQty = () => {
-        if(this.props.product.stock >= this.state.quantity) {
-            this.setState({quantity: this.state.quantity+1})
-        }else{
-            this.setState({stock: 'Out of Stock !'})
-        }
+        this.setState({quantity: this.state.quantity+1})
+        // if(this.props.product.stock >= this.state.quantity) {
+        //     this.setState({quantity: this.state.quantity+1})
+        // }else{
+        //     this.setState({stock: 'Out of Stock !'})
+        // }
     }
     changeQty = (e) => {
         this.setState({ quantity: parseInt(e.target.value) })

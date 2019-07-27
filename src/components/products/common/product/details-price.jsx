@@ -86,11 +86,12 @@ class DetailsWithPrice extends Component {
     }
 
     plusQty = () => {
-        if(this.props.item.stock >= this.state.quantity) {
-            this.setState({quantity: this.state.quantity+1})
-        }else{
-            this.setState({stock: 'Out of Stock !'})
-        }
+        this.setState({quantity: this.state.quantity+1})
+        // if(this.props.item.stock >= this.state.quantity) {
+        //     this.setState({quantity: this.state.quantity+1})
+        // }else{
+        //     this.setState({stock: 'Out of Stock !'})
+        // }
     }
     changeQty = (e) => {
         this.setState({ quantity: parseInt(e.target.value) })

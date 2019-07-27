@@ -35,11 +35,12 @@ class ProductItem extends Component {
     }
 
     plusQty = () => {
-        if(this.props.product.stock >= this.state.quantity) {
-            this.setState({quantity: this.state.quantity+1})
-        }else{
-            this.setState({stock: 'Out of Stock !'})
-        }
+        this.setState({quantity: this.state.quantity+1})
+        // if(this.props.product.stock >= this.state.quantity) {
+        //     this.setState({quantity: this.state.quantity+1})
+        // }else{
+        //     this.setState({stock: 'Out of Stock !'})
+        // }
     }
     changeQty = (e) => {
         this.setState({ quantity: parseInt(e.target.value) })
@@ -70,7 +71,7 @@ class ProductItem extends Component {
                                             product.pictures[0]:
                                         (product.variants.length > 0 ? product.variants[0].images:'')}`}
                                 className="img-fluid"
-                                alt="" /></Link>
+                                style={{minHeight:"100%", maxHeight:"100%", width:"100%" }} alt="" /></Link>
                         </div>
                         {/* <div className="cart-info cart-wrap">
                             <button title="Add to cart" onClick={() => onAddToCartClicked(product, 1, product.size[0])}>

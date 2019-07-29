@@ -94,7 +94,10 @@ class DetailsWithPrice extends Component {
         // }
     }
     changeQty = (e) => {
-        this.setState({ quantity: parseInt(e.target.value) })
+        console.log("e.target.value ", e.target.value)
+        if(e.target.value || e.target.value !== 0) {
+            this.setState({ quantity: parseInt(e.target.value) })
+        }    
     }
 
     render (){
@@ -143,7 +146,7 @@ class DetailsWithPrice extends Component {
                                         <i className="fa fa-angle-left"></i>
                                     </button>
                                 </span>
-                                <input type="text" name="quantity" value={this.state.quantity} onChange={this.changeQty} className="form-control input-number" />
+                                <input type="text" name="quantity" value={this.state.quantity} readOnly={true} className="form-control input-number" />
                                 <span className="input-group-prepend">
                                     <button type="button" className="btn quantity-right-plus" onClick={this.plusQty} data-type="plus" data-field="">
                                         <i className="fa fa-angle-right"></i>

@@ -35,9 +35,9 @@ class cartComponent extends Component {
 
                 {cartItems.length>0 ?
                 <section className="cart-section section-b-space">
-                    <div className="container">
+                    {/* <div className="container"> */}
                         <div className="row cart-display">
-                            <div className="col-sm-12">
+                            <div className="col-md-12 col-xs-12">
                                 <table className="table cart-table table-responsive-xs">
                                     <thead>
                                     <tr className="table-head">
@@ -53,7 +53,7 @@ class cartComponent extends Component {
                                     {cartItems.map((item, index) => {
                                         //console.log("item ", item);
                                         let priceToDisplay = this.getPricePerSize(item, item.choosenSize);
-                                        let imageURL = item.variants.length > 0 ? item.variants[0].images : item.pictures[0]
+                                        // let imageURL = item.variants.length > 0 ? item.variants[0].images : item.pictures[0]
                                         return (
                                         <tbody key={index}>
                                             <tr>
@@ -62,39 +62,56 @@ class cartComponent extends Component {
                                                         <img src={imageURL} alt="" />
                                                     </Link>
                                                 </td> */}
-                                                <td><Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>{item.name}</Link>
-                                                    <div className="mobile-cart-content row">
-                                                        <div className="col-xs-3">
-                                                            <div className="qty-box">
-                                                                <div className="input-group">
-                                                                    <input type="text" name="quantity"
-                                                                           className="form-control input-number" defaultValue={item.qty} />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-xs-3">
-                                                            <h2 className="td-color">{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h2>
-                                                        </div>
-                                                        <div className="col-xs-3">
-                                                            <h2 className="td-color">
-                                                                <a href="#" className="icon" onClick={() => this.props.removeFromCart(item)}>
-                                                                    <i className="icon-close"></i>
-                                                                </a>
-                                                            </h2>
-                                                        </div>
-                                                    </div>
+                                                <td><Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}><h3>{item.name}</h3></Link>
+                                                    
                                                 </td>
                                                 <td><h3>{(item.flavour)}</h3>
-                                                <div className="mobile-cart-content row">
+                                                    <div className="mobile-cart-content row">
                                                         <div className="col-xs-12">
                                                             <div className="qty-box">
                                                             {(item.choosenSize)}
                                                             </div>
+                                                        </div>    
+                                                    </div>
+                                                    <div className="mobile-cart-content row">   
+                                                        <div className="col-xs-12">
+                                                            <h2 className="td-color">{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h2>
                                                         </div>
-                                                        
                                                     </div>
                                                 </td>
-                                                <td><h3>{symbol}{(item.sum)}</h3></td>
+                                                <td>
+                                                    <div className="mobile-cart-content row">
+                                                        
+                                                        <div className="qty-box">
+                                                            <div className="input-group">
+                                                                <span className="input-group-prepend">
+                                                                    <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id, item.choosenSize, item.flavour)} data-type="minus" data-field="">
+                                                                    <i className="fa fa-angle-left"></i>
+                                                                    </button>
+                                                                </span>
+                                                                <input type="text" name="quantity" value={item.qty} readOnly={true} className="form-control input-number" />
+
+                                                                <span className="input-group-prepend">
+                                                                    <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize, item.flavour)}  data-type="plus">
+                                                                    <i className="fa fa-angle-right"></i>
+                                                                    </button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <br/>
+                                                        <br/>
+                                                    </div>    
+                                                    <h3>{symbol}{(item.sum)}</h3>
+                                                    <div className="mobile-cart-content row">
+                                                        <div className="col-xs-12">
+                                                            <h2 className="td-color">
+                                                                <a href="#" className="btn btn-solid" onClick={() => this.props.removeFromCart(item)}>
+                                                                    Delete
+                                                                </a>
+                                                            </h2>
+                                                        </div>
+                                                    </div>        
+                                                </td>
                                                 <td><h3>{(item.choosenSize)}</h3></td>
                                                 <td>
                                                     <div className="qty-box">
@@ -107,12 +124,12 @@ class cartComponent extends Component {
                                                             <input type="text" name="quantity" value={item.qty} readOnly={true} className="form-control input-number" />
 
                                                             <span className="input-group-prepend">
-                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize, item.flavour)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
+                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1, item.choosenSize, item.flavour)}  data-type="plus">
                                                             <i className="fa fa-angle-right"></i>
                                                             </button>
                                                            </span>
                                                         </div>
-                                                    </div>{item.qty}
+                                                    </div>
                                                 </td>
                                                 <td>
                                                     <a href="#" className="icon" onClick={() => this.props.removeFromCart(item)}>
@@ -142,7 +159,7 @@ class cartComponent extends Component {
                                 <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid">check out</Link>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </section>
                 :
                 <section className="cart-section section-b-space">

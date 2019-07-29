@@ -58,7 +58,7 @@ class checkOut extends Component {
             this.validator.showMessages();
             // rerender to show messages for the first time
             this.forceUpdate();
-            toast.warn("Issue in the entries, please check!");
+            toast.warn("There are some issues with data you have entered. Please check it.");
             return;
         }
 

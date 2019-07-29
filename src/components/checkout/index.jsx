@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import SimpleReactValidator from 'simple-react-validator';
 import axios from "axios";
-
+import $ from 'jquery';
 import Breadcrumb from "../common/breadcrumb";
 import {emptyCart} from '../../actions'
 import {getCartTotal} from "../../services";
@@ -55,6 +55,7 @@ class checkOut extends Component {
 
     StripeClick = () => {
         if(!this.validator.allValid()) {
+            $('html,body').animate({scrollTop:250},0);
             this.validator.showMessages();
             // rerender to show messages for the first time
             this.forceUpdate();
@@ -72,7 +73,7 @@ class checkOut extends Component {
                 autoClose :false,
               });
             axios
-            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
+            .post('http://localhost:8000/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
                 this.props.emptyCart();
                 toast.dismiss(toastId);
                 this.props.history.push({

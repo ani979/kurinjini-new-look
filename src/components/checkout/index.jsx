@@ -73,13 +73,21 @@ class checkOut extends Component {
                 autoClose :false,
               });
             axios
-            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
-                this.props.emptyCart();
-                toast.dismiss(toastId);
-                this.props.history.push({
-                    pathname: '/order-success',
-                        state: { orderNumber:response.data.order_id, items:response.data.products, email:response.data.customer, orderTotal:response.data.price }
-                })
+            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', 
+                {"user":user, items: this.props.cartItems, "total":this.props.total},
+                {timeout: 20000}).then((response) => {
+                    this.props.emptyCart();
+                    toast.dismiss(toastId);
+                    this.props.history.push({
+                        pathname: '/order-success',
+                            state: { orderNumber:response.data.order_id, items:response.data.products, email:response.data.customer, orderTotal:response.data.price }
+                    })
+                    
+                }).catch(error => {
+                    toast.dismiss(toastId);
+                    toast.error("Some problems with taking your order. Please try after sometime. If you can notify us about this issue on 7483897810, it would be great! Thanks ", {
+                        autoClose :false,
+                });
                 //resolve(response);
             })
         } else {

@@ -73,7 +73,7 @@ class checkOut extends Component {
                 autoClose :false,
               });
             axios
-            .post('http://localhost:8000/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
+            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', {"user":user, items: this.props.cartItems, "total":this.props.total}).then((response) => {
                 this.props.emptyCart();
                 toast.dismiss(toastId);
                 this.props.history.push({

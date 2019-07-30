@@ -557,7 +557,7 @@ const allItems = [
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.roseHydrosol],
-  "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
+  "howToUse": "Use anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
   "video":"https://www.youtube.com/embed/NaNhsof3LtY"
 },
 {
@@ -649,7 +649,7 @@ const allItems = [
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.mintMist],
-  "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
+  "howToUse": "Use anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
 },
 {
   "id": 27,

@@ -66,11 +66,9 @@ class NavBar extends Component {
                                         </li>
                                     </ul>
                                 </li> */}
-                            <li className="nav-row col-6"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} ><h4 className="nav-font" >About us</h4></Link></li>
-                              
-                            <li className="nav-row col-6"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} ><h4 className="nav-font">Recycling</h4></Link></li>
-                            <li className="nav-row col-6"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} ><h4 className="nav-font">{translate('FAQ')}</h4></Link></li>
-                            <li className="nav-row col-6"><Link to={`${process.env.PUBLIC_URL}/pages/howTo`} ><h4 className="nav-font">How To Order</h4></Link></li>
+                            <li className="nav-row col-4"><Link to={`${process.env.PUBLIC_URL}/pages/about-us`} ><h4 className="nav-font" >About us</h4></Link></li>
+                            <li className="nav-row col-4"><Link to={`${process.env.PUBLIC_URL}/pages/recycling`} ><h4 className="nav-font">Recycling</h4></Link></li>
+                            <li className="nav-row col-4"><Link to={`${process.env.PUBLIC_URL}/pages/faq`} ><h4 className="nav-font">{translate('FAQ')}</h4></Link></li>
 
                         </ul>
                     </nav>

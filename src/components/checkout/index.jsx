@@ -73,7 +73,7 @@ class checkOut extends Component {
                 autoClose :false,
               });
             axios
-            .post('http://api.kurinjiniskincare.com/kbe/api/customers/', 
+            .post('https://api.kurinjiniskincare.com/kbe/api/customers/', 
                 {"user":user, items: this.props.cartItems, "total":this.props.total},
                 {timeout: 20000}).then((response) => {
                     this.props.emptyCart();

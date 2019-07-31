@@ -86,7 +86,7 @@ class checkOut extends Component {
                 }).catch(error => {
                     toast.dismiss(toastId);
                     toast.error("Some problems with taking your order. Please try after sometime. If you can notify us about this issue on 7483897810, it would be great! Thanks ", {
-                        autoClose :false,
+                        autoClose :true,
                 });
                 //resolve(response);
             })

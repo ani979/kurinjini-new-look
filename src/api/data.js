@@ -812,11 +812,11 @@ const allItems = [
   "stock": 10,
   "new": true,
   "sale": false,
-  "category": allProducts.lipbalm,
+  "category": allProducts.lipCare,
   "ingredients": [CANNABIS_SATIVA, COCOA_BUTTER],
   "size": [ROUND_FIVEGM, STICK_FIVEGM],
   "tags": [DRYLIPS, DARKLIPS],
-  "rating": 4,
+  "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.lipbalm]

@@ -171,7 +171,9 @@ class checkOut extends Component {
                                                 </div> */}
                                             </div>
                                         </div>
+                                        
                                         <div className="col-lg-6 col-sm-12 col-xs-12">
+                                        <div className ="mobile-display" style={{marginTop:"30px"}}></div>
                                             <div className="checkout-details">
                                                 <div className="order-box">
                                                     <div className="title-box">

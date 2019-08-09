@@ -84,7 +84,9 @@ class Root extends React.Component {
 								{/* <Route path={`${process.env.PUBLIC_URL}/right-sidebar/collection`} component={CollectionRightSidebar}/> */}
 
 								{/*Routes For Single Product*/}
+								<Route path={`${process.env.PUBLIC_URL}/product/face-care/face-srcub-cleanser/:id`} component={LeftSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/product/:id`} component={LeftSideBar}/>
+								
 
 								{/* <Route path={`${process.env.PUBLIC_URL}/all/collection`} render={
 									(props) => 	import("./components/collection/collection-all").then(CollectionAll => 
@@ -93,6 +95,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/all/collection`} render={(props) => <CollectionAll {...props} typeSelection=""/>}/>
 								<Route path={`${process.env.PUBLIC_URL}/oils-serums`} component = {oilAndSerum}/> 
 								<Route path={`${process.env.PUBLIC_URL}/moisturizing-creams`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.moisturizingCreams} key = {allProducts.skin + allProducts.faceCare + allProducts.moisturizingCreams}/>}/>
+								<Route path={`${process.env.PUBLIC_URL}/face-scrub`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.facecleanser} key = {allProducts.skin + allProducts.faceCare + allProducts.facecleanser}/>}/>
 								<Route path={`${process.env.PUBLIC_URL}/spf-creams`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={allProducts.sunProtection} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/kids`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={SUBCATEGORY_KIDS} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/sensitive-skin`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.faceCare} subSelection={SENSITIVE_SKIN} />}/>
@@ -113,6 +116,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/body-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.scrubbers} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/nourishing-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} subSelection={allProducts.normalSoaps} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/soaping-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} />} key ={allProducts.skin+allProducts.soaps}/>
+								<Route path={`${process.env.PUBLIC_URL}/scrub`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.scrubbing} />} key ={allProducts.skin+allProducts.scrubbing}/>
 								<Route path={`${process.env.PUBLIC_URL}/hydrosols`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.hydrosols}/>} key ={allProducts.skin+allProducts.hydrosols}/>
 
 								<Route path={`${process.env.PUBLIC_URL}/hair-oils`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.oilsAndSerums}/>}/>

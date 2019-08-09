@@ -12,6 +12,8 @@ export const ORANGE_LIP = "Orange"
 export const ROSE_LIP_SCRUB = "Rose"
 export const GLOWING_SKIN = "Glowing Skin"
 export const ANTI_AGEING = "Anti-Ageing"
+export const COFFEE_BEANS = "Coffee Beans"
+export const WALNUT = "Walnut"
 export const ACNE_CONTROL = "Acne control"
 export const UNAVAILABLE_IMAGE = "/assets/images/ImageUnavailable.jpg"
 
@@ -125,6 +127,15 @@ export const VARIANTS_RENAISSANCE = [{
   "images": "/assets/images/kurinjini-images/Oils/hairandface/renaissance_1.jpg"
 }
 
+]
+
+export const VARIANTS_FACESCRUBBER = [{
+  "flavour": COFFEE_BEANS,
+  "images": "/assets/images/kurinjini-images/FaceScrub/coffee.jpg"
+},{
+  "flavour": WALNUT,
+  "images": "/assets/images/kurinjini-images/FaceScrub/walnut.jpg"
+},
 ]
 
 export const VARIANTS_LOOFAH_SCRUBBER = [{

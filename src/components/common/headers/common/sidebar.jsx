@@ -60,6 +60,9 @@ class SideBar extends Component {
                             <li><a href="/body-butter">Body Care</a>
                                 
                             </li>
+                            <li><a href="/scrub">Scrubbers</a>
+                                
+                            </li>
                             <li><a href="#">Kids Special</a>
                                 <ul>
                                     <li><a href="/kids">Moisturizing Creams</a></li>

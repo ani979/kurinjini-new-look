@@ -1,10 +1,10 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA } from '../constants/Ingredients';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
-import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, GLOWING_SKIN } from '../constants/variants';
+import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, GLOWING_SKIN, VARIANTS_FACESCRUBBER } from '../constants/variants';
 
 const allItems = [
 {
@@ -348,7 +348,7 @@ const allItems = [
   "stock": 10,
   "new": false,
   "sale": false,
-  "category": allProducts.soaps,
+  "category": allProducts.scrubbing,
   "ingredients": [UNREFINED_BEESWAX, COCOA_BUTTER, SWEET_ALMOND, JOJOBA, VITAMIN_E],
   "size": [HUNDRED_GMS],
   "tags": [HARD_HEELS],
@@ -373,7 +373,7 @@ const allItems = [
   "stock": 10,
   "new": false,
   "sale": false,
-  "category": allProducts.soaps,
+  "category": allProducts.scrubbing,
   "ingredients": [CASTER_SUGAR, SWEET_ALMOND, VITAMIN_E, FLAVOUR_OILS],
   "size": [EIGHTY_GMS],
   "tags": [HARD_HEELS],
@@ -396,7 +396,7 @@ const allItems = [
   "stock": 10,
   "new": false,
   "sale": false,
-  "category": allProducts.soaps,
+  "category": allProducts.scrubbing,
   "ingredients": [COCONUT, GLYCERINE, FLAVOUR_OILS],
   "size": [HUNDRED_GMS],
   "tags": [DEAD_SKIN_BODY],
@@ -820,6 +820,33 @@ const allItems = [
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.lipbalm]
+},
+{
+  "id": "velvet",
+  "name": "Velvet Face Scrub",
+  "type":allProducts.skin,
+  "price": 150.00,
+  "salePrice": 150.00,
+  "discount": 0,
+  "pictures": [],
+  "shortDetails": "Velvet face scrub",
+  "description": <p>Does pollution acts like a veil covering your face? Does your face wash makes you feel dry after a rinse? What if we pack a cleanser and moisturizer into one! 
+      Yes! sharing with you our face scrub by the name "Velvet". Available in two variants, Coffee and Walnut. Infused with pure nourishing oils and walnut/coffee granules, this face scrub is a great exfoliator that doesn't leave your skin dry after a wash. 
+      Gentle beads of coffee beans and walnut shell is absolutely non-abrasive and does a splendid job at removing those dead cells from your face. You won't find the need to apply any cream after a wash as this scrub already makes your skin smoother and softer.</p>,
+  "stock": 10,
+  "new": true,
+  "sale": false,
+  "category": allProducts.scrubbing,
+  "ingredients": [WALNUT_COFFEE, VIRGIN_COCONUT, SUNFLOWER_WAX, VEGETABLE_GLYCERINE, HONEY],
+  "size": [FIFTY_ML],
+  "tags": [DEAD_SKIN_BODY, DRYNESS],
+  "rating": 5,
+  "variants": VARIANTS_FACESCRUBBER,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.facecleanser],
+  "urlCategory":"face-care",
+  "urlSubCategory":"face-scrub-cleanser",
+  "urlname":"velvets"
 }
 
 ]

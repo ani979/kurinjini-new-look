@@ -73,15 +73,7 @@ export default function NavCarousel() {
                         quickName = "Kids friendly">
                     </OneBlock>
                 </div>
-                <div>
-                    {/* <h4>welcome to fashion</h4> */}
-                    {/* <h4>Home made creams</h4> */}
-                    <OneBlock 
-                        imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/lip-balm.png`} 
-                        linkPath = "lips"
-                        quickName = "lip care">
-                    </OneBlock>
-                </div>
+                
                 <div>
                     {/* <h4>welcome to fashion</h4> */}
                     {/* <h4>Home made creams</h4> */}
@@ -99,6 +91,24 @@ export default function NavCarousel() {
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/oils.png`} 
                         linkPath = "all-oils-serums"
                         quickName = "Oils and serums">
+                    </OneBlock>
+                </div>
+                <div>
+                    {/* <h4>welcome to fashion</h4> */}
+                    {/* <h4>Home made creams</h4> */}
+                    <OneBlock 
+                        imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/lip-balm.png`} 
+                        linkPath = "lips"
+                        quickName = "Lip care">
+                    </OneBlock>
+                </div>
+                <div>
+                    {/* <h4>welcome to fashion</h4> */}
+                    {/* <h4>Home made creams</h4> */}
+                    <OneBlock 
+                        imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/scrub.png`} 
+                        linkPath = "scrub"
+                        quickName = "Scrubbers">
                     </OneBlock>
                 </div>
                 <div>

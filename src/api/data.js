@@ -844,6 +844,7 @@ const allItems = [
   "variants": VARIANTS_FACESCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.facecleanser],
+  "howToUse": ["Cleanse your face first","Gently rub the scrub on your face for 2-3 minutes rinisng with water in between"],
   "urlCategory":"face-care",
   "urlSubCategory":"face-scrub-cleanser",
   "urlname":"velvets"

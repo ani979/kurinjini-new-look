@@ -1,5 +1,5 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY } from '../constants/Ingredients';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY } from '../constants/Prices-Quantity';
 import React from 'react'
@@ -8,7 +8,7 @@ import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LI
 
 const allItems = [
 {
-  "id": 1,
+  "id": "moisturizing-creams",
   "name": allProducts.moisturizingCreams,
   "type":allProducts.skin,
   "price": 250,
@@ -32,7 +32,7 @@ const allItems = [
   "precaution":"All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
 },
 {
-  "id": 2,
+  "id": "immortal",
   "name": "Immortal",
   "type":allProducts.skin,
   "price": 300.00,
@@ -54,7 +54,7 @@ const allItems = [
   "subCategory":[allProducts.moisturizingCreams, ANTI_AGEING]
 },
 {
-  "id": 3,
+  "id": "fluffy",
   "name": "Fluffy",
   "type":allProducts.skin,
   "price": 300.00,
@@ -76,7 +76,7 @@ const allItems = [
   "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS]
 },
 {
-  "id": 4,
+  "id": "pacific",
   "name": "Pacific",
   "type":allProducts.skin,
   "price": 300.00,
@@ -98,7 +98,7 @@ const allItems = [
   "subCategory":[allProducts.moisturizingCreams, SENSITIVE_SKIN]
 },
 {
-  "id": 5,
+  "id": "lip-balms",
   "name": "Lip Balms",
   "type":allProducts.skin,
   "price": 100.00,
@@ -120,7 +120,7 @@ const allItems = [
   "subCategory":[allProducts.lipbalm]
 },
 {
-  "id": 6,
+  "id": "lip-blams-kids",
   "name": "Lip Balms for kids",
   "type":allProducts.skin,
   "price": 100.00,
@@ -142,7 +142,7 @@ const allItems = [
   "subCategory":[allProducts.lipbalm, SUBCATEGORY_KIDS]
 },
 {
-  "id": 7,
+  "id": "lip-scrubs",
   "name": "Lip Scrubs",
   "type":allProducts.skin,
   "price": 100.00,
@@ -165,7 +165,7 @@ const allItems = [
   "howToUse":"Rub gently on the lips and after some continuous rounds of rubbing, wipe off with towel or rinse with water"
 },
 {
-  "id": 8,
+  "id": "vegan-lip-scrubs",
   "name": "Vegan Lip Scrubs",
   "type":allProducts.skin,
   "price": 100.00,
@@ -188,7 +188,7 @@ const allItems = [
   "howToUse":"Rub gently on the lips and after some continuous rounds of rubbing, wipe off with towel or rinse with water"
 },
 {
-  "id": 9,
+  "id": "sparkle",
   "name": "Sparkle",
   "type":allProducts.skin,
   "price": 350.00,
@@ -211,7 +211,7 @@ const allItems = [
   "howToUse":"It's a night application cream. Take a small quantity on your finger tip and apply gently after a face wash on your face."
 },
 {
-  "id": 10,
+  "id": "moonstone",
   "name": "Moonstone",
   "type":allProducts.skin,
   "price": 350.00,
@@ -234,7 +234,7 @@ const allItems = [
   "howToUse":"It's a night application cream. Take a small quantity on your finger tip and massage gently under your eyes so that it improves blood circulation."
 },
 {
-  "id": 11,
+  "id": "renaissance",
   "name": "Renaissance",
   "type":allProducts.skin,
   "price": 200.00,
@@ -266,7 +266,7 @@ const allItems = [
   "howToUse":"Apply after a face wash during night before going to bed."
 },
 {
-  "id": 12,
+  "id": "resurgence-intensive",
   "name": "Resurgence - Intensive hair oil treatment",
   "type":allProducts.hair,
   "price": 350.00,
@@ -289,7 +289,7 @@ const allItems = [
   "howToUse":"Direct application on your hair and scalp"
 },
 {
-  "id": 13,
+  "id": "resurgence-anti-dandruff",
   "name": "Resurgence - Anti-Dandruff treatment",
   "type":allProducts.hair,
   "price": 350.00,
@@ -312,7 +312,7 @@ const allItems = [
   "howToUse":"Direct application on your hair and scalp"
 },
 {
-  "id": 14,
+  "id": "resurgence-kids",
   "name": "Resurgence - Hair treatment for kids",
   "type":allProducts.hair,
   "price": 300.00,
@@ -335,7 +335,7 @@ const allItems = [
   "howToUse":"Direct application on your hair and scalp"
 },
 {
-  "id": 15,
+  "id": "scrubber-looafh",
   "name": "Scrubber - Loofah based",
   "type":allProducts.skin,
   "price": 100.00,
@@ -355,11 +355,11 @@ const allItems = [
   "rating": 4,
   "variants": VARIANTS_LOOFAH_SCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.footScrubbers],
+  "subCategory":[allProducts.footScrubbers, allProducts.soaps],
   "howToUse":"After applying the scrubber, keep it on a dry surface"
 },
 {
-  "id": 16,
+  "id": "scrubber-caster-sugar",
   "name": "Scrubber - Caster Sugar based",
   "type":allProducts.skin,
   "price": 70.00,
@@ -380,11 +380,11 @@ const allItems = [
   "rating": 4,
   "variants": VARIANTS_CASTER_SUGAR_SCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.footScrubbers],
+  "subCategory":[allProducts.footScrubbers, allProducts.soaps],
   "howToUse":"After applying the scrubber, keep it on a dry surface"
 },
 {
-  "id": 17,
+  "id": "mild-scrubbers",
   "name": "Mild scrubbers",
   "type":allProducts.skin,
   "price": 70.00,
@@ -403,11 +403,11 @@ const allItems = [
   "rating": 4,
   "variants": VARIANTS_BODY_SCRUBBER,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.scrubbers],
+  "subCategory":[allProducts.scrubbers, allProducts.soaps],
   "howToUse":"After applying the scrubber, keep it on a dry surface"
 },
 {
-  "id": 18,
+  "id": "soap-chocolate",
   "name": "Soap - Vanilla Chocolate",
   "type":allProducts.skin,
   "price": 80.00,
@@ -429,8 +429,8 @@ const allItems = [
   "subCategory":[allProducts.normalSoaps, SUBCATEGORY_KIDS]
 },
 {
-  "id": 19,
-  "name": "Soap - Shea Cashmere soap",
+  "id": "shea-cashmere",
+  "name": "Soap - Shea Cashmere",
   "type":allProducts.skin,
   "price": 100.00,
   "salePrice": 100.00,
@@ -451,8 +451,8 @@ const allItems = [
   "subCategory":[allProducts.normalSoaps]
 },
 {
-  "id": 20,
-  "name": "Soap - Mango Mandarin soap",
+  "id": "mango-mandarin",
+  "name": "Soap - Mango Mandarin",
   "type":allProducts.skin,
   "price": 100.00,
   "salePrice": 100.00,
@@ -473,7 +473,7 @@ const allItems = [
   "subCategory":[allProducts.normalSoaps]
 },
 {
-  "id": 21,
+  "id": "basily-thyme",
   "name": "Soap - Basil and Thyme soap",
   "type":allProducts.skin,
   "price": 80.00,
@@ -495,7 +495,7 @@ const allItems = [
   "subCategory":[allProducts.normalSoaps]
 },
 {
-  "id": 22,
+  "id": "silk-route",
   "name": "Silk Route",
   "type":allProducts.skin,
   "price": 200.00,
@@ -523,7 +523,7 @@ const allItems = [
   "precaution": "All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
 },
 {
-  "id": 23,
+  "id": "rose-mist",
   "name": "Rose Mist",
   "type":allProducts.skin,
   "price": 100.00,
@@ -561,7 +561,7 @@ const allItems = [
   "video":"https://www.youtube.com/embed/NaNhsof3LtY"
 },
 {
-  "id": 24,
+  "id": "rose-arka",
   "name": "Rose Arka",
   "type":allProducts.skin,
   "price": 80.00,
@@ -591,7 +591,7 @@ const allItems = [
   "video":"https://www.youtube.com/embed/NaNhsof3LtY"
 },
 {
-  "id": 25,
+  "id": "mint-cucumber",
   "name": "Mint Cucumber Mist",
   "type":allProducts.skin,
   "price": 100.00,
@@ -621,7 +621,7 @@ const allItems = [
   "howToUse": "Use in the mornings or evenings or anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
 },
 {
-  "id": 26,
+  "id": "mint-tea-tree",
   "name": "Mint Tea Tree Mist",
   "type":allProducts.skin,
   "price": 100.00,
@@ -652,7 +652,7 @@ const allItems = [
   "howToUse": "Use anytime of the day you want to hydrate your skin. Spray it on your face or hair roots for better results.",
 },
 {
-  "id": 27,
+  "id": "roots-normal",
   "name": "Roots - Hair mask for a normal scalp",
   "type":allProducts.hair,
   "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
@@ -692,7 +692,7 @@ const allItems = [
 },
 
 {
-  "id": 28,
+  "id": "roots-oily",
   "name": "Roots - Hair mask for oily scalp",
   "type":allProducts.hair,
   "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
@@ -732,7 +732,7 @@ const allItems = [
 },
 
 {
-  "id": 29,
+  "id": "ubtan-soap",
   "name": "Soap - Ubtan soap",
   "type":allProducts.skin,
   "price": 80.00,
@@ -754,7 +754,7 @@ const allItems = [
   "subCategory":[allProducts.normalSoaps]
 },
 {
-  "id": 30,
+  "id": "natural-spf",
   "name": "Natural SPF Cream",
   "type":allProducts.skin,
   "price": 250.00,
@@ -776,7 +776,7 @@ const allItems = [
   "subCategory":[allProducts.sunProtection]
 },
 {
-  "id": 31,
+  "id": "body-butter",
   "name": "Wild Almond Body Butter",
   "type":allProducts.skin,
   "price": 400.00,
@@ -798,7 +798,7 @@ const allItems = [
   "subCategory":[allProducts.sunProtection, ANTI_AGEING, allProducts.fadeScars]
 },
 {
-  "id": 32,
+  "id": "hemp-lip-care",
   "name": "Hemp Intensive Lip Care",
   "type":allProducts.skin,
   "price": 120.00,
@@ -848,7 +848,29 @@ const allItems = [
   "urlCategory":"face-care",
   "urlSubCategory":"face-scrub-cleanser",
   "urlname":"velvets"
-}
+},
+{
+  "id": "Neem",
+  "name": "Soap - Neem",
+  "type":allProducts.skin,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/neem.jpg"],
+  "shortDetails": "For a fragrant bath",
+  "description": <p>Made up of edible grade of organic neem powder and neem grade 1 oil. Along with basil essential, this soap has excellent anti-bacterial properties.</p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [NEEM_POWDER, NEEM_OIL, BASIL_ESSENTIALS],
+  "size": [HUNDRED_GMS],
+  "tags": [FRESH_BATH],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps]
+},
 
 ]
 

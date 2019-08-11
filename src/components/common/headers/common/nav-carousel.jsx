@@ -144,7 +144,7 @@ export default function NavCarousel() {
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/sun-guard.png`} 
-                        linkPath = "anti-ageing"
+                        linkPath = "spf-creams"
                         quickName = "Sun protection">
                     </OneBlock>
                 </div>

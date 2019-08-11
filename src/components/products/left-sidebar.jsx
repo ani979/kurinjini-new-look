@@ -65,7 +65,7 @@ class LeftSideBar extends Component {
                                     {item.variants.map((vari, index) =>
                                     <div key={index} className="container">
                                         <ImageZoom image={vari.images} />
-                                        <div className="image-text">{vari.flavour}</div>
+                                        <div className="image-text" style={vari.color? {"color":vari.color} :{}}>{vari.flavour}</div>
                                     </div>
                                     )}
                                 </Slider>:

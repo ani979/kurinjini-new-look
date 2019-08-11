@@ -2,6 +2,7 @@ export const FLH = "French Lavender Honey"
 export const CHERRY_BLOSSOM = "Cherry Blossom"
 export const WINTER_BLOOM = "Winter Bloom"
 export const ORANGE = "Orange"
+export const HEMP = "HEMP"
 export const ROSE_PETALS = "Rose Petals"
 
 export const STRAWBERRY = "Strawberry"
@@ -41,11 +42,11 @@ export const FLAVOUR_MOISTURIZING_CREAMS = [{
 
 export const FLAVOUR_LIP_BALMS = [{
     "flavour": STRAWBERRY,
-    "images": "/assets/images/kurinjini-images/LipCare/lipbalm_strawberry_1.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/strawberry.jpg"
   },
   {
     "flavour": CHOCOLATE,
-    "images": "/assets/images/kurinjini-images/LipCare/lipbalm3_big.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/chocolate.jpg"
   },
   {
     "flavour": SPEARMINT,
@@ -53,7 +54,7 @@ export const FLAVOUR_LIP_BALMS = [{
   },
   {
     "flavour": VANILLA,
-    "images": "/assets/images/kurinjini-images/LipCare/lipbalm2_big.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/vanilla.jpg"
   },
   {
     "flavour": ORANGE,
@@ -61,27 +62,32 @@ export const FLAVOUR_LIP_BALMS = [{
   }
 ]
 
-export const FLAVOUR_LIP_SCRUBS = [{
-        "flavour": ORANGE,
-        "images": "/assets/images/kurinjini-images/LipCare/lipScrub4_small.jpg"
-    },
-    {
-        "flavour": CHOCOLATE,
-        "images": UNAVAILABLE_IMAGE
-    },
-    
-    {
-        "flavour": SPEARMINT,
-        "images": UNAVAILABLE_IMAGE
-    },
-    {
-        "flavour": VANILLA,
-        "images": UNAVAILABLE_IMAGE
-    },
-    {
-        "flavour": STRAWBERRY,
-        "images": UNAVAILABLE_IMAGE
-    },
+export const FLAVOUR_LIP_SCRUBS = [
+  {   
+    "flavour":HEMP,
+    "images": "/assets/images/kurinjini-images/LipCare/hemp_lipscrub.jpg"
+  },
+  {
+    "flavour": ORANGE,
+    "images": "/assets/images/kurinjini-images/LipCare/orange_lipscrub.jpg"
+  },
+  {
+    "flavour": CHOCOLATE,
+    "images": UNAVAILABLE_IMAGE
+  },
+  
+  {
+    "flavour": SPEARMINT,
+    "images": UNAVAILABLE_IMAGE
+  },
+  {
+    "flavour": VANILLA,
+    "images": UNAVAILABLE_IMAGE
+  },
+  {
+    "flavour": STRAWBERRY,
+    "images": UNAVAILABLE_IMAGE
+  },
 ]
 
 export const VEGAN_LIP_SCRUBS = [{
@@ -108,7 +114,7 @@ export const VEGAN_LIP_SCRUBS = [{
 
 export const FLAVOUR_LIP_BALMS_KIDS = [{
     "flavour": CHOCOLATE,
-    "images": "/assets/images/kurinjini-images/LipCare/lipbalm3_big.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/chocolate.jpg"
   },{
     "flavour": STRAWBERRY,
     "images": "/assets/images/kurinjini-images/LipCare/lipbalm_strawberry_1.jpg"
@@ -141,7 +147,16 @@ export const VARIANTS_FACESCRUBBER = [{
 export const VARIANTS_LOOFAH_SCRUBBER = [{
   "flavour": "Ylang Ylang",
   "images": "/assets/images/kurinjini-images/Soaps/loofah_one.jpg"
-},{
+},
+{
+  "flavour": "Pink Chifon",
+  "images": "/assets/images/kurinjini-images/Soaps/pink_chifon_loofah.jpg"
+},
+{
+  "flavour": "Mango Mandarin",
+  "images": "/assets/images/kurinjini-images/Soaps/mango_mandarin_loofah.jpg"
+},
+{
   "flavour": "Basil",
   "images": UNAVAILABLE_IMAGE
 },{
@@ -151,10 +166,6 @@ export const VARIANTS_LOOFAH_SCRUBBER = [{
 {
   "flavour": "Orange",
   "images": "/assets/images/kurinjini-images/Soaps/loofah_orange.jpg"
-},
-{
-  "flavour": "Mango Mandarin",
-  "images": "/assets/images/kurinjini-images/Soaps/loofah_three.jpg"
 },
 {
   "flavour": "Rosewood",
@@ -167,7 +178,8 @@ export const VARIANTS_LOOFAH_SCRUBBER = [{
 {
   "flavour": "Cooling Mint",
   "images": UNAVAILABLE_IMAGE
-}
+},
+
 
 ]
 
@@ -209,29 +221,27 @@ export const VARIANTS_CASTER_SUGAR_SCRUBBER = [{
 export const VARIANTS_BODY_SCRUBBER = [
   {
     "flavour": "Oatmeal",
-    "images": "/assets/images/kurinjini-images/Soaps/mildScrubber_one.jpg"
+    "images": "/assets/images/kurinjini-images/Soaps/oatmeal.jpg"
   },
   {
     "flavour": "Crushed almonds and Granulated Besan",
-    "images": UNAVAILABLE_IMAGE
+    "images": "/assets/images/kurinjini-images/Soaps/crushed_almonds.jpg",
   },
   {
-  "flavour": "Oatmeal",
-  "images": "/assets/images/kurinjini-images/Soaps/mildScrubber_one.jpg"
-},{
   "flavour": "Chia Seeds",
-  "images": "/assets/images/kurinjini-images/Soaps/ChiaSeeds.jpg"
+  "images": "/assets/images/kurinjini-images/Soaps/chiaSeeds.jpg"
 },{
   "flavour": "Flax seeds",
   "images": UNAVAILABLE_IMAGE
 },
 {
   "flavour": "Poppy seeds",
-  "images": UNAVAILABLE_IMAGE
+  "images": "/assets/images/kurinjini-images/Soaps/poppy_seeds.jpg",
+  "color":"#1b1818"
 },
 {
   "flavour": "Walnut Shells",
-  "images": "/assets/images/kurinjini-images/Soaps/Walnut.jpg"
+  "images": "/assets/images/kurinjini-images/Soaps/walnut.jpg"
 },
 {
   "flavour": "Rosewood",

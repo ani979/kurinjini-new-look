@@ -791,7 +791,7 @@ const allItems = [
   "category": allProducts.bodyCare,
   "ingredients": [WILD_ALMONDS, COCOA_BUTTER, SHEA_BUTTER],
   "size": [APPROX_ONETWENTY],
-  "tags": [DRYNESS, SCARS],
+  "tags": [DRYNESS, SCARS, SUNPROTECTION],
   "rating": 4,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],

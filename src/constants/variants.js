@@ -2,7 +2,7 @@ export const FLH = "French Lavender Honey"
 export const CHERRY_BLOSSOM = "Cherry Blossom"
 export const WINTER_BLOOM = "Winter Bloom"
 export const ORANGE = "Orange"
-export const HEMP = "HEMP"
+export const HEMP = "Hemp"
 export const ROSE_PETALS = "Rose Petals"
 
 export const STRAWBERRY = "Strawberry"
@@ -65,11 +65,13 @@ export const FLAVOUR_LIP_BALMS = [{
 export const FLAVOUR_LIP_SCRUBS = [
   {   
     "flavour":HEMP,
-    "images": "/assets/images/kurinjini-images/LipCare/hemp_lipscrub.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/hemp_lipscrub.jpg",
+    "color":"#1b1818"
   },
   {
     "flavour": ORANGE,
-    "images": "/assets/images/kurinjini-images/LipCare/orange_lipscrub.jpg"
+    "images": "/assets/images/kurinjini-images/LipCare/orange_lipscrub.jpg",
+    "color":"#1b1818"
   },
   {
     "flavour": CHOCOLATE,
@@ -229,7 +231,7 @@ export const VARIANTS_BODY_SCRUBBER = [
   },
   {
   "flavour": "Chia Seeds",
-  "images": "/assets/images/kurinjini-images/Soaps/chiaSeeds.jpg"
+  "images": "/assets/images/kurinjini-images/Soaps/chiaseeds.jpg"
 },{
   "flavour": "Flax seeds",
   "images": UNAVAILABLE_IMAGE

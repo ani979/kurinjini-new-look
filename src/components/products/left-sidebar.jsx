@@ -50,14 +50,16 @@ class LeftSideBar extends Component {
             slidesToScroll: 1,
             dots: true,
             fade: true,
-            arrows:false
+            arrows:false,
+            infinite: false,
         };
         var productsnav = {
             slidesToShow: 3,
             swipeToSlide:true,
             arrows: false,
             dots: false,
-            focusOnSelect: true
+            focusOnSelect: true,
+            infinite: false,
         };
 
         let sliderToDisplay = item.variants.length > 0? 

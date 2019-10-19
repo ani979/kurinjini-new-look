@@ -13,6 +13,7 @@ export const SENSITIVE_SKIN = "Sensitive Skin"
 export const TANNEDSKIN = "Tanned skin"
 export const SUNPROTECTION = "Sun Protection"
 export const SCARS = "Visible skin damage"
+export const DETOX = "Toxins due to pollution"
 
 export const DANDRUFF = "Dandruff"
 export const SPLIT_ENDS = "Split Ends"

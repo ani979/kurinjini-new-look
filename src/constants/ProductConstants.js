@@ -7,6 +7,7 @@ const allProducts = {
     specialNeeds: "Special needs",
     moisturizingCreams:"Moisturizing cream",
     faceCare:"Face Care",
+    faceMask:"Face Mask",
     bodyCare:"Body Care",
     allKids:"Kids special",
     antiageing:"Anti-ageing cream",

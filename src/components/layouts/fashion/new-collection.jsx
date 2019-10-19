@@ -79,6 +79,23 @@ class NewCollection extends Component {
                 <section className="p-0">
                     <Slider  {...slidesix} className="slide-1 home-slider">
                         <div>
+                            <div className="home home11 text-center">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col">
+                                            <div className="slider-contain">
+                                                <div>
+                                                    {/* <h4>welcome to fashion</h4> */}
+                                                    {/* <h4>Home made creams</h4> */}
+                                                    <Link to={`${process.env.PUBLIC_URL}/product/facemask`} className="btn btn-solid">Lotus face mask</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
                             <div className="home home10 text-center">
                                 <div className="container">
                                     <div className="row">

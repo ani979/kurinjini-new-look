@@ -16,6 +16,8 @@ export const ANTI_AGEING = "Anti-Ageing"
 export const COFFEE_BEANS = "Coffee Beans"
 export const WALNUT = "Walnut"
 export const ACNE_CONTROL = "Acne control"
+export const KAOLIN = "Kaolin Clay(Dry skin)"
+export const DEAD_SEA_MUD = "Dead sea mud(Oily skin)"
 export const UNAVAILABLE_IMAGE = "/assets/images/ImageUnavailable.jpg"
 
 export const FLAVOUR_MOISTURIZING_CREAMS = [{
@@ -122,6 +124,15 @@ export const FLAVOUR_LIP_BALMS_KIDS = [{
     "images": "/assets/images/kurinjini-images/LipCare/lipbalm_strawberry_1.jpg"
   },
   
+]
+
+export const FLAVOUR_FACE_MASK = [{
+    "flavour": KAOLIN,
+    "images": "/assets/images/kurinjini-images/FaceMask/Kaolin_2.jpg"
+  },{
+    "flavour": DEAD_SEA_MUD,
+    "images": "/assets/images/kurinjini-images/FaceMask/Dead_sea_mud_1.jpg"
+  },
 ]
 
 export const VARIANTS_RENAISSANCE = [{

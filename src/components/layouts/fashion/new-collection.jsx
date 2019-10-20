@@ -78,6 +78,7 @@ class NewCollection extends Component {
                 {/*Paragraph End*/}
                 <section className="p-0">
                     <Slider  {...slidesix} className="slide-1 home-slider">
+                        <Link to={`${process.env.PUBLIC_URL}/product/facemask`}>
                         <div>
                             <div className="home home11 text-center">
                                 <div className="container">
@@ -94,7 +95,10 @@ class NewCollection extends Component {
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
+                        </Link>
+                        <Link to={`${process.env.PUBLIC_URL}/product/forest-lavender`} >
                         <div>
                             <div className="home home10 text-center">
                                 <div className="container">
@@ -112,6 +116,8 @@ class NewCollection extends Component {
                                 </div>
                             </div>
                         </div>
+                        </Link>
+                        <Link to={`${process.env.PUBLIC_URL}/product/lip-scrubs`}>
                         <div>
                             <div className="home home9 text-center">
                                 <div className="container">
@@ -129,6 +135,8 @@ class NewCollection extends Component {
                                 </div>
                             </div>
                         </div>
+                        </Link>
+                        <Link to={`${process.env.PUBLIC_URL}/product/face-care/face-srcub-cleanser/velvet`}>
                         <div>
                             <div className="home home8 text-center">
                                 <div className="container">
@@ -146,15 +154,15 @@ class NewCollection extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        </Link>
+                        {/* <div>
                             <div className="home home1 text-center">
                                 <div className="container">
                                     <div className="row">
                                         <div className="col">
                                             <div className="slider-contain">
                                                 <div>
-                                                    {/* <h4>welcome to fashion</h4> */}
-                                                    {/* <h4>Home made creams</h4> */}
+
                                                     <Link to={`${process.env.PUBLIC_URL}/product/body-butter`} className="btn btn-solid">Natural soother</Link>
                                                 </div>
                                             </div>
@@ -170,8 +178,7 @@ class NewCollection extends Component {
                                         <div className="col">
                                             <div className="slider-contain">
                                                 <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
+
                                                     <Link to={`${process.env.PUBLIC_URL}/product/mild-scrubbers`} className="btn btn-solid">Gentle scrubber</Link>
                                                 </div>
                                             </div>
@@ -187,8 +194,7 @@ class NewCollection extends Component {
                                         <div className="col">
                                             <div className="slider-contain">
                                                 <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
+
                                                     <Link to={`${process.env.PUBLIC_URL}/product/natural-spf`} className="btn btn-solid">Natural SPF</Link>
                                                 </div>
                                             </div>
@@ -196,7 +202,8 @@ class NewCollection extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <Link to={`${process.env.PUBLIC_URL}/product/ubtan-soap`}>
                         <div>
                             <div className="home home4 text-center">
                                 <div className="container">
@@ -214,6 +221,7 @@ class NewCollection extends Component {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                         <div>
                             <div className="home home5 text-center">
                                 <div className="container">

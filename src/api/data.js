@@ -904,10 +904,10 @@ const allItems = [
   "discount": 0,
   "pictures": [],
   "shortDetails": "Lotus face mask - Kaolin clay and Dead sea mud based",
-  "description": <p>These days as our cities are getting more and more polluted, the face is the one that bears the brunt. A face wash in your routine 
-    doesn't help in fighting those impurities. A weekly dose of face mask could be something that your skin may need at these testing times.
-    <br/> <br/>On the same lines, Kurinjini skin care introduces a <b>purifying detox face mask</b> by the name <b>Lotus</b> for both men and women alike. 
-      The powerful anti-oxidants like Green Tea extract, Neem powder pulls out the toxins from damaged skin and rejuvenate dull and tired skins.
+  "description": <p>As our cities are getting more and more polluted, the face is the one that bears the brunt. A face wash in your routine 
+    alone doesn't help in fighting those impurities. A weekly dose of face mask could be something that your skin may need at these testing times.
+    <br/><br/>On the same lines, Kurinjini skin care introduces a <b>purifying detox face mask</b> by the name <b>Lotus</b> for both men and women alike. 
+      The powerful anti-oxidants like Green Tea extract, Neem powder pulls out the toxins and rejuvenate dull and tired skins.
       <br/> Available for skin types : <ul><li><b>Kaolin clay (For dry skin)</b></li><li><b>Dead sea mud (For oily skin)</b></li></ul>
       <br/><b>Kaolin clay</b> is one of the gentlest clays. Unlike other clays kaolin clay doesn’t leave your skin dry after use. It softens the skin, leaving it toned and healthy.
       <br/>Naturally rich in minerals like Magnesium, Calcium and Potassium, <b>Dead Sea Mud</b> is known to have rejuvenation qualities for the skin.</p>,

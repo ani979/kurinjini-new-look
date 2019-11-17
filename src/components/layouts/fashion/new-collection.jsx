@@ -78,6 +78,46 @@ class NewCollection extends Component {
                 {/*Paragraph End*/}
                 <section className="p-0">
                     <Slider  {...slidesix} className="slide-1 home-slider">
+                        <Link to={`${process.env.PUBLIC_URL}/product/ubtan`}>
+                            <div>
+                                <div className="home home13 text-center">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col">
+                                                <div className="slider-contain">
+                                                    <div>
+                                                        {/* <h4>welcome to fashion</h4> */}
+                                                        {/* <h4>Home made creams</h4> */}
+                                                        <Link to={`${process.env.PUBLIC_URL}/product/ubtan`} className="btn btn-solid">Ubtan</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </Link>
+                        <Link to={`${process.env.PUBLIC_URL}/product/closetbar`}>
+                            <div>
+                                <div className="home home12 text-center">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col">
+                                                <div className="slider-contain">
+                                                    <div>
+                                                        {/* <h4>welcome to fashion</h4> */}
+                                                        {/* <h4>Home made creams</h4> */}
+                                                        <Link to={`${process.env.PUBLIC_URL}/product/closetbar`} className="btn btn-solid">Fragrance bar</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </Link>
                         <Link to={`${process.env.PUBLIC_URL}/product/facemask`}>
                         <div>
                             <div className="home home11 text-center">

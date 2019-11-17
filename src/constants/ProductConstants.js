@@ -7,7 +7,10 @@ const allProducts = {
     specialNeeds: "Special needs",
     moisturizingCreams:"Moisturizing cream",
     faceCare:"Face Care",
+    homeCare:"Home Care",
     faceMask:"Face Mask",
+    ubtan:"Ubtan",
+    faceCleansers:"Face Cleanser",
     bodyCare:"Body Care",
     allKids:"Kids special",
     antiageing:"Anti-ageing cream",
@@ -64,7 +67,8 @@ const allProducts = {
     hair:"hair",
     lipCare:"Lip care",
     sixteenYeardsOld: "Adult skin",
-    mintMist: "Mint Mist"
+    mintMist: "Mint Mist",
+    house:"Closet"
 }
 
 export default allProducts

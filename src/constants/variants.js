@@ -14,6 +14,8 @@ export const ROSE_LIP_SCRUB = "Rose"
 export const GLOWING_SKIN = "Glowing Skin"
 export const ANTI_AGEING = "Anti-Ageing"
 export const COFFEE_BEANS = "Coffee Beans"
+export const KAFFIR_LIME = "Kaffir Lime"
+export const TANGERINE = "Tangerine"
 export const WALNUT = "Walnut"
 export const ACNE_CONTROL = "Acne control"
 export const KAOLIN = "Kaolin Clay(Dry skin)"
@@ -154,6 +156,15 @@ export const VARIANTS_FACESCRUBBER = [{
 },{
   "flavour": WALNUT,
   "images": "/assets/images/kurinjini-images/FaceScrub/walnut.jpg"
+},
+]
+
+export const VARIANTS_CLOSETBAR = [{
+  "flavour": KAFFIR_LIME,
+  "images": "/assets/images/kurinjini-images/closet-bar/closetBar_1.jpg"
+},{
+  "flavour": TANGERINE,
+  "images": "/assets/images/kurinjini-images/closet-bar/closetBar_2.jpg"
 },
 ]
 

@@ -54,7 +54,7 @@ class SideBar extends Component {
                                     <li><a href="/sensitive-skin">Sensitive skin</a></li>
                                     <li><a href="/anti-ageing">Anti-ageing</a></li>
                                     <li><a href="/spf-creams">Sun protection</a></li>
-                                    <li><a href="/facemask">Face mask</a></li>
+                                    <li><a href="/facecleansers">Face Cleansers</a></li>
                                 
                                 </ul>
                             </li>
@@ -96,6 +96,11 @@ class SideBar extends Component {
                                 <ul>
                                     <li><a href="/hair-oils">Hair Oils</a></li>
                                     <li><a href="/hair-masks">Hair Masks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Home care</a>
+                                <ul>
+                                    <li><a href="/product/closetbar">Closet Bar</a></li>
                                 </ul>
                             </li>
                             {/* <li><a href="#">Just Oils</a>

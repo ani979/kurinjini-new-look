@@ -1,7 +1,7 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, CUCUMBER_GEL, CINNAMON_POWDER } from '../constants/Ingredients';
-import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX } from '../constants/Tags';
-import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM } from '../constants/Prices-Quantity';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, OATMEAL, METHI, HALDI, BADAAM } from '../constants/Ingredients';
+import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX, DARK_SPOTS } from '../constants/Tags';
+import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
 import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, GLOWING_SKIN, VARIANTS_FACESCRUBBER, FLAVOUR_FACE_MASK } from '../constants/variants';
@@ -907,10 +907,10 @@ const allItems = [
   "description": <p>As our cities are getting more and more polluted, the face is the one that bears the brunt. A face wash in your routine 
     alone doesn't help in fighting those impurities. A weekly dose of face mask could be something that your skin may need at these testing times.
     <br/><br/>On the same lines, Kurinjini skin care introduces a <b>purifying detox face mask</b> by the name <b>Lotus</b> for both men and women alike. 
-      The powerful anti-oxidants like Green Tea extract, Neem powder pulls out the toxins and rejuvenate dull and tired skins.
+      The powerful anti-oxidants like Green Tea extract, Neem powder pulls out the toxins and rejuvenate dull and tired skin. 
       <br/> Available for skin types : <ul><li><b>Kaolin clay (For dry skin)</b></li><li><b>Dead sea mud (For oily skin)</b></li></ul>
       <br/><b>Kaolin clay</b> is one of the gentlest clays. Unlike other clays kaolin clay doesn’t leave your skin dry after use. It softens the skin, leaving it toned and healthy.
-      <br/>Naturally rich in minerals like Magnesium, Calcium and Potassium, <b>Dead Sea Mud</b> is known to have rejuvenation qualities for the skin.</p>,
+      <br/>Naturally rich in minerals, <b>Dead Sea Mud</b> is known to have rejuvenation qualities for the skin.</p>,
   "stock": 10,
   "new": true,
   "sale": false,
@@ -921,7 +921,65 @@ const allItems = [
   "rating": 4,
   "variants": FLAVOUR_FACE_MASK,
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.faceMask]
+  "subCategory":[allProducts.faceCleansers],
+  "howToUse": ["Cleanse your face first","Apply a layer of mask and wait for 15 mins", "Scrub it off gently"]
+},
+{
+  "id": "closetbar",
+  "name": "Fragrance bar",
+  "type":allProducts.house,
+  "price": 100.00,
+  "salePrice": 100.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/closet-bar/closetBar_1.jpg","/assets/images/kurinjini-images/closet-bar/closetBar_2.jpg"],
+  "shortDetails": "Fragrance bar",
+  "description": <p>When you clean your closet, tuck in it one of these fragrance bars that not only makes your closet and clothes smell wonderful, but also uplifts your mood and energy level everytime you open the closet.</p>,
+  "stock": 10,
+  "new": true,
+  "sale": false,
+  "category": allProducts.homeCare,
+  "ingredients": [],
+  "size": [FIFTY_GMS],
+  "tags": [],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[],
+  "subCategory":[]
+},
+
+{
+  "id": "ubtan",
+  "name": "Ubtan Face cleanser",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/ubtan/ubtan_1.jpg"],
+  "shortDetails": "Face cleanser",
+  "description": <p>Looking for a smooth, nourished, healthy skin tone or a blemish free look.
+  <br/><br/>
+  <b>Ubtan</b> is packed with lot of anti-oxidants, vitamin, minerals that contribute to a healthy skin. 
+  The face pack of this ubtan(by adding your favourite fruit pulp, yogurt or milk) will intensely nourish your skin from deep within.
+  <ul>
+  <li><b>Jau Flour</b> - One of the very old natural ingredients known to heal and repair wounds and also brighten the skin, hydrate the skin and treat clogged pores.</li>
+  <li><b>Masoor dal</b> - An excellent cleanser and a natural bleaching agent, this is very effective in removing tan and softening the skin. It also makes skin oil free thereby preventing acne.</li>
+  <li><b>Orange peel</b> enhances complexion</li>
+  </ul>
+  Overall efficiency of this pack is enhanced by gram flour, haldi and badaam.
+  
+  Rich in Vitamin-E, C and other minerals, khus-khus and methi seeds lightens the skin and reduces dark circle and spots</p>,
+  "stock": 10,
+  "new": true,
+  "sale": false,
+  "category": allProducts.faceCare,
+  "ingredients": [KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, OATMEAL, METHI, HALDI, BADAAM],
+  "size": [HUNDRED_ML],
+  "tags": [BLEMISHES, ACNE, DARK_SPOTS],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.faceCleansers],
+  "howToUse":"While washing gently massage with your finger tip in circular motion focusing the areas where you have black heads and wash off thoroughly with water. To lock-in moisture apply your favourite face cream"
 },
 
 ]

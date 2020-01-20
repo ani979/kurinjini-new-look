@@ -30,6 +30,7 @@ class LeftSideBar extends Component {
 
 
     componentDidMount() {
+        document.title = this.props.item.shortDetails;
         this.setState({
             nav1: this.slider1,
             nav2: this.slider2

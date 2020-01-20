@@ -14,7 +14,7 @@ const allItems = [
   "price": 250,
   "salePrice": 250,
   "discount": 0,
-  "pictures": ["/assets/images/moisturizingCreams/frenchLavender_1.jpg", "/assets/images/moisturizingCreams/frenchLavender_2.jpg", "/assets/images/moisturizingCreams/orange_big.jpg", "/assets/images/moisturizingCreams/rose_big.jpg"],
+  "pictures": ["/assets/images/moisturizingCreams/frenchLavender_1.jpg", "/assets/images/moisturizingCreams/frenchLavender_2.jpg", "/assets/images/moisturizingCreams/rose_big.jpg"],
   "shortDetails": "Moisturizing cream for daily use",
   "description": "Daily moisturizing is vital for a healthy skin. Leaving skin without a moisturizer means compromising the protective skin barrier. Kurinjini brings to you a Shea, Mango butter based moisturizer that also has the anti-oxidant properties brought by Vitamin-E. Along with these, we have also added Jojoba and Sweet Almond oils provide that extra nourishment to the skin. We also take customized orders for your specific requirement on fragrance.",
   "stock": 10,
@@ -22,7 +22,7 @@ const allItems = [
   "sale": false,
   "quantity":"60 ml",
   "category": allProducts.faceCare,
-  "subCategory":[SUBCATEGORY_MOISTURIZING],
+  "subCategory":[allProducts.moisturizingCreams],
   "ingredients": [JOJOBA, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, TEATREE, ROSEMARY,COCONUT,VIRIN_OLIVE, BEESWAX],
   "size": [SIXTY],
   "tags": [DRYNESS],
@@ -961,7 +961,7 @@ const allItems = [
   <b>Ubtan</b> is packed with lot of anti-oxidants, vitamin, minerals that contribute to a healthy skin. 
   The face pack of this ubtan(by adding your favourite fruit pulp, yogurt or milk) will intensely nourish your skin from deep within.
   <ul>
-  <li><b>Jau Flour</b> - One of the very old natural ingredients known to heal and repair wounds and also brighten the skin, hydrate the skin and treat clogged pores.</li>
+  <li><b>Jau Flour</b> - One of the very old natural ingredients known to heal and repair skin and also brightens the skin, hydrate the skin and treat clogged pores.</li>
   <li><b>Masoor dal</b> - An excellent cleanser and a natural bleaching agent, this is very effective in removing tan and softening the skin. It also makes skin oil free thereby preventing acne.</li>
   <li><b>Orange peel</b> enhances complexion</li>
   </ul>
@@ -980,6 +980,44 @@ const allItems = [
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.faceCleansers],
   "howToUse":"While washing gently massage with your finger tip in circular motion focusing the areas where you have black heads and wash off thoroughly with water. To lock-in moisture apply your favourite face cream"
+},
+{
+  "id": "roots-onionSeedOil",
+  "name": "Roots - Onion Seed Oil Hair Mask",
+  "type":allProducts.hair,
+  "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/hairCare/roots_1.jpg", "/assets/images/kurinjini-images/hairCare/roots_2.jpg"],
+  "shortDetails": "A natural hair cream",
+  "description":  
+  <p>
+        A natural hair cream made out of oils, butter and other hydrating ingredients. It provides treatment for primarily hair fall and split ends along with giving your hair a shiny and bouncy look. 
+        <br/>
+        <ul class = "item-desc">
+            <li>Ingredients like Brahmi, Bhringraj and Hibiscus strengthens the root follicles promotes hair growth, treats dry, itchy scalp and makes hair bouncy.</li>
+            <li>Argan oil has a number of benefits when used on hair. It can act as a moisturiser for the scalp to fight dandruff and dry scalp. </li>
+            <li>Along with it is added Rosemary that stimulates hair growth, prevents dandruff. </li>
+            <li>Avacodo butter and oil both not only provide lustrous hair but also prevent premature greying.</li>
+            <li>Moringa oil is a natural hair cleanser.  It rejuvenates your hair from deep within and the minerals and vitamins make your hair stronger and fight dandruff and split ends. It has great healing properties which makes it ideal for hair care.</li>
+        </ul>
+        
+        <p> Begin with using more frequently, weekly application and then move on to monthly application.</p>
+        <b>A regular use of hair mask is recommended for healthy hair and healthy root.</b>
+    </p>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.hairCare,
+  "ingredients": [],
+  "size": [SIXTY, ONETWENTY],
+  "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
+  "rating": 4,
+  "variants": [],
+  "goodFor":[allProducts.hairMaskNormal],
+  "subCategory":[allProducts.hairMaskNormal],
+  "howToUse": ["Wash and towel dry your hair", "Apply good amount of mask from hair roots to tips", "Keep it like that for 30 mins", "Do a shampoo wash after that"],      
 },
 
 ]

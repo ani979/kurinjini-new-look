@@ -27,18 +27,6 @@ export const FLAVOUR_MOISTURIZING_CREAMS = [{
     "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg"
   },
   {
-    "flavour": CHERRY_BLOSSOM,
-    "images": UNAVAILABLE_IMAGE
-  },
-  {
-    "flavour": ORANGE,
-    "images": "/assets/images/MoisturizingCreams/orange_big.jpg"
-  },
-  {
-    "flavour": WINTER_BLOOM,
-    "images": UNAVAILABLE_IMAGE
-  },
-  {
     "flavour": ROSE_PETALS,
     "images": "/assets/images/MoisturizingCreams/rose_big.jpg"
   }

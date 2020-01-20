@@ -169,7 +169,7 @@ class FooterOne extends Component {
                                         </li>
                                         <li><i className="fa fa-phone"></i>Call Us: 7483897810</li>
                                         <li><i className="fa fa-envelope-o"></i>Email Us: shilpi@kurinjiniskincare.com</li>
-                                        <li><i className="fa fa-copyright" aria-hidden="true"></i> 2019-20 Powered by Yavanika Consulting</li>
+                                        <li><i className="fa fa-copyright" aria-hidden="true"></i>2019-20 Kurinjini Skincare</li>
                                     </ul>
                                     
                                 </div>

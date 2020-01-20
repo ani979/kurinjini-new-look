@@ -9,6 +9,10 @@ import {filterCategory, filterSubCategory, filterType} from '../../actions'
 
 class CollectionAll extends Component {
 
+    componentDidMount() {
+        document.title = this.props.subSelection ?  this.props.subSelection : "Skin potions made at home";
+    }
+
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -97,7 +101,7 @@ class CollectionAll extends Component {
                                                         </div>
 
                                                         {/*Products Listing Component*/}
-                                                        <ProductListing key = {this.props.mainSelection + this.props.subSelection + this.props.typeSelection}/>
+                                                        <ProductListing key = {this.props.mainSelection + this.props.subSelection + this.props.typeSelection} />
 
                                                     </div>
                                                 </div>

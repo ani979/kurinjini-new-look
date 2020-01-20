@@ -25,7 +25,6 @@ class ProductListing extends Component {
         this.fetchMoreItems();
     }
     
-
     fetchMoreItems = () => {
         if (this.state.limit >= this.props.products.length) {
             this.setState({ hasMoreItems: false });

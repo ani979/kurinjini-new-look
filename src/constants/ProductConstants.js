@@ -3,6 +3,8 @@
 const allProducts = {
     hairMaskNormal:"Hair Mask for Normal Hair",
     hairMaskOily:"Hair Mask for Oily and Scanty Hair",
+    hairMaskAll: "Hair Mask for all kinds of hair",
+    allhuman: "for both men and women",
     lipBalmParent : "Lip Care",
     specialNeeds: "Special needs",
     moisturizingCreams:"Moisturizing cream",

@@ -1,5 +1,5 @@
 import allProducts from '../constants/ProductConstants'
-import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, OATMEAL, METHI, HALDI, BADAAM } from '../constants/Ingredients';
+import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANIUM, GRAPESEED, SHEA_BUTTER, SAFFLOWER, HEMP, CUCUMBER_SEED, ARGAN, VIRGIN_COCONUT, MORINGA, JOJOBA, BEESWAX, MANGO_BUTTER, APRICOT, AVOCADO, VIRIN_OLIVE, COCOA_BUTTER, COCONUT, PURE_AFRICAN_SHEA_BUTTER, EUCALYPTUS, UNREFINED_BEESWAX, CASTER_SUGAR, KOKUM_BUTTER, ROSE_ESSENTIALS, SANDALWOOD, HELICHRYSUM, ROSEHIP, ALOVE, LAVENDER, CARROT_SEED, SAFFRON, LEMON_GRASS, NEEM, HIBISCUS, FLAVOUR_OILS, GLYCERINE, VANILLA_FRAGRANCE, COCOA_POWDER, CASHMERE, CHERRY_BLOSSOM_FRAGRANCE, MANGA_MANDARIN_FRAGRANCE, THYME_LEAVES, BASIL_ESSENTIALS, WHEAT_GERM, UNREFINED_SHEA_BUTTER, FRESH_MINT, FRESH_CUCUMBER, BESAN, TURMERIC, LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX, DARK_SPOTS } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
@@ -989,35 +989,25 @@ const allItems = [
   "price": 200.00,
   "salePrice": 200.00,
   "discount": 0,
-  "pictures": ["/assets/images/kurinjini-images/hairCare/roots_1.jpg", "/assets/images/kurinjini-images/hairCare/roots_2.jpg"],
-  "shortDetails": "A natural hair cream",
+  "pictures": ["/assets/images/kurinjini-images/hairCare/onion-seed_1.jpg", "/assets/images/kurinjini-images/hairCare/onion-seed_2.jpg"],
+  "shortDetails": "An onion seed oil hair mask",
   "description":  
   <p>
-        A natural hair cream made out of oils, butter and other hydrating ingredients. It provides treatment for primarily hair fall and split ends along with giving your hair a shiny and bouncy look. 
-        <br/>
-        <ul class = "item-desc">
-            <li>Ingredients like Brahmi, Bhringraj and Hibiscus strengthens the root follicles promotes hair growth, treats dry, itchy scalp and makes hair bouncy.</li>
-            <li>Argan oil has a number of benefits when used on hair. It can act as a moisturiser for the scalp to fight dandruff and dry scalp. </li>
-            <li>Along with it is added Rosemary that stimulates hair growth, prevents dandruff. </li>
-            <li>Avacodo butter and oil both not only provide lustrous hair but also prevent premature greying.</li>
-            <li>Moringa oil is a natural hair cleanser.  It rejuvenates your hair from deep within and the minerals and vitamins make your hair stronger and fight dandruff and split ends. It has great healing properties which makes it ideal for hair care.</li>
-        </ul>
-        
-        <p> Begin with using more frequently, weekly application and then move on to monthly application.</p>
-        <b>A regular use of hair mask is recommended for healthy hair and healthy root.</b>
+        One of the magical oils for promoting hair regrowth. It is rich in sulphur which prevents breakage, split ends and thinning of hair. Most importantly it maintains the Ph of the hair that promotes hair thickening.  Its a great product for preventing hair fall.
+        <br/><b>Weekly application is recommended for healthy hair and healthy root</b>
     </p>,
   "stock": 10,
   "new": false,
   "sale": false,
   "category": allProducts.hairCare,
-  "ingredients": [],
+  "ingredients": [ONION_SEED_OIL,ARGAN, MORINGA, PURE_AFRICAN_SHEA_BUTTER],
   "size": [SIXTY, ONETWENTY],
   "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
   "rating": 4,
   "variants": [],
-  "goodFor":[allProducts.hairMaskNormal],
+  "goodFor":[allProducts.allKindsOfHair, allProducts.allhuman],
   "subCategory":[allProducts.hairMaskNormal],
-  "howToUse": ["Wash and towel dry your hair", "Apply good amount of mask from hair roots to tips", "Keep it like that for 30 mins", "Do a shampoo wash after that"],      
+  "howToUse": ["Apply adequate amount of mask from hair roots to tips", "Keep it like that for minimum 30 mins", "Do a shampoo wash after that"],      
 },
 
 ]

@@ -1003,7 +1003,7 @@ const allItems = [
   "ingredients": [ONION_SEED_OIL,ARGAN, MORINGA, PURE_AFRICAN_SHEA_BUTTER],
   "size": [SIXTY, ONETWENTY],
   "tags": [HAIR_FALL, SPLIT_ENDS, DANDRUFF],
-  "rating": 4,
+  "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfHair, allProducts.allhuman],
   "subCategory":[allProducts.hairMaskNormal],

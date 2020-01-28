@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { IntlActions } from 'react-redux-multilingual'
 import Pace from 'react-pace-progress'
 import '../../../index.scss'
 
@@ -44,11 +43,6 @@ class HeaderOne extends Component {
 		}
 		//document.getElementById("sticky").classList.remove('fixed');
     }
-
-    changeLanguage(lang) {
-        store.dispatch(IntlActions.setLocale(lang))
-		localStorage.setItem('locale-lang', lang)
-	}
 
     openNav() {
         var openmyslide = document.getElementById("mySidenav");

@@ -1,5 +1,4 @@
-import React, {Component, Children} from 'react';
-import { withTranslate } from 'react-redux-multilingual'
+import React from 'react';
 import { ToastContainer } from 'react-toastify';
 
 import HeaderOne from './common/headers/header-one';
@@ -23,4 +22,4 @@ const App = ({children }) => {
         )
 }
 
-export default withTranslate(App);
+export default App;

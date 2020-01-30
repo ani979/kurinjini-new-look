@@ -4,26 +4,27 @@ import { AGEING, DRYNESS, SUBCATEGORY_MOISTURIZING, SUBCATEGORY_KIDS, ACNE, DRYL
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
-import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, GLOWING_SKIN, VARIANTS_FACESCRUBBER, FLAVOUR_FACE_MASK } from '../constants/variants';
+import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, GLOWING_SKIN, VARIANTS_FACESCRUBBER, FLAVOUR_FACE_MASK, VARIANTS_BODY_BUTTER } from '../constants/variants';
 
 const allItems = [
 {
   "id": "moisturizing-creams",
   "name": allProducts.moisturizingCreams,
   "type":allProducts.skin,
-  "price": 250,
-  "salePrice": 250,
+  "price": 200,
+  "salePrice": 200,
   "discount": 0,
   "pictures": ["/assets/images/moisturizingCreams/frenchLavender_1.jpg", "/assets/images/moisturizingCreams/frenchLavender_2.jpg", "/assets/images/moisturizingCreams/rose_big.jpg"],
   "shortDetails": "Moisturizing cream for daily use",
-  "description": "Daily moisturizing is vital for a healthy skin. Leaving skin without a moisturizer means compromising the protective skin barrier. Kurinjini brings to you a Shea, Mango butter based moisturizer that also has the anti-oxidant properties brought by Vitamin-E. Along with these, we have also added Jojoba and Sweet Almond oils provide that extra nourishment to the skin. We also take customized orders for your specific requirement on fragrance.",
+  "description": <div><p>Daily moisturizing is vital for a healthy skin. Leaving skin without a moisturizer means compromising the protective skin barrier. Kurinjini brings to you a Shea, Mango butter based moisturizer that also has the anti-oxidant properties brought by Vitamin-E. Along with these, we have also added Jojoba and Sweet Almond oils provide that extra nourishment to the skin. We also take customized orders for your specific requirement on fragrance.</p><br/>
+                <h4>About Vegan Winter Bloom moisturizer</h4><p>Moisturizing winter cream that hydrates the skin and works against winter flaking. Mild fragrannce of essential oils added with goodnness of cocoa butter that repairs chapped skin too. Vitamin-E in this cream gves your skin deep nourishhment keeping it soft and supple. <br/><b>Its a vegan version of our moisturizer and doesn't contain beeswax.</b></p></div>,
   "stock": 10,
   "new": false,
   "sale": false,
   "quantity":"60 ml",
   "category": allProducts.faceCare,
   "subCategory":[allProducts.moisturizingCreams],
-  "ingredients": [JOJOBA, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, TEATREE, ROSEMARY,COCONUT,VIRIN_OLIVE, BEESWAX],
+  "ingredients": [JOJOBA, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, TEATREE, ROSEMARY,COCONUT,VIRIN_OLIVE, BEESWAX, AVOCADO, SUNFLOWER_WAX, FRANKINCENSE],
   "size": [SIXTY],
   "tags": [DRYNESS],
   "rating": 4,
@@ -777,23 +778,26 @@ const allItems = [
 },
 {
   "id": "body-butter",
-  "name": "Wild Almond Body Butter",
+  "name": "Body Butter",
   "type":allProducts.skin,
   "price": 400.00,
   "salePrice": 400.00,
   "discount": 0,
   "pictures": ["/assets/images/kurinjini-images/BodyButter/BB_1.jpg", "/assets/images/kurinjini-images/BodyButter/BB_2.jpg", "/assets/images/kurinjini-images/BodyButter/BB_3.jpg"],
   "shortDetails": "A natural body butter",
-  "description": <p>Bringing to you a natural body butter made of Wild green almonds that are known to be high in therapeutic value. This forest almonds oil is rich in Vitamin-E and A. Apart from soothing the skin also helps to heal sun damage and fade the scars. <br/><br/> This product is non-greasy, contains no preservatives, additives, emulsifiers or any chemicals. <br/><br/> It carries a natural woody and earthy smell and can be customized for different flavours as required.</p>,
+  "description": <div><h4>Wild Almond Body Butter</h4><p>Bringing to you a natural body butter made of Wild green almonds that are known to be high in therapeutic value. This forest almonds oil is rich in Vitamin-E and A. Apart from soothing the skin also helps to heal sun damage and fade the scars. <br/> 
+                This product is non-greasy, contains no preservatives, additives, emulsifiers or any chemicals. <br/> 
+                It carries a natural woody and earthy smell and can be customized for different flavours as required.</p>
+                <h4>Vegan Winter Bloom</h4><p>Its a vegan version of our body butter. Mild fragrance of essential oils added with goodness of Cocoa butter that repairs chapped skin too. Vitamin-E in this cream gives your skin deep nourishment keepingit soft and supple.</p></div>,
   "stock": 10,
   "new": true,
   "sale": false,
   "category": allProducts.bodyCare,
-  "ingredients": [WILD_ALMONDS, COCOA_BUTTER, SHEA_BUTTER],
+  "ingredients": [WILD_ALMONDS, COCOA_BUTTER, SHEA_BUTTER, SUNFLOWER_WAX,SWEET_ALMOND,AVOCADO, JOJOBA],
   "size": [APPROX_ONETWENTY],
   "tags": [DRYNESS, SCARS, SUNPROTECTION],
   "rating": 4,
-  "variants": [],
+  "variants": VARIANTS_BODY_BUTTER,
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.sunProtection, ANTI_AGEING, allProducts.fadeScars, allProducts.moisturizingCreams]
 },

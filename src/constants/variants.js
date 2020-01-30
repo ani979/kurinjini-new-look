@@ -22,13 +22,20 @@ export const KAOLIN = "Kaolin Clay(Dry skin)"
 export const DEAD_SEA_MUD = "Dead sea mud(Oily skin)"
 export const UNAVAILABLE_IMAGE = "/assets/images/ImageUnavailable.jpg"
 
-export const FLAVOUR_MOISTURIZING_CREAMS = [{
+export const FLAVOUR_MOISTURIZING_CREAMS = [
+  {
+    "flavour": "Winter Bloom - Vegan",
+    "images": "/assets/images/kurinjini-images/FaceCare/MoisturizingCreams//winterBloom.jpg",
+    "price":200.00
+  },{
     "flavour": FLH,
-    "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg"
+    "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg",
+    "price":250.00
   },
   {
     "flavour": ROSE_PETALS,
-    "images": "/assets/images/MoisturizingCreams/rose_big.jpg"
+    "images": "/assets/images/MoisturizingCreams/rose_big.jpg",
+    "price":250.00
   }
 ]
 
@@ -280,5 +287,19 @@ export const VARIANTS_UBTAN_SOAPS = [{
   "images": "/assets/images/kurinjini-images/Soaps/ubtan_customized.jpg",
   "price":100.00
 },
+
+]
+
+export const VARIANTS_BODY_BUTTER = [
+  {
+    "flavour": "Vegan Body Butter",
+    "images": "/assets/images/kurinjini-images/BodyButter/BB_WB.jpg",
+    "price":400.00
+  },
+  {
+    "flavour": "Wild Almond Body Butter",
+    "images": "/assets/images/kurinjini-images/BodyButter/BB_1.jpg",
+    "price":400.00
+  },
 
 ]

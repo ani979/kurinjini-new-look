@@ -55,7 +55,7 @@ class TopBar extends Component {
                             <div>
                                 <Link to={`${process.env.PUBLIC_URL}/`}>
                                     <div className="header-contact">
-                                        <h2 style={{color:"#31315f"}}> Kurinjini Skin care</h2>
+                                        <h2 style={{color:"#31315f"}}> Kurinjini SC</h2>
                                         <h5 style={{color:"#31315f"}}>
                                             {translate('call_us')}:  748- 389 - 7810
                                         </h5>

@@ -24,7 +24,8 @@ class checkOut extends Component {
             city:'',
             state:'',
             pincode:'',
-            create_account: ''
+            create_account: '',
+            notes:''
         }
         this.validator = new SimpleReactValidator();
     }
@@ -33,19 +34,18 @@ class checkOut extends Component {
         var obj = {};
         obj[event.target.name] = event.target.value;
         this.setState(obj);
-
       }
 
-      setStateFromCheckbox = (event) => {
-          var obj = {};
-          obj[event.target.name] = event.target.checked;
-          this.setState(obj);
+    setStateFromCheckbox = (event) => {
+        var obj = {};
+        obj[event.target.name] = event.target.checked;
+        this.setState(obj);
 
-          if(!this.validator.fieldValid(event.target.name))
-          {
-              this.validator.showMessages();
-          }
+        if(!this.validator.fieldValid(event.target.name))
+        {
+            this.validator.showMessages();
         }
+    }
 
     checkhandle(value) {
         this.setState({
@@ -67,14 +67,15 @@ class checkOut extends Component {
             const user = {"fname":this.state.first_name, 
                         "lname":this.state.last_name, 
                         "email":this.state.email, 
-                        "phone":this.state.phone}
+                        "phone":this.state.phone,
+                        "address":this.state.address}
             
             let toastId = toast.warn("Sending you mail with details ", {
                 autoClose :false,
               });
             axios
             .post('https://api.kurinjiniskincare.com/kbe/api/customers/', 
-                {"user":user, items: this.props.cartItems, "total":this.props.total},
+                {"user":user, items: this.props.cartItems, "total":this.props.total, "notes":this.state.notes},
                 {timeout: 20000}).then((response) => {
                     this.props.emptyCart();
                     toast.dismiss(toastId);
@@ -133,6 +134,14 @@ class checkOut extends Component {
                                                     <div className="field-label">Email Address*</div>
                                                     <input type="text" name="email" value={this.state.email} onChange={this.setStateFromInput} />
                                                     {this.validator.message('email', this.state.email, 'required|email')}
+                                                </div>
+                                                <div className="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div className="field-label">Address</div>
+                                                    <textarea placeholder="Your address in case this has to go through post" rows="3" cols="50" class="form-control" name = "address" value={this.state.address} onChange={this.setStateFromInput}></textarea>
+                                                </div>
+                                                <div className="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div className="field-label">Notes</div>
+                                                    <textarea placeholder="Any information that help us to process your order better. Eg. Need for oily skin" rows="5" cols="50" class="form-control" name = "notes" value={this.state.notes} onChange={this.setStateFromInput}></textarea>
                                                 </div>
                                                 {/* <div className="form-group col-md-12 col-sm-12 col-xs-12">
                                                     <div className="field-label">Country</div>

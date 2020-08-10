@@ -5,10 +5,16 @@ import {
     INCREMENT_QTY,
     DECREMENT_QTY } from "../constants/ActionTypes";
 
-function getPricePerSize(item, size) {
+function getPricePerSizeOrVariants(item, size, variant) {
     if(item.pricePerSize) {
         let selItem = item.pricePerSize.filter((value, index) => value.size === size);
         return selItem[0].price;
+    }
+    if(item.variants && item.variants.length > 0) {
+        let selItem = item.variants.filter((itemVariant, index) => itemVariant.flavour === variant);
+        if (selItem.length > 0 && selItem[0].price) {
+            return selItem[0].price;
+        }
     }
     return item.price;
 }
@@ -21,7 +27,7 @@ export default function cartReducer(state = {
         case ADD_TO_CART:
             const productId = action.product.id 
             //console.log("action.variant ", action);
-            const price = getPricePerSize(action.product, action.size);
+            const price = getPricePerSizeOrVariants(action.product, action.size, action.variant);
             let foundCartItem = -1;
             //console.log(product.variants.filter((variant) => (variant.flavour === action.variant)))
             if(action.variant) {
@@ -78,7 +84,7 @@ export default function cartReducer(state = {
                         product.choosenSize === action.size && 
                         product.flavour === action.variant && 
                         product.qty > 1) {
-                        const price = getPricePerSize(product, action.size);
+                        const price = getPricePerSizeOrVariants(product, action.size, action.variant);
                         cartAcc.push({ ...product, qty: product.qty-1, sum: (price - (price*product.discount/100))*(product.qty-1) }) // Decrement qty
                     } else {
                         cartAcc.push(product)

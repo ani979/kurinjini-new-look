@@ -1,3 +1,5 @@
+import { TEN, ONETWENTY } from "./Prices-Quantity"
+
 export const FLH = "French Lavender Honey"
 export const CHERRY_BLOSSOM = "Cherry Blossom"
 export const WINTER_BLOOM = "Winter Bloom"
@@ -25,7 +27,7 @@ export const UNAVAILABLE_IMAGE = "/assets/images/ImageUnavailable.jpg"
 export const FLAVOUR_MOISTURIZING_CREAMS = [
   {
     "flavour": "Winter Bloom - Vegan",
-    "images": "/assets/images/kurinjini-images/FaceCare/MoisturizingCreams//winterBloom.jpg",
+    "images": "/assets/images/kurinjini-images/FaceCare/MoisturizingCreams/winterBloom.jpg",
     "price":200.00
   },{
     "flavour": FLH,
@@ -302,4 +304,18 @@ export const VARIANTS_BODY_BUTTER = [
     "price":400.00
   },
 
+]
+
+export const VARITIES_MOSQUITO_REPELLANT = [
+  {
+    "flavour": "Balm",
+    "images": "/assets/images/kurinjini-images/AntiBuzz/1.jpeg",
+    "size":TEN,
+    "price":150.00
+  },{
+    "flavour": "Lotion",
+    "images": "/assets/images/kurinjini-images/AntiBuzz/2.jpeg",
+    "size":ONETWENTY,
+    "price":200.00
+  }
 ]

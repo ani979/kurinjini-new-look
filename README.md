@@ -42,3 +42,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### When launching a new product
+Add in data.js
+"good for" - This means for which types of skin, add all or kids as required
+"subcategory" - This means under which category - Creams or Kids friendly
+Add featured image in new-Collection.jsx
+"home-banner/mobile" - Add new image

@@ -11,7 +11,7 @@ class ProductListing extends Component {
     constructor (props) {
         super (props)
 
-        this.state = { limit: 5, hasMoreItems: true, _isLoading:true };
+        this.state = { limit: 50, hasMoreItems: true, _isLoading:true };
 
     }
 

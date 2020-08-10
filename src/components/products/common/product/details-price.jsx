@@ -27,10 +27,24 @@ class DetailsWithPrice extends Component {
         this.setState({
             nav3: this.slider3,
             price:this.props.item.price,
-            size:this.props.item.size[0],
+            size:this.getInitialSizeToDisplay(),
             quantity:1,
             flavour:this.props.item.variants && this.props.item.variants.length > 0 ? this.props.item.variants[0].flavour: ""
         });
+    }
+
+    getInitialPriceToDisplay() {
+        return this.props.item.variants && this.props.item.variants.length > 0 
+                ? 
+                (this.props.item.variants[0].price ? this.props.item.variants[0].price : this.props.item.price) 
+                : this.props.item.price;
+    }
+
+    getInitialSizeToDisplay() {
+        return this.props.item.variants && this.props.item.variants.length > 0 
+                ? 
+                (this.props.item.variants[0].size ? this.props.item.variants[0].size : (this.props.item.size && this.props.item.size[0])) 
+                : (this.props.item.size && this.props.item.size[0]);
     }
 
     componentDidUpdate(prevProps) {
@@ -81,7 +95,13 @@ class DetailsWithPrice extends Component {
                 this.setState({
                     flavour:flavour
                 })
-            }   
+            }  
+            
+            if(selItem[0].size) {
+                this.setState({
+                    size:selItem[0].size
+                })
+            }    
         }
     }
 
@@ -128,6 +148,7 @@ class DetailsWithPrice extends Component {
 
                         <div className="product-page-filter row">
                                 <p className="col-md-6 col-sm-6 col-xl-6 col-6 product-detail-flavour"> Choose quantity:</p>
+                                {item.size && item.size.length > 0 ?
                                 <select className="col-md-6 col-sm-6 col-xl-6 col-5 quantity-border"
                                     onChange={(e) => this.changePriceBasedOnQuantity(e.target.value)}
                                 >
@@ -136,6 +157,8 @@ class DetailsWithPrice extends Component {
                                     })}
                                     
                                 </select>
+                                :
+                                ""}
                         </div>
                         <span className="instock-cls">{this.state.stock}</span>
                         <h6 className="product-title">How many?</h6>

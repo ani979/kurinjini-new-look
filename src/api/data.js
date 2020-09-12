@@ -1050,6 +1050,33 @@ const allItems = [
   "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS],
   "howToUse": ["Apply on your hands and legs"],      
 },
+{
+  "id": "rose-milk",
+  "name": "Rose Milk Vegan Soap",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/rosemilk/rose_milk_1.jpeg", "/assets/images/kurinjini-images/rosemilk/rose_milk_2.jpeg", "/assets/images/kurinjini-images/rosemilk/rose_milk_3.jpeg","/assets/images/kurinjini-images/rosemilk/rose_milk_4.jpeg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       We have come out with 100% vegan pure oil based soap with a different process than usual also known as saponification or cold process. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing.<br/>
+       Low creamy lather typical of 100% pure oil soap. It has skin friendly rose essential oil that has harmonising and relaxing properties. Milk has light lactic acid that nourishes and moisturises skin.
+Ph is exactly between 7 and 8. 
+<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b></p>,
+  "stock": 10,
+  "size": [HUNDRED_GMS],
+  "new": true,
+  "sale": false,
+  "category": allProducts.bodyCare,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,ROSE_ESSENTIALS],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps]
+}
 
 ]
 

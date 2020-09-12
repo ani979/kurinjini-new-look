@@ -338,76 +338,7 @@ class NewCollection extends Component {
                                 </div>
                             </div>
                         </div> */}
-                        <Link to={`${process.env.PUBLIC_URL}/product/ubtan-soap`}>
-                        <div>
-                            <div className="home home4 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/product/ubtan-soap`} className="btn btn-solid">Simple yet powerful</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </Link>
-                        <div>
-                            <div className="home home5 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/product/hemp-lip-care`} className="btn btn-solid">Long lasting Lip Balm</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home6 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/product/renaissance`} className="btn btn-solid">Extra Glowing Skin</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home3 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    {/* <h4>Oils for you</h4> */}
-                                                    {/* <h1>women fashion</h1> */}
-                                                    <Link to={`${process.env.PUBLIC_URL}/product/vegan-lip-scrubs`} className="btn btn-solid">Vegan lip scrub</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </Slider>
                 </section>
             </div>

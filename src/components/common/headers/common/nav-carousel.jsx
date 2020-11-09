@@ -70,7 +70,7 @@ export default function NavCarousel() {
                     <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/vegan.png`}
                         linkPath = "vegan"
-                        quickName = "All things vegan">
+                        quickName = "Vegan">
                     </OneBlock>
                 </div>
                 <div>

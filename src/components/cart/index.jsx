@@ -101,7 +101,7 @@ class cartComponent extends Component {
                                                         <br/>
                                                         <br/>
                                                     </div>    
-                                                    <h3>{symbol}{(item.sum)}</h3>
+                                                    <h3>{symbol}{(priceToDisplay - (priceToDisplay * item.discount/100))}</h3>
                                                     <div className="mobile-cart-content row">
                                                         <div className="col-xs-12">
                                                             <h2 className="td-color">

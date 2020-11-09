@@ -9,9 +9,17 @@ class DetailsWithPrice extends Component {
         this.state = {
             open:false,
             quantity:1,
-            stock: 'InStock',
+            stock: '',
             nav3: null,
             size:''
+        }
+    }
+
+    componentDidMount() {
+        if(this.props.item.stock === 0) {
+            this.setState({stock: 'Out of Stock !'})
+        } else {
+            this.setState({stock: 'In Stock'})
         }
     }
 
@@ -61,7 +69,7 @@ class DetailsWithPrice extends Component {
 
     minusQty = () => {
         if(this.state.quantity > 1) {
-            this.setState({stock: 'InStock'})
+            this.setState({stock: 'In Stock'})
             this.setState({quantity: this.state.quantity - 1})
         }
     }
@@ -145,7 +153,7 @@ class DetailsWithPrice extends Component {
                     {flavour}
 
                     <div className="product-description">
-
+                        {this.props.item.stock ?
                         <div className="product-page-filter row">
                                 <p className="col-md-6 col-sm-6 col-xl-6 col-6 product-detail-flavour"> Choose quantity:</p>
                                 {item.size && item.size.length > 0 ?
@@ -160,7 +168,11 @@ class DetailsWithPrice extends Component {
                                 :
                                 ""}
                         </div>
+                        :<div></div>}
                         <span className="instock-cls">{this.state.stock}</span>
+                        
+                        {this.props.item.stock ?
+                        <span>
                         <h6 className="product-title">How many?</h6>
                         <div className="qty-box">
                             <div className="input-group">
@@ -174,14 +186,19 @@ class DetailsWithPrice extends Component {
                                     <button type="button" className="btn quantity-right-plus" onClick={this.plusQty} data-type="plus" data-field="">
                                         <i className="fa fa-angle-right"></i>
                                     </button>
-                            </span>
+                                </span>
                             </div>
-                        </div>    
+                        </div>   
+                        
+                        </span>
+                        :<div></div>}
                     </div>
+                    {this.props.item.stock ?
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity, this.state.size, this.state.flavour)}>add to cart</a>
                         <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity, this.state.size, this.state.flavour)} >buy now</Link>
                     </div>
+                    :<div><b>SOLD OUT</b></div>}
                     {/* <div className="product-buttons" >
                         <Link to={`${process.env.PUBLIC_URL}/pages/howTo`} className="btn btn-solid" >How to Buy</Link>
                     </div> */}

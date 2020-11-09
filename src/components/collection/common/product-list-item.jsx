@@ -11,12 +11,19 @@ class ProductListItem extends Component {
 
         this.state = {
             open: false,
-            stock: 'InStock',
+            stock: '',
             quantity: 1,
             image: ''
         }
     }
 
+    componentDidMount() {
+        if(this.props.product.stock === 0) {
+            this.setState({stock: 'Out of Stock !'})
+        } else {
+            this.setState({stock: 'In Stock'})
+        }
+    }
     onOpenModal = () => {
         this.setState({ open: true });
     };
@@ -31,7 +38,7 @@ class ProductListItem extends Component {
 
     minusQty = () => {
         if(this.state.quantity > 1) {
-            this.setState({stock: 'InStock'})
+            this.setState({stock: 'In Stock'})
             this.setState({quantity: this.state.quantity - 1})
         }
     }

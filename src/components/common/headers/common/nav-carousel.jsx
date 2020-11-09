@@ -68,6 +68,15 @@ export default function NavCarousel() {
                     {/* <h4>welcome to fashion</h4> */}
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
+                        imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/vegan.png`}
+                        linkPath = "vegan"
+                        quickName = "All things vegan">
+                    </OneBlock>
+                </div>
+                <div>
+                    {/* <h4>welcome to fashion</h4> */}
+                    {/* <h4>Home made creams</h4> */}
+                    <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/kids_1.png`}
                         linkPath = "kids-friendly"
                         quickName = "Kids friendly">
@@ -148,6 +157,7 @@ export default function NavCarousel() {
                         quickName = "Sun protection">
                     </OneBlock>
                 </div>
+                
             </Slider>
         </div>  
     )

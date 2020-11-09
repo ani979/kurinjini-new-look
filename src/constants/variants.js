@@ -1,4 +1,4 @@
-import { TEN, ONETWENTY } from "./Prices-Quantity"
+import { TEN, ONETWENTY, SIXTY } from "./Prices-Quantity"
 
 export const FLH = "French Lavender Honey"
 export const CHERRY_BLOSSOM = "Cherry Blossom"
@@ -29,11 +29,12 @@ export const FLAVOUR_MOISTURIZING_CREAMS = [
     "flavour": "Winter Bloom - Vegan",
     "images": "/assets/images/kurinjini-images/FaceCare/MoisturizingCreams/winterBloom.jpg",
     "price":200.00
-  },{
-    "flavour": FLH,
-    "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg",
-    "price":250.00
   },
+  // {
+  //   "flavour": FLH,
+  //   "images": "/assets/images/MoisturizingCreams/frenchLavender_1.jpg",
+  //   "price":250.00
+  // },
   {
     "flavour": ROSE_PETALS,
     "images": "/assets/images/MoisturizingCreams/rose_big.jpg",
@@ -83,24 +84,24 @@ export const FLAVOUR_LIP_SCRUBS = [
     "flavour": SPEARMINT,
     "images": UNAVAILABLE_IMAGE
   },
-  {
-    "flavour": VANILLA,
-    "images": UNAVAILABLE_IMAGE
-  },
-  {
-    "flavour": STRAWBERRY,
-    "images": UNAVAILABLE_IMAGE
-  },
+  // {
+  //   "flavour": VANILLA,
+  //   "images": UNAVAILABLE_IMAGE
+  // },
+  // {
+  //   "flavour": STRAWBERRY,
+  //   "images": UNAVAILABLE_IMAGE
+  // },
 ]
 
 export const VEGAN_LIP_SCRUBS = [{
     "flavour": ROSE_LIP_SCRUB,
     "images": "/assets/images/kurinjini-images/LipCare/rose_lipscrub_2.jpg"
   },
-  {
-    "flavour": STRAWBERRY,
-    "images": UNAVAILABLE_IMAGE
-  },
+  // {
+  //   "flavour": STRAWBERRY,
+  //   "images": UNAVAILABLE_IMAGE
+  // },
   {
     "flavour": ORANGE,
     "images": UNAVAILABLE_IMAGE
@@ -109,10 +110,10 @@ export const VEGAN_LIP_SCRUBS = [{
     "flavour": SPEARMINT,
     "images": UNAVAILABLE_IMAGE
   },
-  {
-    "flavour": VANILLA,
-    "images": UNAVAILABLE_IMAGE
-  },
+  // {
+  //   "flavour": VANILLA,
+  //   "images": UNAVAILABLE_IMAGE
+  // },
 ]
 
 export const FLAVOUR_LIP_BALMS_KIDS = [{

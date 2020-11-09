@@ -8,9 +8,9 @@ import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANI
   LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, 
   WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, 
   CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, 
-  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL } from '../constants/Ingredients';
+  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL, CHIKMAGLAUR_RAW_COFFEE, COLD_PRESSED_COCONUT_OIL, RICE_BRAN_OIL } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX, DARK_SPOTS, MOSQUITO_BITES } from '../constants/Tags';
-import { TEN, SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
+import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
 import { LIPBALM_ONE,LIPBALM_THREE, LIPBALM_FIVE } from '../constants/ImageConstants';
 import { FLAVOUR_MOISTURIZING_CREAMS, ROSE_PETALS, FLAVOUR_LIP_BALMS, FLAVOUR_LIP_BALMS_KIDS, FLAVOUR_LIP_SCRUBS, VEGAN_LIP_SCRUBS, VARIANTS_RENAISSANCE, VARIANTS_LOOFAH_SCRUBBER, VARIANTS_CASTER_SUGAR_SCRUBBER, VARIANTS_BODY_SCRUBBER, ANTI_AGEING, VARIANTS_UBTAN_SOAPS, VARIANTS_FACESCRUBBER, FLAVOUR_FACE_MASK, VARIANTS_BODY_BUTTER, SPEARMINT, VARITIES_MOSQUITO_REPELLANT } from '../constants/variants';
@@ -38,6 +38,31 @@ const allItems = [
   "tags": [DRYNESS],
   "rating": 4,
   "variants": FLAVOUR_MOISTURIZING_CREAMS,
+  "goodFor":[allProducts.allKindsOfSkin],
+  "precaution":"All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
+},
+{
+  "id": "winter-bloom-vegan",
+  "name": allProducts.veganMoisturizingCream,
+  "type":allProducts.skin,
+  "pricePerSize":[{size:SIXTY,price:200.00}, {size:ONETWENTY,price:400.00}],
+  "price": 200,
+  "salePrice": 200,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/FaceCare/MoisturizingCreams/winterBloom.jpg"],
+  "shortDetails": "Moisturizing cream for daily use",
+  "description": <div><p>Daily moisturizing is vital for a healthy skin. Leaving skin without a moisturizer means compromising the protective skin barrier. Kurinjini brings to you a Shea, Mango butter based moisturizer that also has the anti-oxidant properties brought by Vitamin-E. Along with these, we have also added Jojoba and Sweet Almond oils provide that extra nourishment to the skin. We also take customized orders for your specific requirement on fragrance.</p><br/>
+                <h4>About Vegan Winter Bloom moisturizer</h4><p>Moisturizing winter cream that hydrates the skin and works against winter flaking. Mild fragrannce of essential oils added with goodnness of cocoa butter that repairs chapped skin too. Vitamin-E in this cream gves your skin deep nourishhment keeping it soft and supple. <br/><b>Its a vegan version of our moisturizer and doesn't contain beeswax.</b></p></div>,
+  "stock": 10,
+  "new": false,
+  "sale": false,
+  "category": allProducts.faceCare,
+  "subCategory":[allProducts.moisturizingCreams, allProducts.vegan],
+  "ingredients": [JOJOBA, SWEET_ALMOND, VITAMIN_E, MANGO_BUTTER, TEATREE, ROSEMARY,COCONUT,VIRIN_OLIVE, AVOCADO, SUNFLOWER_WAX, FRANKINCENSE],
+  "tags": [DRYNESS],
+  "rating": 4,
+  "variants":[],
+  "size": [SIXTY, ONETWENTY],
   "goodFor":[allProducts.allKindsOfSkin],
   "precaution":"All our moisturizing creams should be kept away from sunlight as it may lose its consistency"
 },
@@ -95,7 +120,7 @@ const allItems = [
   "pictures": ["/assets/images/kurinjini-images/FaceCare/SpecialNeeds/pacific_big.jpg"],
   "shortDetails": "A cream for sensitive skin",
   "description": "Pacific has speciality of soothing sensitive skin. It has ingredients like Rosemary, Tea tree and safflower oil that refresh oily skin without causing excess dryness. Tea tree and Rosemary are considered to be a natural antiseptic and has astringent properties. It is effective in lightening scars, soothing pimples apart from being anti-blemish, anti-microbial agents.",
-  "stock": 6,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.faceCare,
@@ -380,7 +405,7 @@ const allItems = [
   "description": <p> A soap that removes dry skin from your feet making it smooth and clean. Currently in two variants, caster sugar is fine-grained sugar that helps to maintain moisture in the skin and makes a gentle scrub, removing dead cells to brighten, smooth and moisturise the skin.
   Available with addition of some essential oils or fragrance that are proven to be not only beneficial on your skin but also your life. They have properties to reducing stress, anxiety, bringing calmness and soothing on skin too.
   </p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.scrubbing,
@@ -448,7 +473,7 @@ const allItems = [
   "pictures": ["/assets/images/kurinjini-images/Soaps/shea_cashmere_1.jpg"],
   "shortDetails": "For a fragrant bath",
   "description": <p>A fragrance balanced perfectly between sweet, warm and comforting. A rich buttery opening note combined with warm coconut leaves a fascinating scent. A soft moisturising soaping bar made with Shea Butter, Coconut oil base, Cashmere & Cherry blossom fragrance.</p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.soaps,
@@ -470,7 +495,7 @@ const allItems = [
   "pictures": ["/assets/images/kurinjini-images/Soaps/shea_punch_mango_one.jpg", "/assets/images/kurinjini-images/Soaps/shea_punch_mango_two.jpg"],
   "shortDetails": "For a fragrant bath",
   "description": <p>A fragrance balanced with combination of Mango and Mandarin Orange. A coconut oil base soap that is soft moisturising with the presence of Shea Butter.</p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.soaps,
@@ -518,7 +543,7 @@ const allItems = [
   But it does matter, these skin cracks apart from being painful, can allow bacteria and viruses to enter the body, leading to infection and illness. 
   And, if you are diabetic, it is important to examine your feet frequently for signs of cracks or infection. 
   Foot Healer has Rosemary essentials that saves from any fungal or bacterial infection. Cucumber seed oil being rich in Vitamin-B and Vitamin-C provides hydration to the skin and also is a healer to the dry and cracked skin.</p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.moisturizingCreams,
@@ -556,7 +581,7 @@ const allItems = [
     </ul>
 
   </p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.hydrosols,
@@ -586,7 +611,7 @@ const allItems = [
     <br/>
     Soak cotton pad in Rose arka and dab it all over the face for extra-hydration. The cotton pad can also be chilled in fridge and used on eyes for tired and puffy eyes.
   </p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.hydrosols,
@@ -617,7 +642,7 @@ const allItems = [
       <br/>
       <br/>
     </p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.hydrosols,
@@ -648,7 +673,7 @@ const allItems = [
     <b>This particular mist can be used for solving scalp itching problem. Spray it on the hair roots and massage to spread it on the scalp. It doesn’t need any wash after that.</b>
    
   </p>,
-  "stock": 10,
+  "stock": 0,
   "new": false,
   "sale": false,
   "category": allProducts.hydrosols,
@@ -924,7 +949,7 @@ const allItems = [
       <br/> Available for skin types : <ul><li><b>Kaolin clay (For dry skin)</b></li><li><b>Dead sea mud (For oily skin)</b></li></ul>
       <br/><b>Kaolin clay</b> is one of the gentlest clays. Unlike other clays kaolin clay doesn’t leave your skin dry after use. It softens the skin, leaving it toned and healthy.
       <br/>Naturally rich in minerals, <b>Dead Sea Mud</b> is known to have rejuvenation qualities for the skin.</p>,
-  "stock": 10,
+  "stock": 0,
   "new": true,
   "sale": false,
   "category": allProducts.faceCare,
@@ -1047,7 +1072,7 @@ const allItems = [
   "rating": 5,
   "variants": VARITIES_MOSQUITO_REPELLANT,
   "goodFor":[allProducts.allhuman, allProducts.allKindsOfSkin, allProducts.kidsSpecial],
-  "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS],
+  "subCategory":[allProducts.moisturizingCreams, SUBCATEGORY_KIDS, allProducts.vegan],
   "howToUse": ["Apply on your hands and legs"],      
 },
 {
@@ -1065,17 +1090,98 @@ const allItems = [
        Low creamy lather typical of 100% pure oil soap. It has skin friendly rose essential oil that has harmonising and relaxing properties. Milk has light lactic acid that nourishes and moisturises skin.
 Ph is exactly between 7 and 8. 
 <br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b></p>,
-  "stock": 10,
+  "stock": 0,
   "size": [HUNDRED_GMS],
   "new": true,
   "sale": false,
-  "category": allProducts.bodyCare,
+  "category": allProducts.soaps,
   "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,ROSE_ESSENTIALS],
   "tags": [FRESH_BATH],
   "rating": 5,
   "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
-  "subCategory":[allProducts.normalSoaps]
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
+},
+{
+  "id": "body-scrub",
+  "name": "Velvet Coffee Body Scrub",
+  "type":allProducts.skin,
+  "price": 300.00,
+  "salePrice": 300.00,
+  "discount": 0,
+  "pictures": ["/assets/images/home-banner/mobile/18.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       A great combination of Raw Coffee, Cold Pressed Coconut oil & Butters, the body scrub exfoliates dead skin cells and helps get rid of blackheads, tan & impurities. It deeply cleanses the pores and polishes the skin.  The size of coffee particles gently scrub the skin. This body scrub doesn’t dry out the skin and smoothens superbly.</p>,
+  "stock": 10,
+  "size": [ONE_TWENTY_GM],
+  "new": true,
+  "sale": false,
+  "ingredients": [CHIKMAGLAUR_RAW_COFFEE, SHEA_BUTTER, COCOA_BUTTER, COLD_PRESSED_COCONUT_OIL, SWEET_ALMOND],
+  "rating": 5,
+  "variants": [],
+  "category": allProducts.scrubbing,
+  "tags": [DEAD_SKIN_BODY, DRYNESS],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.bodyCare, allProducts.vegan],
+  "howToUse":"Squeeze out a good quantity and apply with light pressure onto the skin in a circular motion, and then rinse off. No need to apply soap further."
+
+},
+{
+  "id": "coffee-vanilla",
+  "name": "Coffee Vanilla Soap",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/coffee-vanilla.jpeg","/assets/images/home-banner/mobile/19.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       Coffee Vanilla handmade bathing bar. 
+       <br/> This handcrafted bathing is augmented by chikmagalur coffee that has splendid fragrance. Its an amazing exfoliator and has anti-oxidant ad detoxifying properties.
+<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+<br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+  "stock": 10,
+  "size": [HUNDRED_GMS],
+  "new": true,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,RICE_BRAN_OIL, VANILLA_FRAGRANCE, CHIKMAGLAUR_RAW_COFFEE],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
+},
+{
+  "id": "lemon-grass",
+  "name": "Lemon Grass Soap",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/lemon-grass.jpg","/assets/images/home-banner/mobile/20.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       This soap made of lemon grass essential oil having purifying and detoxiying properties that keeps your skin clean and clear. 
+       Being an anti-bacterial and ant-fungal it calms and soothes the irritated skin. The rich citrus smell makes your bath even more refreshing.
+      <br/>Lemon Grass essential oil is edible grade 1, use for Asian Cuisines.  
+<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+<br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+  "stock": 10,
+  "size": [HUNDRED_GMS],
+  "new": true,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,RICE_BRAN_OIL, LEMON_GRASS],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
 }
 
 ]

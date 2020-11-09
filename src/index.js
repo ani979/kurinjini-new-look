@@ -119,6 +119,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/soaping-bars`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.soaps} />} key ={allProducts.skin+allProducts.soaps}/>
 								<Route path={`${process.env.PUBLIC_URL}/scrub`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.scrubbing} />} key ={allProducts.skin+allProducts.scrubbing}/>
 								<Route path={`${process.env.PUBLIC_URL}/hydrosols`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.hydrosols}/>} key ={allProducts.skin+allProducts.hydrosols}/>
+								<Route path={`${process.env.PUBLIC_URL}/vegan`} render={(props) => <CollectionAll {...props} subSelection = {allProducts.vegan}/>} key ={allProducts.vegan}/>
 
 								<Route path={`${process.env.PUBLIC_URL}/hair-oils`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.oilsAndSerums}/>}/>
 								<Route path={`${process.env.PUBLIC_URL}/hair-masks`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} mainSelection = {allProducts.hairCare} />}/>

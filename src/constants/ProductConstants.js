@@ -21,6 +21,7 @@ const allProducts = {
     lipScrubs:"Lip Scrubs",
     lipScrubsVegan:"Vegan Lip Scrubs",
     vegan:"Vegan",
+    veganMoisturizingCream:"Vegan Moisturizing Cream",
     oilsAndSerums:"Oils and Serums",
     nightOil:"Night Oil",
     hairOilIntensive: "Hair Oil - Intensive Hair Care",

@@ -12,6 +12,7 @@ import DetailsTopTabs from "./common/details-top-tabs";
 import { addToCart, addToCartUnsafe} from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
+import {Helmet} from "react-helmet";
 
 
 
@@ -30,7 +31,6 @@ class LeftSideBar extends Component {
 
 
     componentDidMount() {
-        document.title = this.props.item.shortDetails;
         this.setState({
             nav1: this.slider1,
             nav2: this.slider2
@@ -90,6 +90,14 @@ class LeftSideBar extends Component {
                 {/*Section Start*/}
                 {(item)?
                 <section className="section-b-space">
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>{item.name}</title>
+                        <meta property="og:title" content={item.name} />
+                        <meta property="og:description" content={item.shortDetails} />
+                        <meta property="og:url" href={`${process.env.PUBLIC_URL}/product/${item.id}`} />
+                        <link rel="canonical" href={`${process.env.PUBLIC_URL}/product/${item.id}`}/>
+                    </Helmet>
                     <div className="collection-wrapper">
                         <div className="container">
                             <div className="row">

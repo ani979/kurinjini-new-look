@@ -17,6 +17,7 @@ export const CUCUMBER_SEED = 'Cucumber seed'
 export const CUCUMBER_GEL = 'Cucumber gel'
 export const CINNAMON_POWDER = 'Cinnamon powder'
 export const COCONUT = 'Coconut'
+export const COCONUT_CREAM = 'Coconut Cream'
 export const COCONUT_BUTTER = 'Coconut Butter'
 export const NEEM_POWDER = 'Neem powder(leaf)'
 export const NEEM_OIL = "Neem grade 1 oil"

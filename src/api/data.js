@@ -8,7 +8,7 @@ import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANI
   LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, 
   WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, 
   CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, 
-  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL, CHIKMAGLAUR_RAW_COFFEE, COLD_PRESSED_COCONUT_OIL, RICE_BRAN_OIL, TURMERIC_OIL, RAW_TURMERIC } from '../constants/Ingredients';
+  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL, CHIKMAGLAUR_RAW_COFFEE, COLD_PRESSED_COCONUT_OIL, RICE_BRAN_OIL, TURMERIC_OIL, RAW_TURMERIC, COCONUT_CREAM } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX, DARK_SPOTS, MOSQUITO_BITES } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
@@ -1213,22 +1213,49 @@ Ph is exactly between 7 and 8. 
   "id": "neem-soap",
   "name": "Neem Soap",
   "type":allProducts.skin,
-  "price": 200.00,
-  "salePrice": 200.00,
+  "price": 150.00,
+  "salePrice": 150.00,
   "discount": 0,
-  "pictures": ["/assets/images/kurinjini-images/Soaps/raw_turmeric_two.jpg","/assets/images/home-banner/mobile/21.jpg"],
+  "pictures": ["/assets/images/kurinjini-images/Soaps/neem_soap_one.jpg","/assets/images/kurinjini-images/Soaps/neem_soap_two.jpg"],
   "shortDetails": "100% Pure Oil Soap",
   "description":  
   <p>
-       Made of raw turmeric and turmeric oil, this natural, pH balanced handmade herbal bar. One of Ayurveda's favourite healing herbs, Turmeric is known to contain more than 300 antioxidants that protect you from skin conditions like dark spots, adult cystic and  eczema apart from fighting with  pimples and breakout.
-<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
-<br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+       A neem oil soap that contains edible quality of USDA certified organic neem powder and FDA approved neem oil. Neem as you know contains essential naturals which support our body’s natural ability to fight germs and build upon the immunity. No wonder Ayurvedic text describes it as Sarva Roga Nivarini” meaning universal reliever of all illness.
+  <br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+  <br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
   "stock": 10,
-  "size": [ONE_TWENTY_GM],
+  "size": [HUNDRED_GMS],
   "new": true,
   "sale": false,
   "category": allProducts.soaps,
-  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,TURMERIC_OIL, RAW_TURMERIC],
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND, NEEM_OIL, NEEM_POWDER],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
+},
+{
+  "id": "oatmeal-soap",
+  "name": "Oatmeal Coconut cream soap",
+  "type":allProducts.skin,
+  "price": 150.00,
+  "salePrice": 150.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/oatmeal_coconut_cream.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+      Oatmeal considered to be a diet food also is found to be extremely benefical for skin. Known to control irriation, also a natural exfoliator the oatmeal in general has immense benefits in certain skin problems. 
+      The coconut cream combined with this is considered to be highly moisturizing, which improves the skin elasticity.
+  <br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+  <br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+  "stock": 10,
+  "size": [HUNDRED_GMS],
+  "new": true,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND, OATMEAL, COCONUT_CREAM],
   "tags": [FRESH_BATH],
   "rating": 5,
   "variants": [],

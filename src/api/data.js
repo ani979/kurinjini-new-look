@@ -8,7 +8,7 @@ import { ROSEMARY, TEATREE, LEMON, SWEET_ALMOND, VITAMIN_E, FRANKINCENSE, GERANI
   LEMON_EXTRACT, GOAT_MILK, FURTHER_CUSTOMIZATION, RASPBERRY_SEED, SUNFLOWER_WAX, CHAMOMILE, WILD_ALMONDS, CANNABIS_SATIVA, 
   WALNUT_COFFEE, VEGETABLE_GLYCERINE, HONEY, NEEM_POWDER, NEEM_OIL, COCONUT_BUTTER, KAOLIN_CLAY, DEAD_SEA_MUD, GREEN_TEA, 
   CUCUMBER_GEL, CINNAMON_POWDER, KHUS_KHUS, JAU_FLOUR, ORANGE_PEEL, CHANA, MASOOR_DAL, 
-  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL, CHIKMAGLAUR_RAW_COFFEE, COLD_PRESSED_COCONUT_OIL, RICE_BRAN_OIL } from '../constants/Ingredients';
+  OATMEAL, METHI, HALDI, BADAAM, ONION_SEED_OIL, CITRONELLA_OIL, CHIKMAGLAUR_RAW_COFFEE, COLD_PRESSED_COCONUT_OIL, RICE_BRAN_OIL, TURMERIC_OIL, RAW_TURMERIC } from '../constants/Ingredients';
 import { AGEING, DRYNESS, SUBCATEGORY_KIDS, ACNE, DRYLIPS, FLAKYLIPS, DULLSKIN, DARK_CIRCLES, BLEMISHES, PIGMENTATION, DANDRUFF, SPLIT_ENDS, HAIR_FALL, HARD_HEELS, DEAD_SKIN_BODY, FRESH_BATH, SENSITIVE_SKIN, TANNEDSKIN, SUNPROTECTION, SCARS, DARKLIPS, DETOX, DARK_SPOTS, MOSQUITO_BITES } from '../constants/Tags';
 import { SIXTY, ONETWENTY, ROUND_FIVEGM, STICK_FIVEGM, TWENTY, FIFTEEN, EIGHTY, HUNDRED_GMS, EIGHTY_GMS, FORTY_GMS, FIFTY_GMS, FIFTY_ML, CLOSE_TO_HUNDRED, APPROX_ONETWENTY, ONE_TWENTY_GM, HUNDRED_ML } from '../constants/Prices-Quantity';
 import React from 'react'
@@ -817,21 +817,21 @@ const allItems = [
   "price": 400.00,
   "salePrice": 400.00,
   "discount": 0,
-  "pictures": ["/assets/images/kurinjini-images/BodyButter/BB_1.jpg", "/assets/images/kurinjini-images/BodyButter/BB_2.jpg", "/assets/images/kurinjini-images/BodyButter/BB_3.jpg"],
+  "pictures": ["/assets/images/kurinjini-images/BodyButter/BB_4.jpg", "/assets/images/kurinjini-images/BodyButter/BB_2.jpg", "/assets/images/kurinjini-images/BodyButter/BB_1.jpg", "/assets/images/kurinjini-images/BodyButter/BB_3.jpg"],
   "shortDetails": "A natural body butter",
   "description": <div><h4>Wild Almond Body Butter</h4><p>Bringing to you a natural body butter made of Wild green almonds that are known to be high in therapeutic value. This forest almonds oil is rich in Vitamin-E and A. Apart from soothing the skin also helps to heal sun damage and fade the scars. <br/> 
-                This product is non-greasy, contains no preservatives, additives, emulsifiers or any chemicals. <br/> 
-                It carries a natural woody and earthy smell and can be customized for different flavours as required.</p>
-                <h4>Vegan Winter Bloom</h4><p>Its a vegan version of our body butter. Mild fragrance of essential oils added with goodness of Cocoa butter that repairs chapped skin too. Vitamin-E in this cream gives your skin deep nourishment keepingit soft and supple.</p></div>,
+                This product is non-greasy, contains no preservatives, additives, emulsifiers or any chemicals.Complemented with Cocoa Butter, a super food for the skin loaded with natural benefits. Some of the few benefits of cocoa butter include reduce inflammations, preventing stretch marks, heal damage skin. <br/> 
+                </p>
+                </div>,
   "stock": 10,
   "new": true,
   "sale": false,
   "category": allProducts.bodyCare,
-  "ingredients": [WILD_ALMONDS, COCOA_BUTTER, SHEA_BUTTER, SUNFLOWER_WAX,SWEET_ALMOND,AVOCADO, JOJOBA],
+  "ingredients": [WILD_ALMONDS, COCOA_BUTTER, SHEA_BUTTER, SWEET_ALMOND,AVOCADO, JOJOBA],
   "size": [APPROX_ONETWENTY],
   "tags": [DRYNESS, SCARS, SUNPROTECTION],
   "rating": 4,
-  "variants": VARIANTS_BODY_BUTTER,
+  "variants": [],
   "goodFor":[allProducts.allKindsOfSkin],
   "subCategory":[allProducts.sunProtection, ANTI_AGEING, allProducts.fadeScars, allProducts.moisturizingCreams]
 },
@@ -1177,6 +1177,58 @@ Ph is exactly between 7 and 8. 
   "sale": false,
   "category": allProducts.soaps,
   "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,RICE_BRAN_OIL, LEMON_GRASS],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
+},
+{
+  "id": "raw-turmeric",
+  "name": "Raw Turmeric Soap",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/raw_turmeric_two.jpg","/assets/images/home-banner/mobile/21.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       Made of raw turmeric and turmeric oil, this natural, pH balanced handmade herbal bar. One of Ayurveda's favourite healing herbs, Turmeric is known to contain more than 300 antioxidants that protect you from skin conditions like dark spots, adult cystic and  eczema apart from fighting with  pimples and breakout.
+<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+<br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+  "stock": 10,
+  "size": [ONE_TWENTY_GM],
+  "new": true,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,TURMERIC_OIL, RAW_TURMERIC],
+  "tags": [FRESH_BATH],
+  "rating": 5,
+  "variants": [],
+  "goodFor":[allProducts.allKindsOfSkin],
+  "subCategory":[allProducts.normalSoaps, allProducts.vegan]
+},
+{
+  "id": "neem-soap",
+  "name": "Neem Soap",
+  "type":allProducts.skin,
+  "price": 200.00,
+  "salePrice": 200.00,
+  "discount": 0,
+  "pictures": ["/assets/images/kurinjini-images/Soaps/raw_turmeric_two.jpg","/assets/images/home-banner/mobile/21.jpg"],
+  "shortDetails": "100% Pure Oil Soap",
+  "description":  
+  <p>
+       Made of raw turmeric and turmeric oil, this natural, pH balanced handmade herbal bar. One of Ayurveda's favourite healing herbs, Turmeric is known to contain more than 300 antioxidants that protect you from skin conditions like dark spots, adult cystic and  eczema apart from fighting with  pimples and breakout.
+<br/><br/><b>Free off Paraben, SLS/Sulphate, palm Oil, artificial fragrances or preservatives.</b>
+<br/>The saponified soaps are prepared with oils like olive, coconut, rice bran with added Shea and Cocoa butter to ensure soft and gentle lather without making your skin dry. This process generally takes longer period of curing(hardening) which is somewhere around 4-6 weeks. The soap that we present you have undergone close to 6 weeks of curing. </p>,
+  "stock": 10,
+  "size": [ONE_TWENTY_GM],
+  "new": true,
+  "sale": false,
+  "category": allProducts.soaps,
+  "ingredients": [VIRIN_OLIVE, VIRGIN_COCONUT, SWEET_ALMOND,TURMERIC_OIL, RAW_TURMERIC],
   "tags": [FRESH_BATH],
   "rating": 5,
   "variants": [],

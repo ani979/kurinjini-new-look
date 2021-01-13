@@ -78,6 +78,28 @@ class NewCollection extends Component {
                 {/*Paragraph End*/}
                 <section className="p-0">
                     <Slider  {...slidesix} className="slide-1 home-slider">
+                    <Link to={`${process.env.PUBLIC_URL}/product/raw-turmeric`}>
+                        <div>
+                            <div className="home home21 text-center">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col">
+                                            <div className="slider-contain">
+                                                <div>
+                                                    {/* <h4>welcome to fashion</h4> */}
+                                                    {/* <h4>Home made creams</h4> */}
+                                                    <Link to={`${process.env.PUBLIC_URL}/product/raw-turmeric`} className="btn btn-solid">Raw Turmeric Soap</Link>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </Link>
                     <Link to={`${process.env.PUBLIC_URL}/product/lemon-grass`}>
                         <div>
                             <div className="home home20 text-center">

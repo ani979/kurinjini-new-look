@@ -107,6 +107,7 @@ class Root extends React.Component {
 								<Route path={`${process.env.PUBLIC_URL}/kids-hair`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.hair} subSelection={SUBCATEGORY_KIDS} key={allProducts.hair + SUBCATEGORY_KIDS}/>}/>
 								<Route path={`${process.env.PUBLIC_URL}/lips`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.lipCare} key={allProducts.skin + allProducts.lipCare}/>}/>
 								<Route path={`${process.env.PUBLIC_URL}/kids-friendly`} render={(props) => <CollectionAll {...props} subSelection={SUBCATEGORY_KIDS} />} key={SUBCATEGORY_KIDS}/>
+								<Route path={`${process.env.PUBLIC_URL}/body-care`} render={(props) => <CollectionAll mainSelection = {allProducts.bodyCare} key={allProducts.bodyCare}/>}/>
 
 								<Route path={`${process.env.PUBLIC_URL}/foot-scrubbers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.scrubbing} subSelection={allProducts.footScrubbers} />}/>
 								<Route path={`${process.env.PUBLIC_URL}/foot-healers`} render={(props) => <CollectionAll {...props} typeSelection = {allProducts.skin} mainSelection = {allProducts.moisturizingCreams} subSelection={allProducts.footHealer} />}/>

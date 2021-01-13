@@ -106,6 +106,15 @@ export default function NavCarousel() {
                     {/* <h4>welcome to fashion</h4> */}
                     {/* <h4>Home made creams</h4> */}
                     <OneBlock 
+                        imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/body-care.png`} 
+                        linkPath = "body-care"
+                        quickName = "Body care">
+                    </OneBlock>
+                </div>
+                <div>
+                    {/* <h4>welcome to fashion</h4> */}
+                    {/* <h4>Home made creams</h4> */}
+                    <OneBlock 
                         imagePath = {`${process.env.PUBLIC_URL}/assets/images/home-banner/lip-balm.png`} 
                         linkPath = "lips"
                         quickName = "Lip care">

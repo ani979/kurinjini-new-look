@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Modal from 'react-responsive-modal';
+import {Helmet} from "react-helmet";
 
 
 class ProductItem extends Component {
@@ -67,6 +68,14 @@ class ProductItem extends Component {
         }
         return (
                 <div className="product-box">
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>{product.name}</title>
+                        <meta property="og:title" content={product.name} />
+                        <meta property="og:description" content={product.shortDetails} />
+                        <meta property="og:url" href={`${process.env.PUBLIC_URL}/product/${product.id}`} />
+                        <link rel="canonical" href={`${process.env.PUBLIC_URL}/product/${product.id}`}/>
+                    </Helmet>
                     <div className="img-wrapper">
                         <div className="lable-block">
                             {(product.new == true)? <span className="lable3">new</span> : ''}

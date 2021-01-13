@@ -6,6 +6,7 @@ import FilterBar from "./common/filter-bar";
 import ProductListing from "./common/product-listing";
 import StickyBox from "react-sticky-box";
 import {filterCategory, filterSubCategory, filterType} from '../../actions'
+import {Helmet} from "react-helmet";
 
 class CollectionAll extends Component {
 
@@ -44,7 +45,11 @@ class CollectionAll extends Component {
         
         return (
             <div>
-
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{this.props.subSelection ? this.props.subSelection : this.props.mainSelection}</title>
+                    <meta property="og:title" content={this.props.subSelection ? this.props.subSelection : this.props.mainSelection} />
+                </Helmet>
                 <Breadcrumb title={this.props.subSelection ? this.props.subSelection : this.props.mainSelection}/>
 
                 <section className="section-b-space">

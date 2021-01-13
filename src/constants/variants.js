@@ -293,19 +293,19 @@ export const VARIANTS_UBTAN_SOAPS = [{
 
 ]
 
-export const VARIANTS_BODY_BUTTER = [
-  {
-    "flavour": "Vegan Body Butter",
-    "images": "/assets/images/kurinjini-images/BodyButter/BB_WB.jpg",
-    "price":400.00
-  },
-  {
-    "flavour": "Wild Almond Body Butter",
-    "images": "/assets/images/kurinjini-images/BodyButter/BB_1.jpg",
-    "price":400.00
-  },
+// export const VARIANTS_BODY_BUTTER = [
+//   {
+//     "flavour": "Vegan Body Butter",
+//     "images": "/assets/images/kurinjini-images/BodyButter/BB_WB.jpg",
+//     "price":400.00
+//   },
+//   {
+//     "flavour": "Wild Almond Body Butter",
+//     "images": "/assets/images/kurinjini-images/BodyButter/BB_1.jpg",
+//     "price":400.00
+//   },
 
-]
+// ]
 
 export const VARITIES_MOSQUITO_REPELLANT = [
   {

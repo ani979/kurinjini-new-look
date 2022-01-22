@@ -839,7 +839,7 @@ const allItems = [
   "id": "hemp-lip-care",
   "name": "Hemp Intensive Lip Care",
   "type":allProducts.skin,
-  "price": 202.00,
+  "price": 220.00,
   "salePrice": 220.00,
   "discount": 0,
   "pictures": ["/assets/images/kurinjini-images/LipCare/hemp_1.jpg", "/assets/images/kurinjini-images/LipCare/hemp_2.jpg"],
